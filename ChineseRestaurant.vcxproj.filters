@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{09c08e51-194b-415b-9db6-ce423503ffce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\models">
+      <UniqueIdentifier>{d8c1c03b-057d-48d7-bc41-aea21b97089a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\models\persons">
+      <UniqueIdentifier>{133675d0-e496-4fae-bc89-a10695b1f58f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\models\objects">
+      <UniqueIdentifier>{6e56afca-bcb7-43af-9690-6edb94aa4766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utility">
+      <UniqueIdentifier>{0bf0b6cd-a34c-4fba-a73c-139057c22af4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\simulator">
+      <UniqueIdentifier>{8d6d8245-9a68-4df9-b725-a69bd76342d9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cc">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simulator.cc">
+      <Filter>src\simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log.cc">
+      <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\table.cc">
+      <Filter>src\models\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\waiter.cc">
+      <Filter>src\models\persons</Filter>
+    </ClCompile>
+    <ClCompile Include="src\generator.cc">
+      <Filter>src\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\manager.cc">
+      <Filter>src\models\persons</Filter>
+    </ClCompile>
+    <ClCompile Include="src\customer_group.cc">
+      <Filter>src\models\persons</Filter>
+    </ClCompile>
+    <ClCompile Include="src\customer.cc">
+      <Filter>src\models\persons</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cashier.cc">
+      <Filter>src\models\persons</Filter>
+    </ClCompile>
+    <ClCompile Include="src\process.cc">
+      <Filter>src\simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\seat.cc">
+      <Filter>src\models\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\event.cc">
+      <Filter>src\simulator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\simulator.h">
+      <Filter>src\simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\table.h">
+      <Filter>src\models\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\seat.h">
+      <Filter>src\models\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cashier.h">
+      <Filter>src\models\persons</Filter>
+    </ClInclude>
+    <ClInclude Include="src\customer.h">
+      <Filter>src\models\persons</Filter>
+    </ClInclude>
+    <ClInclude Include="src\customer_group.h">
+      <Filter>src\models\persons</Filter>
+    </ClInclude>
+    <ClInclude Include="src\waiter.h">
+      <Filter>src\models\persons</Filter>
+    </ClInclude>
+    <ClInclude Include="src\manager.h">
+      <Filter>src\models\persons</Filter>
+    </ClInclude>
+    <ClInclude Include="src\chinese_restaurant.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="src\process.h">
+      <Filter>src\simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event.h">
+      <Filter>src\simulator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\generator.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\variables.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
