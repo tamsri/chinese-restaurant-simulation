@@ -24,6 +24,7 @@ Simulator::Simulator (const unsigned end_time, const Variables variables):	curre
 
 void Simulator::Init (bool is_step, Log::LogPriority level) {
 	is_step_ = is_step;
+	process_ = new Process;
 	Log::GetLog()->SetPriority(static_cast<Log::LogPriority>(level));
 	PrepareRestaurant();
 }
@@ -62,7 +63,7 @@ void Simulator::Run() {
 	(new CustomerGroup(chinese_restaurant_))->Activate(current_time_);
 	// Run the simulation by popping the first event.
 	while (current_time_ <= end_time_) {
-		const auto event = process_->RemoveEvent();
+		const auto event = process_->PopEvent();
 		current_time_ = event->event_time_;
 		Log::GetLog()->Print("-----------------------------------------------------------------------\n", Log::P3);
 		Log::GetLog()->Print("TIME: " +std::to_string(current_time_) + "\n", Log::P3);

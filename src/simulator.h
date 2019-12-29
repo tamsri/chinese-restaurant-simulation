@@ -5,6 +5,7 @@
 #include "chinese_restaurant.h"
 #include "process.h"
 struct Variables;
+class Log;
 
 class Simulator {
 public:
@@ -19,7 +20,5 @@ private:
 	
 	ChineseRestaurant * chinese_restaurant_;
 	Process * process_;
-	Log * log_;
-
 };
 #endif

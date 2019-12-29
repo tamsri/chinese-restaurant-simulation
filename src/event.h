@@ -5,10 +5,11 @@
 class Process;
 
 struct Event {
+	Event(Process * process, const unsigned int time):event_time(time), process(process){};
+
 	unsigned int event_time;
 	Process * process;
 
-	explicit Event(Process * process):event_time(0), process(process){};
 };
 struct EventComparator
 {

@@ -7,14 +7,10 @@
 class Process {
 public:
 	Process();
-	~Process();
 
 	virtual void Execute(unsigned int current_time);
-	
-	void Activate(unsigned int event_time);
-	unsigned int Time();
-
-	Event * PopEvent();
+	virtual void Activate(unsigned int event_time);
+	Event PopEvent();
 protected:
 	static std::multiset<Event*, EventComparator> timeline_;
 };

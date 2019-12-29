@@ -6,8 +6,10 @@
 #include "customer_group.h"
 #include "variables.h"
 #include "table.h"
+
+
 Manager::Manager(ChineseRestaurant * chinese_restaurant) :chinese_restaurant_(chinese_restaurant) {
-	Log::GetLog()->Print("Manager is created", Log::P4);
+	Log::GetLog()->Print("Manager is created");
 }
 
 void Manager::Manages (CustomerGroup * this_customer, unsigned int current_time) {
@@ -21,7 +23,8 @@ void Manager::Manages (CustomerGroup * this_customer, unsigned int current_time)
 	for(auto customer_group: chinese_restaurant_->restaurant_queue) {
 		for(auto table : free_table) {
 			if (table->GetSeatNumber() >= customer_group->PersonsInGroup()) {
-				customer_group->table_ = table;
+				customer_group->AssignTable(table);
+				customer_group->AssignState(CustomerGroup::kRestaurantServiceState);
 				customer_group->Activate(current_time + chinese_restaurant_->variables->time_queue_to_table);
 			}
 		}
