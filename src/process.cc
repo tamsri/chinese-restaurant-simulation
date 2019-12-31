@@ -2,22 +2,21 @@
 
 #include "event.h"
 #include "log.h"
+#include "future_event_list.h"
 
 Process::Process ( ) {
-	
+	future_event_list_ = new FutureEventList();
+	Log::GetLog()->Print("Process is constructed");
+}
+Process::~Process ( ) {
+	Log::GetLog()->Print("Process is constructed");
 }
 
-void Process::Execute (unsigned int current_time) {
-	Log::GetLog()->Print("Execute needs to be implemented in the derived class", Log::P4, Log::ERROR);
+void Process::InsertEvent (Event * event) const {
+	future_event_list_->insert(event);
 }
 
-void Process::Activate (unsigned int event_time) {
-	Log::GetLog()->Print("Activate needs to be implemented in the derived class", Log::P4, Log::ERROR);
-}
-
-Event Process::PopEvent()
-{
-	Event event;
+Event * Process::PopEvent() const {
+	Event * event = future_event_list_->pop();
 	return event;
 }
-

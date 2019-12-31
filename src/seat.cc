@@ -22,12 +22,12 @@ Customer * Seat::WhoSit() const {
 
 void Seat::OnSit(Customer * customer) {
 	occupied_customer_ = customer;
-	log_->Print("Customer #" + std::to_string(customer->GetPersonID()) + " occupied the seat #" + std::to_string(GetSeatID()) + ".", Log::P4);
+	log_->Print("Customer #" + std::to_string(customer->GetPersonId()) + " occupied the seat #" + std::to_string(GetSeatID()) + ".", Log::P4);
 }
 
 void Seat::OnLeave() {
 	occupied_customer_ = nullptr;
-	log_->Print("Customer #" + std::to_string(occupied_customer_->GetPersonID()) + " left the seat #" + std::to_string(GetSeatID()) + ".", Log::P4);
+	log_->Print("Customer #" + std::to_string(occupied_customer_->GetPersonId()) + " left the seat #" + std::to_string(GetSeatID()) + ".", Log::P4);
 }
 bool Seat::IsEmpty() const {
 	return occupied_customer_ == nullptr;

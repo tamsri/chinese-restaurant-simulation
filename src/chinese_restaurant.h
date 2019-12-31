@@ -18,10 +18,10 @@ struct ChineseRestaurant {
 	Variables * variables;
 
 	Manager * manager;
-	std::vector<Waiter * > waiters;
+	std::queue<Waiter * > free_waiters;
+	std::queue<Cashier * > free_cashiers;
 	std::vector<Table * > restaurant_tables;
 	std::vector<Seat * > buffet_seats;
-	std::vector<Cashier * > cashiers;
 
 	std::queue<Waiter* > free_waiter_queue;
 	std::deque<CustomerGroup * > restaurant_queue;

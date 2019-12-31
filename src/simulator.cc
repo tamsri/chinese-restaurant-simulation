@@ -12,19 +12,26 @@
 #include "table.h"
 #include "seat.h"
 
+#include "process.h"
+
 Simulator::Simulator (const unsigned end_time, const Variables variables):	current_time_(0),
 																			end_time_(end_time),
-																			is_step_(false),
-																			process_(nullptr),
-																			log_(nullptr) {
+																			is_step_(false)
+																	{
+	// Initialize variables in simulator
 	chinese_restaurant_                   = new ChineseRestaurant();
 	chinese_restaurant_->variables        = new Variables(variables);
 	chinese_restaurant_->random_generator = new Generator();
+	// Initialize components in process
+	process_ = new Process();
+}
+
+Simulator::~Simulator ( ) {
+	delete chinese_restaurant_;
 }
 
 void Simulator::Init (bool is_step, Log::LogPriority level) {
 	is_step_ = is_step;
-	process_ = new Process;
 	Log::GetLog()->SetPriority(static_cast<Log::LogPriority>(level));
 	PrepareRestaurant();
 }
@@ -54,20 +61,20 @@ void Simulator::PrepareRestaurant() const {
 	// Prepare cashier.
 	for (unsigned int i = 0; i < var->number_cashiers; ++i) {
 		auto cashier = new Cashier();
-		chinese_restaurant_->cashiers.push_back(cashier);
+		chinese_restaurant_->free_cashiers.push_back(cashier);
 	}
 }
 
 void Simulator::Run() {
 	// Creating the first customer group.
-	(new CustomerGroup(chinese_restaurant_))->Activate(current_time_);
+	(new CustomerGroup(chinese_restaurant_, process_))->Activate(current_time_);
 	// Run the simulation by popping the first event.
 	while (current_time_ <= end_time_) {
-		const auto event = process_->PopEvent();
-		current_time_ = event->event_time_;
+		Event * event = process_->PopEvent();
+		current_time_ = event->event_time;
 		Log::GetLog()->Print("-----------------------------------------------------------------------\n", Log::P3);
 		Log::GetLog()->Print("TIME: " +std::to_string(current_time_) + "\n", Log::P3);
-		CustomerGroup * customer_group = event->customer_group_;
+		CustomerGroup * customer_group = event->customer_group;
 		customer_group->Execute(current_time_);
 		delete event;
 		if (customer_group->IsTerminated()) delete customer_group;

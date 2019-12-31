@@ -60,6 +60,9 @@
     <ClCompile Include="src\event.cc">
       <Filter>src\simulator</Filter>
     </ClCompile>
+    <ClCompile Include="src\future_event_list.cc">
+      <Filter>src\simulator</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\simulator.h">
@@ -103,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="src\variables.h">
       <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="src\future_event_list.h">
+      <Filter>src\simulator</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

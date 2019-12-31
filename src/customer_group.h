@@ -11,78 +11,94 @@ class Table;
 class Waiter;
 class Seat;
 class Cashier;
-class CustomerGroup : public Process {
 
+class CustomerGroup {
 public:
-	CustomerGroup(ChineseRestaurant * chinese_restaurant);
+	CustomerGroup(ChineseRestaurant * chinese_restaurant, Process * process);
 	~CustomerGroup();
-
 	enum State {
-		kArriveState,
-		
-		kBuffetQueueState,
-		kBuffetServiceState,
-
-		kRestaurantQueueState,
-		kRestaurantWaiterState,
-		kRestaurantServiceState,
-		
-		kCheckoutQueueState,
-		kCheckoutServiceState,
-		kCompletedState
+			// states for 
+		kArriveState,							// state when the customer group arrives to the restaurant
+			// states for buffet customer group
+		kBuffetQueueState,						// state when the customer group arrives the the buffet queue
+		kBuffetServiceState,					// state when the customer group start the service after arriving to the seats
+			// states for restaurant customer group
+		kRestaurantQueueState,					// state when the customer group arrives to the restaurant queue 
+		kRestaurantWaiterState,					// state when the customer group arrives to the table and wait for the waiter
+		kRestaurantServiceState,				// state when the customer group start the service after a waiter arrives
+			// states for checkout
+		kCheckoutQueueState,					// state when the customer group finish the service and arrive to checkout queue
+		kCheckoutServiceState,					// state when the customer group start the checkout service
+		kCompletedState							// state when the customer group finish leave the restaurant
 	};
 	
-	bool IsTerminated ( ) const;
-	unsigned int GetCustomerGroupID() const;
+	bool IsTerminated ( ) const;					// get a signal if the customer group is to be terminated
+	unsigned int GetCustomerGroupID() const;		// get the id of the customer group
 
-	void Execute(unsigned int current_time) override;
+	void Execute(unsigned int current_time);
 	/*----------- variables in a customer group ----------------*/
-	unsigned int PersonsInGroup() const;
-	bool IsBuffetCustomer() const;
-
-	// To be accessibly by managers
-	void AssignTable(Table * table);
-	void AssignState(const State state);
-	void Activate(unsigned event_time) override;
+	unsigned int PersonsInGroup() const;			// get the number of persons in the customer group
+	bool IsBuffetCustomer() const;					// get the type of the customer group (buffet or restaurant)
+	Customer * GetCustomerMember(unsigned int position); // get the customer member according to position
+	
+		// To be accessibly by managers
+	void AssignTable(Table * table);				// assign the table to the customer group for manager
+	void AssignState(const State state);			// assign the state to the customer group for manager
+	void Activate(unsigned int current_time);	// activate the customer group for manager
 
 private:
 	/*----------- variables in a customer group ----------------*/
-	ChineseRestaurant * chinese_restaurant_;
-	static unsigned int customer_group_global_id_;
-	unsigned int customer_group_id_;
-	unsigned int service_time_;
+	
+	ChineseRestaurant * chinese_restaurant_;		// the pointer attribute to the chinese restaurant
+	static unsigned int customer_group_global_id_;  // the global id for counting customer group
+	unsigned int customer_group_id_;				// the id of the customer group
+	unsigned int service_time_;						// the initially generated service time of the customer group
 
-	bool is_buffet_customer_;
+	bool is_buffet_customer_;						// indicator type of the customer group
+	
 	/*----------- variables for a restaurant customer group ----------------*/
-	std::vector<Customer *> customer_members_;
-	Cashier * cashier_{};
+	
+	std::vector<Customer *> customer_members_;		// customer members in the customer group
+	Cashier * cashier_ = nullptr;					// the cashier that the customer group occupy
+	
 	/*----------- variables for a restaurant customer group ----------------*/
-	Waiter * served_by_;
-	Table * table_;
+	
+	Waiter * served_by_ = nullptr;		// the waiter that served the customer group
+	Table * table_ = nullptr;			// the table that customer group occupy
+	
 	/*----------- variables for a buffet customer group ----------------*/
-	std::vector<Seat *> buffet_seats_;
+	
+	std::vector<Seat *> buffet_seats_; // the vector of buffet seats that customer members occupy
 
 	/*----------- variables for the process ----------------*/
-	State state_;
-	bool terminated_;
-	/*------------------- Verbs of Class  ------------------------------*/
-	// verbs for restaurant customer groups
-	void SitOnTable();
-	void LeaveTable();
-	// verbs for buffet customer groups
-	void SitOnBuffetSeats();
-	void LeaveBuffetSeats();
-	/*----------- methods for executing the process ----------------*/
-	void CustomerGroupWaitsInRestaurantQueue (const unsigned int current_time);
-	bool CustomerGroupWaitsInBuffetQueue(const  unsigned int current_time);
-	bool CustomerGroupInCheckoutQueue(const unsigned int current_time);
+	Process * process_;								// the reference of the process
+	State state_ = kArriveState;					// the state of the customer group
+	bool terminated_ = false;						// the indicator for terminating customer
 	
-	void CustomerGroupArrives ( const unsigned int current_time);
-	void CreateNextCustomerGroup(const unsigned int current_time) const;
-	bool CustomerGroupArrivesToTable(const unsigned int current_time);
-	bool CustomerGroupInRestaurantService(const unsigned int current_time);
-	bool CustomerGroupInBuffetService(const unsigned int current_time);
-	bool CustomerGroupInCashier(const unsigned int current_time);
+	/*------------------- Verbs of Class  ------------------------------*/
+	
+		// verbs for restaurant customer groups
+	void SitOnTable();			// the action for customer group sitting on the table
+	void LeaveTable();			// the action for customer group leaving the table
+		// verbs for buffet customer groups
+	void SitOnBuffetSeats();	// the action for customer group sitting on buffet seats
+	void LeaveBuffetSeats();	// the action for customer group leaving the buffet seats
+	
+	/*----------- methods for executing the process ----------------*/
+
+		// executes for customer group on queues
+	void CustomerGroupWaitsInRestaurantQueue (const unsigned int current_time); // execute customer group waiting in restaurant queue
+	bool CustomerGroupWaitsInBuffetQueue(const  unsigned int current_time); // execute customer group waiting in buffet queue
+	bool CustomerGroupInCheckoutQueue(const unsigned int current_time); // execute customer group waiting in checkout queue
+	
+	void CustomerGroupArrives ( const unsigned int current_time); // execute arriving customer group to enter their type service
+	void CreateNextCustomerGroup(const unsigned int current_time) const; // execute generating the next customer group
+	
+	bool CustomerGroupArrivesToTable(const unsigned int current_time); // execute customer group arriving to table by manager and waiting for the waiter
+	bool CustomerGroupInRestaurantService(const unsigned int current_time); // execute customer group starting restaurant service after the waiter arrives to the table
+	bool CustomerGroupInBuffetService(const unsigned int current_time); // execute customer group starting buffer service after arrive to the seats
+	bool CustomerGroupInCashier(const unsigned int current_time); // execute customer group 
+	bool CustomerGroupComplete (const unsigned int current_time); // the customer group complete
 
 
 };

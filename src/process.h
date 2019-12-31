@@ -1,18 +1,17 @@
-#ifndef SIMULATOR_PROCESS_H_
-#define SIMULATOR_PROCESS_H_
+#ifndef SIMULATOR_PROCESS_H
+#define SIMULATOR_PROCESS_H
 
-#include <set>
-#include "event.h"
+class FutureEventList;
+struct Event;
 
 class Process {
 public:
 	Process();
-
-	virtual void Execute(unsigned int current_time);
-	virtual void Activate(unsigned int event_time);
-	Event PopEvent();
-protected:
-	static std::multiset<Event*, EventComparator> timeline_;
+	~Process();
+	void InsertEvent(Event * event) const;
+	Event * PopEvent() const;
+private:
+	FutureEventList * future_event_list_;
 };
 
 #endif

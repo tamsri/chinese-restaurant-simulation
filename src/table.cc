@@ -31,7 +31,7 @@ Table::~Table() {
 void Table::OnSit(CustomerGroup * arrival_customer_group) {
 	occupied_customer_group_ = arrival_customer_group;
 	for (unsigned int i = 0; i < GetSeatNumber(); ++i) {
-		seats_[i]->OnSit(occupied_customer_group_->customer_members_[i]);
+		seats_[i]->OnSit(occupied_customer_group_->GetCustomerMember(i));
 	}
 	log_->Print("Customer Group #" + std::to_string(occupied_customer_group_->GetCustomerGroupID()) + "occupied the Restaurant Table #" + std::to_string(GetTableID()) + ".", Log::P3);
 }

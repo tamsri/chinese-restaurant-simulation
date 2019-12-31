@@ -12,7 +12,11 @@ Manager::Manager(ChineseRestaurant * chinese_restaurant) :chinese_restaurant_(ch
 	Log::GetLog()->Print("Manager is created");
 }
 
-void Manager::Manages (CustomerGroup * this_customer, unsigned int current_time) {
+Manager::~Manager ( ) {
+	Log::GetLog()->Print("Manager is deleted");
+}
+
+void Manager::Manages (CustomerGroup * this_customer, unsigned int current_time) const {
 	std::vector<Table *> free_table;
 	// The manager look up for free table
 	for (auto table : chinese_restaurant_->restaurant_tables)
@@ -26,6 +30,8 @@ void Manager::Manages (CustomerGroup * this_customer, unsigned int current_time)
 				customer_group->AssignTable(table);
 				customer_group->AssignState(CustomerGroup::kRestaurantServiceState);
 				customer_group->Activate(current_time + chinese_restaurant_->variables->time_queue_to_table);
+				Log::GetLog()->Print("Manager assigned table #" + std::to_string(table->GetTableID()) + " to customer group #" + std::to_string(customer_group->GetCustomerGroupID()));
+				return;
 			}
 		}
 	}
