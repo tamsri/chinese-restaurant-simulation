@@ -1,6 +1,5 @@
 #ifndef SIMULATOR_FUTURE_EVENT_LIST_H
 #define SIMULATOR_FUTURE_EVENT_LIST_H
-#include <queue>
 struct Event;
 
 class FutureEventList {

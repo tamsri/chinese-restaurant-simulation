@@ -9,7 +9,9 @@ Process::Process ( ) {
 	Log::GetLog()->Print("Process is constructed");
 }
 Process::~Process ( ) {
+	delete future_event_list_;
 	Log::GetLog()->Print("Process is constructed");
+
 }
 
 void Process::InsertEvent (Event * event) const {

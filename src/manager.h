@@ -9,7 +9,7 @@ struct ChineseRestaurant;
 class Manager {
 public:
 	Manager(ChineseRestaurant * chinese_restaurant);
-	void Manages (CustomerGroup * this_customer, unsigned int current_time) const;
+	void Manages (unsigned int current_time) const;
 	~Manager();
 	// if manages return true means the manager finally manages the queue;
 private:

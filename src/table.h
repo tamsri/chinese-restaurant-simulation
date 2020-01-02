@@ -23,6 +23,5 @@ private:
 	const unsigned int table_id_;
 	static unsigned int table_global_;
 	std::vector<Seat * > seats_;
-	Log * log_;
 };
 #endif // MODEL_TABLE_H

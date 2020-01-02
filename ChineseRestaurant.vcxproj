@@ -48,6 +48,7 @@
     <ClInclude Include="src\seat.h" />
     <ClInclude Include="src\simulator.h" />
     <ClInclude Include="src\table.h" />
+    <ClInclude Include="src\timer.h" />
     <ClInclude Include="src\variables.h" />
     <ClInclude Include="src\waiter.h" />
   </ItemGroup>

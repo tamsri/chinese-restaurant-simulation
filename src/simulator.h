@@ -15,6 +15,7 @@ public:
 	void Init(bool is_step, Log::LogPriority level);
 	void PrepareRestaurant ( ) const;
 	void Run();
+	void Status ( ) const;
 private:
 	unsigned int current_time_;
 	const unsigned int end_time_;

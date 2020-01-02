@@ -27,6 +27,7 @@ public:
 		kRestaurantWaiterState,					// state when the customer group arrives to the table and wait for the waiter
 		kRestaurantServiceState,				// state when the customer group start the service after a waiter arrives
 			// states for checkout
+		kLeaveServiceState,
 		kCheckoutQueueState,					// state when the customer group finish the service and arrive to checkout queue
 		kCheckoutServiceState,					// state when the customer group start the checkout service
 		kCompletedState							// state when the customer group finish leave the restaurant
@@ -59,12 +60,12 @@ private:
 	/*----------- variables for a restaurant customer group ----------------*/
 	
 	std::vector<Customer *> customer_members_;		// customer members in the customer group
-	Cashier * cashier_ = nullptr;					// the cashier that the customer group occupy
+	Cashier * cashier_;								// the cashier that the customer group occupy
 	
 	/*----------- variables for a restaurant customer group ----------------*/
 	
-	Waiter * served_by_ = nullptr;		// the waiter that served the customer group
-	Table * table_ = nullptr;			// the table that customer group occupy
+	Waiter * served_by_;							// the waiter that served the customer group
+	Table * table_;									// the table that customer group occupy
 	
 	/*----------- variables for a buffet customer group ----------------*/
 	
@@ -72,22 +73,30 @@ private:
 
 	/*----------- variables for the process ----------------*/
 	Process * process_;								// the reference of the process
-	State state_ = kArriveState;					// the state of the customer group
-	bool terminated_ = false;						// the indicator for terminating customer
-	
+	State state_;									// the state of the customer group
+	bool terminated_;								// the indicator for terminating customer
+	Log * log_;
 	/*------------------- Verbs of Class  ------------------------------*/
 	
-		// verbs for restaurant customer groups
-	void SitOnTable();			// the action for customer group sitting on the table
-	void LeaveTable();			// the action for customer group leaving the table
-		// verbs for buffet customer groups
+	
+	// verbs for restaurant customer groups
+	void SitOnTable();					// the action for customer group sitting on the table
+	void AssignWaiter ();// the action for customer group assign the given waiter
+	void ActivateWaiter ( ) const;		// the action for customer group to activate the waiter service
+	void LeaveTable();					// the action for customer group leaving the table
+	void LeaveWaiter();					// the action for customer group leaving the waiter
+	// verbs for buffet customer groups
+	void AssignBuffetSeats();
 	void SitOnBuffetSeats();	// the action for customer group sitting on buffet seats
 	void LeaveBuffetSeats();	// the action for customer group leaving the buffet seats
-	
+	// verbs for cashiers
+	void AssignCashier ();
+	void ActivateCashier();
+	void LeaveCashier();
 	/*----------- methods for executing the process ----------------*/
 
 		// executes for customer group on queues
-	void CustomerGroupWaitsInRestaurantQueue (const unsigned int current_time); // execute customer group waiting in restaurant queue
+	bool CustomerGroupWaitsInRestaurantQueue (const unsigned int current_time) const; // execute customer group waiting in restaurant queue
 	bool CustomerGroupWaitsInBuffetQueue(const  unsigned int current_time); // execute customer group waiting in buffet queue
 	bool CustomerGroupInCheckoutQueue(const unsigned int current_time); // execute customer group waiting in checkout queue
 	
@@ -97,6 +106,7 @@ private:
 	bool CustomerGroupArrivesToTable(const unsigned int current_time); // execute customer group arriving to table by manager and waiting for the waiter
 	bool CustomerGroupInRestaurantService(const unsigned int current_time); // execute customer group starting restaurant service after the waiter arrives to the table
 	bool CustomerGroupInBuffetService(const unsigned int current_time); // execute customer group starting buffer service after arrive to the seats
+	bool CustomerGroupLeavesService(const unsigned int current_time);
 	bool CustomerGroupInCashier(const unsigned int current_time); // execute customer group 
 	bool CustomerGroupComplete (const unsigned int current_time); // the customer group complete
 

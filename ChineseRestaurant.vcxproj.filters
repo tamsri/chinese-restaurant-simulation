@@ -110,5 +110,8 @@
     <ClInclude Include="src\future_event_list.h">
       <Filter>src\simulator</Filter>
     </ClInclude>
+    <ClInclude Include="src\timer.h">
+      <Filter>src\utility</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

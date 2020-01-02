@@ -17,25 +17,40 @@ FutureEventList::~FutureEventList ( ) {
 	Log::GetLog()->Print("Future Event List is deleted");
 }
 
-void FutureEventList::insert (Event * event) {
-	// If future event list doesn't exist any event
-	if (first_event_ == nullptr) {
-		first_event_ = event;
-		return;
+void FutureEventList::insert (Event * input_event) {
+	// if the event list is empty
+	if(first_event_ == nullptr) first_event_ = input_event;
+	// if the event list is not empty
+	else if (input_event->event_time < first_event_->event_time) {
+		input_event->next_event = first_event_;
+		first_event_ = input_event;
 	}
-	// Start counting event from first event
-	Event * current_event = first_event_;
-	while(current_event->next_event != nullptr) {
-		if (event->event_time >= current_event->event_time && event->event_time <= current_event->next_event->event_time) break;
-		Log::GetLog()->Print("... error ...");
-		current_event = current_event->next_event;
+	else if (input_event->event_time == first_event_->event_time) {
+		input_event->next_event = first_event_->next_event;
+		first_event_->next_event = input_event;
 	}
-	if(current_event->next_event!=nullptr) event->next_event = current_event->next_event;
-	current_event->next_event = event;
-	
+	else {
+		Event * current_event = first_event_;
+		while(current_event->next_event != nullptr) {
+			if (input_event->event_time <= current_event->next_event->event_time || input_event->event_time <= current_event->event_time) break;
+			current_event = current_event->next_event;
+		}
+		if(current_event->next_event != nullptr) input_event->next_event = current_event->next_event;
+		current_event->next_event = input_event;
+	}
+
+	// Event Lists checker
+	printf("event lists: ");
+	Event * check_event = first_event_;
+	while (check_event != nullptr) {
+		printf("%d ", check_event->event_time);
+		check_event = check_event->next_event;
+	}
+	printf("\n");
 }
 
 Event * FutureEventList::pop ( ) {
+	if (first_event_ == nullptr) assert("No future event to pop");
 	Event * pop_event = first_event_;
 	first_event_ = pop_event->next_event;
 	return pop_event;

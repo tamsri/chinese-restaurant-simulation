@@ -21,7 +21,7 @@ int main() {
 	printf("                   The Chinese Restaurant\n\n");
 	printf("                                                      By Supawat Tamsri\n");
 	printf("-----------------------------------------------------------------------\n");
-	Simulator * simulator = new Simulator(200, variables);
+	Simulator * simulator = new Simulator(5000, variables);
 	int mode, priority;
 	do {
 		printf("Select the simulation mode ( 1 - Step by Step, 0 - Non-stop ): ");
