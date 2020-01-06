@@ -10,15 +10,16 @@ class Waiter;
 class Cashier;
 class Table;
 class Seat;
-class Generator;
+
+struct RandomGenerators;
 struct Variables;
 
 struct ChineseRestaurant {
 
-	Generator * random_generator{};						// pointer to the random generator
-	Variables * variables{};							// pointer to variables of the restaurant
+	RandomGenerators * random_generators;				// pointer to the random generator
+	Variables * variables;								// pointer to variables of the restaurant
 
-	Manager * manager{};								// pointer to the manager
+	Manager * manager;									// pointer to the manager
 	
 	std::vector<Table *> free_restaurant_tables;		// free tables in restaurant
 	std::vector<Seat * > free_buffet_seats;				// free buffet seats in restaurant

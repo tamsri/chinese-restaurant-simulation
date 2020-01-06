@@ -7,10 +7,11 @@
 
 struct Variables;
 class Log;
+class Timer;
 
 class Simulator final {
 public:
-	Simulator(unsigned int end_time, Variables variables );
+	Simulator(unsigned int end_time, const Variables & variables, int kernel_set_index);
 	void Init(bool is_step, Log::LogPriority level);
 	void Run();
 private:
@@ -23,5 +24,7 @@ private:
 	void Status ( ) const;
 	Process * process_;
 	ChineseRestaurant * chinese_restaurant_;
+
+	Timer * timer_;
 };
 #endif

@@ -69,11 +69,14 @@
     <ClCompile Include="src\kernels.cpp">
       <Filter>src\utilities\random generator</Filter>
     </ClCompile>
-    <ClCompile Include="src\random_generator.cc">
-      <Filter>src\utilities\random generator</Filter>
-    </ClCompile>
     <ClCompile Include="src\generators.cc">
       <Filter>src\utilities\random generator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\random_generators.cc">
+      <Filter>src\utilities\random generator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timer.cc">
+      <Filter>src\utilities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,10 +128,10 @@
     <ClInclude Include="src\kernels.h">
       <Filter>src\utilities\random generator</Filter>
     </ClInclude>
-    <ClInclude Include="src\random_generator.h">
+    <ClInclude Include="src\generators.h">
       <Filter>src\utilities\random generator</Filter>
     </ClInclude>
-    <ClInclude Include="src\generators.h">
+    <ClInclude Include="src\random_generators.h">
       <Filter>src\utilities\random generator</Filter>
     </ClInclude>
   </ItemGroup>

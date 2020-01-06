@@ -3,7 +3,6 @@
 #include "event.h"
 
 #include "variables.h"
-#include "generators.h"
 
 #include "customer_group.h"
 #include "manager.h"
@@ -14,14 +13,37 @@
 
 #include "process.h"
 
-Simulator::Simulator (const unsigned int end_time, const Variables variables):	current_time_(0),
+#include "random_generators.h"
+#include "kernels.h"
+#include "timer.h"
+
+Simulator::Simulator (const unsigned int end_time, const Variables & variables, const int kernel_set_index):
+																			current_time_(0),
 																			end_time_(end_time),
 																			is_step_(false)
 																	{
+	// Initialize Timer
+	timer_ = new Timer(28800);
 	// Initialize variables in simulator
 	chinese_restaurant_                   = new ChineseRestaurant();
 	chinese_restaurant_->variables        = new Variables(variables);
-	chinese_restaurant_->random_generator = new Generator();
+	chinese_restaurant_->random_generators = new RandomGenerators();
+	// Initialize random generators
+	auto * kernels = new Kernels();
+	std::string generated_file_path = "./kernels/generated.txt";
+	//kernels->GenerateKernels(generated_file_path);
+	kernels->ReadKernels(generated_file_path);
+	const RandomInitializerForm random_init_form = {
+		static_cast<int>(variables.average_arrival_interval),
+		static_cast<int>(variables.variance_arrival_interval),
+		static_cast<int>(variables.average_waiter_service_time),
+		static_cast<int>(variables.average_buffet_time),
+		static_cast<int>(variables.variance_buffet_time),
+		static_cast<int>(variables.average_cashier_service_time),
+							variables.probability_of_persons_in_group,
+							static_cast<double>(variables.probability_buffet_customer_group)
+		};
+	chinese_restaurant_->random_generators->Initialize(kernels, kernel_set_index, random_init_form);
 	// Initialize components in process
 	process_ = new Process();
 }
@@ -73,7 +95,7 @@ void Simulator::Run() {
 		Event * event = process_->PopEvent();
 		current_time_ = event->event_time;
 		printf("-----------------------------------------------------------------------\n");
-		printf("TIME: %d\n", current_time_);
+		printf("TIME: %s\n", timer_->SecondsToTime(current_time_).c_str());
 		CustomerGroup * customer_group = event->customer_group;
 		customer_group->Execute(current_time_);
 		delete event;

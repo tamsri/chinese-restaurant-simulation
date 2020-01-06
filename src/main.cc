@@ -9,7 +9,7 @@ int main ( ) {
 			{8, 14, 4},
 			{0.11f, 0.33f, 0.33f, 0.23f},
 			1500,
-			100,
+			100*100,
 			40,
 			4000,
 			220,
@@ -17,14 +17,14 @@ int main ( ) {
 			20,
 			0.6f,
 			1900,
-			200
+			200*200
 		};
-
+	const int kernel_set = 5;
 	printf("-----------------------------------------------------------------------\n");
 	printf("                   The Chinese Restaurant\n\n");
 	printf("                                                      By Supawat Tamsri\n");
 	printf("-----------------------------------------------------------------------\n");
-	Simulator * simulator = new Simulator(5000, variables);
+	auto simulator = new Simulator(21600, variables, kernel_set);
 	int mode, priority;
 	do {
 		printf("Select the simulation mode ( 1 - Step by Step, 0 - Non-stop ): ");

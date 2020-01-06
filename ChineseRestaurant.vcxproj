@@ -30,10 +30,11 @@
     <ClCompile Include="src\main.cc" />
     <ClCompile Include="src\manager.cc" />
     <ClCompile Include="src\process.cc" />
-    <ClCompile Include="src\random_generator.cc" />
+    <ClCompile Include="src\random_generators.cc" />
     <ClCompile Include="src\seat.cc" />
     <ClCompile Include="src\simulator.cc" />
     <ClCompile Include="src\table.cc" />
+    <ClCompile Include="src\timer.cc" />
     <ClCompile Include="src\waiter.cc" />
   </ItemGroup>
   <ItemGroup>
@@ -48,7 +49,7 @@
     <ClInclude Include="src\log.h" />
     <ClInclude Include="src\manager.h" />
     <ClInclude Include="src\process.h" />
-    <ClInclude Include="src\random_generator.h" />
+    <ClInclude Include="src\random_generators.h" />
     <ClInclude Include="src\seat.h" />
     <ClInclude Include="src\simulator.h" />
     <ClInclude Include="src\table.h" />
@@ -102,7 +103,6 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="boost_x64_debug.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />

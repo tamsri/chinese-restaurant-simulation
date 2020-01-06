@@ -1,9 +1,13 @@
 #ifndef UTILS_RANDOM_GENERATOR_H
 #define UTILS_RANDOM_GENERATOR_H
+#include <vector>
 
 class NormalGenerator;
 class UniformGenerator;
 class ExponentialGenerator;
+class ProbabilityGenerator;
+class BoolProbabilityGenerator;
+
 class Kernels;
 
 struct RandomInitializerForm {
@@ -21,15 +25,21 @@ struct RandomInitializerForm {
 
 	// Parameters for Cashier Service Time Generator (Exponential Generator)
 	int average_cashier_service_time;
+	// Parameters for Persons in Group Generator (Probability by Uniform Generator)
+	std::vector<double> persons_in_group_probability; // persons in group probability
+	// Parameters for Persons in Group Generator (Probability by Uniform Generator)
+	double buffet_probability;					// buffet probability
 };
 
-struct RandomGenerator final{
-	RandomGenerator();
-	void Initialize( Kernels * kernels,	int set_index, RandomInitializerForm initializer_form);
+struct RandomGenerators{
+	RandomGenerators();
+	void Initialize( Kernels * kernels,	int set_index, const RandomInitializerForm & initializer_form);
 
 	NormalGenerator *		interval_arrival_generator;		 // Time Interval Arrival Generator
 	ExponentialGenerator *	waiter_service_generator;	 // Time Waiter Service Generator
 	NormalGenerator *		buffet_service_generator;		 // Time Buffet Service Generator
 	ExponentialGenerator *	cashier_service_generator;   // Time Cashier Service Generator
+	ProbabilityGenerator *		persons_generator;
+	BoolProbabilityGenerator *  buffet_generator;
 };
 #endif

@@ -5,6 +5,7 @@
 #include "chinese_restaurant.h"
 #include "variables.h"
 #include "generators.h"
+#include "random_generators.h"
 
 #include "waiter.h"
 #include "cashier.h"
@@ -17,6 +18,7 @@
 #include "seat.h"
 
 #include "event.h"
+#include "timer.h"
 
 /*------------------- Static Initialization ------------------------------*/
 
@@ -35,31 +37,36 @@ CustomerGroup::CustomerGroup(ChineseRestaurant * chinese_restaurant, Process * p
 																		log_(Log::GetLog()){
 	// generate the customer group
 	auto * variables = chinese_restaurant_->variables;
+	
 	// Generate the amount of persons
-	const auto persons_in_group = Generator::GenerateByProbability(variables->probability_of_persons_in_group);
+	const auto persons_in_group = chinese_restaurant_->random_generators->persons_generator->Rand();
+	
 	// Generate the service time of the group
-	is_buffet_customer_ = Generator::GenerateBoolByProbability(variables->probability_buffet_customer_group);
+	is_buffet_customer_ = chinese_restaurant_->random_generators->buffet_generator->Rand();
+	
 	if (is_buffet_customer_) {
-		service_time_ = Generator::GenerateNormalDistribution(variables->average_buffet_time, variables->variance_buffet_time);
+		service_time_ = chinese_restaurant_->random_generators->buffet_service_generator->Rand();
 	}
 	else {
-		service_time_ = Generator::GenerateExponentialDistribution(variables->average_waiter_service_time);
+		service_time_ = chinese_restaurant_->random_generators->waiter_service_generator->Rand();
 	}
+	
 	// Generate the cashier time of the group
-	cashier_time_ = Generator::GenerateExponentialDistribution(variables->average_cashier_service_time);
+	cashier_time_ = chinese_restaurant_->random_generators->cashier_service_generator->Rand();
+	
 	// Generate persons in the group
 	for (unsigned int i = 0; i < persons_in_group; ++i) {
 		auto c = new Customer();
 		customer_members_.push_back(c);
 	}
-	log_->Print("Customer Group ("+ std::to_string(PersonsInGroup()) +")#" + std::to_string(GetCustomerGroupId()) + " is created");
+	std::string type = is_buffet_customer_ ? "buffet" : "restaurant";
+	log_->Print("Customer Group ("+ std::to_string(PersonsInGroup()) +" persons, " + type +")#" + std::to_string(GetCustomerGroupId()) + " is created. (service time: " + Timer::SecondsToMinutes(service_time_) + ", cashier time: " + Timer::SecondsToMinutes(cashier_time_) + ")");
 }
 
 CustomerGroup::~CustomerGroup() {
 	while (!customer_members_.empty()) {
 		const auto current_customer = customer_members_.back();
 		customer_members_.pop_back();
-		//log_->Print("Customer #"+ std::to_string(current_customer->GetPersonID())+ " in Group #" + std::to_string(customer_group_id_) + "deleted!\n");
 		delete current_customer;
 	}
 	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " is deleted");
@@ -108,7 +115,7 @@ void CustomerGroup::CallManager (const unsigned int current_time) const {
 
 void CustomerGroup::SitOnTable() {
 	table_->OnSit(this);
-	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + "sits on the table #");
+	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " sits on the table");
 }
 /*------------------- Actions for Tables (for customer) ------------------------------*/
 void CustomerGroup::LeaveTable() {
@@ -281,12 +288,12 @@ void CustomerGroup::CustomerGroupArrives (const unsigned int current_time) {
 void CustomerGroup::CreateNextCustomerGroup(const unsigned int current_time) const {
 	const auto var = chinese_restaurant_->variables;
 	// Generate the interval time
-	const auto interval_time = Generator::GenerateNormalDistribution(var->average_arrival_interval, var->variance_arrival_interval);
+	const auto interval_time = chinese_restaurant_->random_generators->interval_arrival_generator->Rand();
 	// Get next arrival to the restaurant
 	const auto next_arrival_customer_time = current_time + interval_time;
 	auto * next_customer_group = new CustomerGroup(chinese_restaurant_, process_);
 	(new CustomerGroup(chinese_restaurant_, process_))->Activate(next_arrival_customer_time);
-	log_->Print("Next customer Group  will enter the restaurant at " + std::to_string(next_arrival_customer_time), Log::P4, Log::EVENT);
+	//log_->Print("Next customer Group  will enter the restaurant at " + std::to_string(next_arrival_customer_time), Log::P4, Log::EVENT);
 }
 
 // Action when the customer group arrives to restaurant queue
@@ -299,7 +306,7 @@ bool CustomerGroup::CustomerGroupWaitsInRestaurantQueue (const unsigned int curr
 
 // Action when the customer group enter the buffet queue
 bool CustomerGroup::CustomerGroupWaitsInBuffetQueue (const unsigned int current_time) {
-	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " look for " + std::to_string(PersonsInGroup())  + "buffet seats", Log::P3, Log::EVENT);
+	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " look for " + std::to_string(PersonsInGroup())  + " buffet seats", Log::P3, Log::EVENT);
 	// Are Seats enough for the first group
 	if (PersonsInGroup() > chinese_restaurant_->free_buffet_seats.size()) return false;
 	AssignBuffetSeats();
@@ -330,7 +337,6 @@ bool CustomerGroup::CustomerGroupWaitsTheWaiter(const unsigned int current_time)
 	AssignWaiter();
 	// Assign the group to the service state
 	AssignState(kRestaurantServiceState);
-	log_->Print("Next customer Group  will enter the restaurant at", Log::P3, Log::EVENT);
 	return true;
 }
 // Action when the waiter arrives to the table and start the service

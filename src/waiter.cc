@@ -20,11 +20,11 @@ unsigned int Waiter::GetWaiterId() const {
 
 void Waiter::ProvideServiceTo(Table * table) {
 	service_to_ = table;
-	log_->Print("Waiter #" + std::to_string(GetWaiterId()) + "started service on Table #" + std::to_string(service_to_->GetTableId()), Log::P4);
+	log_->Print("Waiter #" + std::to_string(GetWaiterId()) + " started service on Table #" + std::to_string(service_to_->GetTableId()), Log::P4);
 }
 
 void Waiter::CompleteService() {
-	log_->Print("Waiter #" + std::to_string(GetWaiterId()) + "finished service on Table #" + std::to_string(service_to_->GetTableId()), Log::P4);
+	log_->Print("Waiter #" + std::to_string(GetWaiterId()) + " finished service on Table #" + std::to_string(service_to_->GetTableId()), Log::P4);
 	service_to_ = nullptr;
 }
 

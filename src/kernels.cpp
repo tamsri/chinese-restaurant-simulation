@@ -4,8 +4,8 @@
 #include "generators.h"
 #include <sstream>
 
-Kernels::Kernels(): number_of_sets_(0),
-					set_length_(0),
+Kernels::Kernels(): number_of_sets_(100),
+					set_length_(1000000),
                     kernels_loaded_(false) {
 	for(auto i = 0; i != COUNT; ++i) {
 		kernel_set_.insert(std::pair<GenerateTypes, std::vector<int>>(static_cast<GenerateTypes>(i), std::vector<int>()));
@@ -41,14 +41,15 @@ void Kernels::GenerateKernels (std::string & output_file_path) const {
 			output_file << "\n";
 		}
 		output_file.close();
+		printf("Successfully generated Kernels\n");
 	} else {
-		assert("Writing Kernels File Error!");
+		printf("Cannot write the file\n");
 	}
 	delete uniform_generator;
 }
 
 void Kernels::ReadKernels (std::string & input_file_path) {
-	printf(" Reading kernels from %s", input_file_path.c_str());
+	printf(" Reading kernels from %s\n", input_file_path.c_str());
 	std::ifstream file_input(input_file_path);
 	
 	if (file_input.is_open()) {
@@ -56,7 +57,7 @@ void Kernels::ReadKernels (std::string & input_file_path) {
 		auto line_index = 0;
 		while(getline(file_input, line) && line_index < COUNT ) {
 			std::vector<int> kernels;
-			// using stringstream allowing split and input number directly
+			// using istringstream allowing split and input number directly
 			std::istringstream line_stream(line);
 			int number;
 			while(line_stream >> number)

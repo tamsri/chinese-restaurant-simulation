@@ -14,6 +14,8 @@ public:
 		TBS1,		// Time Buffet Service 1
 		TBS2,		// Time Buffet Service 2
 		TCS,        // Time Cashier Service
+		TPG,		// Persons in Group
+		TPB,		// Buffet Customers
 		COUNT
 	};
 
