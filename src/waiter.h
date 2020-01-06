@@ -1,15 +1,14 @@
 #ifndef MODEL_WAITER_H
 #define MODEL_WAITER_H
 
-
 class Table;
 class Log;
 
-class Waiter {
+class Waiter final {
 public:
 	Waiter();
 	~Waiter();
-	unsigned int GetWaiterID() const;
+	unsigned int GetWaiterId() const;
 	void ProvideServiceTo(Table * table);
 	void CompleteService();
 	bool IsAvailable() const;

@@ -6,12 +6,10 @@ class CustomerGroup;
 class Log;
 class Seat;
 
-class Table {
+class Table final{
 public:
-	Table(const unsigned int seat_number);
-	~Table();
-
-	unsigned int GetTableID() const;
+	explicit Table(const unsigned int seat_number);
+	unsigned int GetTableId() const;
 	unsigned int GetSeatNumber() const;
 	bool IsFree ( ) const;
 
@@ -21,7 +19,7 @@ public:
 
 private:
 	const unsigned int table_id_;
-	static unsigned int table_global_;
-	std::vector<Seat * > seats_;
+	static unsigned int table_global_id_;
+	std::vector<Seat> seats_;
 };
 #endif // MODEL_TABLE_H

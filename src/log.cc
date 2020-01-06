@@ -26,6 +26,6 @@ Log * Log::GetLog ( ) {
 	return log_;
 }
 
-void Log::SetPriority (LogPriority priority) {
+void Log::SetPriority (const LogPriority priority) {
 	priority_ = priority;
 }

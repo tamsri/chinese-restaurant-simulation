@@ -13,11 +13,17 @@
     <Filter Include="src\models\objects">
       <UniqueIdentifier>{6e56afca-bcb7-43af-9690-6edb94aa4766}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\utility">
-      <UniqueIdentifier>{0bf0b6cd-a34c-4fba-a73c-139057c22af4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\simulator">
       <UniqueIdentifier>{8d6d8245-9a68-4df9-b725-a69bd76342d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utilities">
+      <UniqueIdentifier>{0bf0b6cd-a34c-4fba-a73c-139057c22af4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utilities\random generator">
+      <UniqueIdentifier>{d9d52a7d-d923-49d4-82a5-51ae22ea571e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utilities\statistic tools">
+      <UniqueIdentifier>{b93bc3b8-05de-4e03-bb49-7f3316b24f31}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -28,16 +34,13 @@
       <Filter>src\simulator</Filter>
     </ClCompile>
     <ClCompile Include="src\log.cc">
-      <Filter>src\utility</Filter>
+      <Filter>src\utilities</Filter>
     </ClCompile>
     <ClCompile Include="src\table.cc">
       <Filter>src\models\objects</Filter>
     </ClCompile>
     <ClCompile Include="src\waiter.cc">
       <Filter>src\models\persons</Filter>
-    </ClCompile>
-    <ClCompile Include="src\generator.cc">
-      <Filter>src\utility</Filter>
     </ClCompile>
     <ClCompile Include="src\manager.cc">
       <Filter>src\models\persons</Filter>
@@ -62,6 +65,15 @@
     </ClCompile>
     <ClCompile Include="src\future_event_list.cc">
       <Filter>src\simulator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kernels.cpp">
+      <Filter>src\utilities\random generator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\random_generator.cc">
+      <Filter>src\utilities\random generator</Filter>
+    </ClCompile>
+    <ClCompile Include="src\generators.cc">
+      <Filter>src\utilities\random generator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,11 +110,8 @@
     <ClInclude Include="src\event.h">
       <Filter>src\simulator</Filter>
     </ClInclude>
-    <ClInclude Include="src\generator.h">
-      <Filter>src\utility</Filter>
-    </ClInclude>
     <ClInclude Include="src\log.h">
-      <Filter>src\utility</Filter>
+      <Filter>src\utilities</Filter>
     </ClInclude>
     <ClInclude Include="src\variables.h">
       <Filter>src\models</Filter>
@@ -111,7 +120,16 @@
       <Filter>src\simulator</Filter>
     </ClInclude>
     <ClInclude Include="src\timer.h">
-      <Filter>src\utility</Filter>
+      <Filter>src\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernels.h">
+      <Filter>src\utilities\random generator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\random_generator.h">
+      <Filter>src\utilities\random generator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\generators.h">
+      <Filter>src\utilities\random generator</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

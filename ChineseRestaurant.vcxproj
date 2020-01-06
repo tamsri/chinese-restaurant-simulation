@@ -24,11 +24,13 @@
     <ClCompile Include="src\customer_group.cc" />
     <ClCompile Include="src\event.cc" />
     <ClCompile Include="src\future_event_list.cc" />
-    <ClCompile Include="src\generator.cc" />
+    <ClCompile Include="src\generators.cc" />
+    <ClCompile Include="src\kernels.cpp" />
     <ClCompile Include="src\log.cc" />
     <ClCompile Include="src\main.cc" />
     <ClCompile Include="src\manager.cc" />
     <ClCompile Include="src\process.cc" />
+    <ClCompile Include="src\random_generator.cc" />
     <ClCompile Include="src\seat.cc" />
     <ClCompile Include="src\simulator.cc" />
     <ClCompile Include="src\table.cc" />
@@ -41,10 +43,12 @@
     <ClInclude Include="src\customer_group.h" />
     <ClInclude Include="src\event.h" />
     <ClInclude Include="src\future_event_list.h" />
-    <ClInclude Include="src\generator.h" />
+    <ClInclude Include="src\generators.h" />
+    <ClInclude Include="src\kernels.h" />
     <ClInclude Include="src\log.h" />
     <ClInclude Include="src\manager.h" />
     <ClInclude Include="src\process.h" />
+    <ClInclude Include="src\random_generator.h" />
     <ClInclude Include="src\seat.h" />
     <ClInclude Include="src\simulator.h" />
     <ClInclude Include="src\table.h" />
@@ -98,6 +102,7 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="boost_x64_debug.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />

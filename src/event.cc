@@ -1,7 +1,5 @@
 #include "event.h"
 
-#include <string>
-#include "log.h"
 #include "customer_group.h"
 
 Event::Event (CustomerGroup * customer_group, const unsigned time) : customer_group(customer_group)

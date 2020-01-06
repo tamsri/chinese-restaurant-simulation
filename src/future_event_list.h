@@ -2,7 +2,7 @@
 #define SIMULATOR_FUTURE_EVENT_LIST_H
 struct Event;
 
-class FutureEventList {
+class FutureEventList final {
 public:
 	FutureEventList();
 	~FutureEventList();

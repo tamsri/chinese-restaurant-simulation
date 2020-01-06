@@ -3,7 +3,7 @@
 #include "event.h"
 
 #include "variables.h"
-#include "generator.h"
+#include "generators.h"
 
 #include "customer_group.h"
 #include "manager.h"
@@ -14,7 +14,7 @@
 
 #include "process.h"
 
-Simulator::Simulator (const unsigned end_time, const Variables variables):	current_time_(0),
+Simulator::Simulator (const unsigned int end_time, const Variables variables):	current_time_(0),
 																			end_time_(end_time),
 																			is_step_(false)
 																	{
@@ -26,11 +26,7 @@ Simulator::Simulator (const unsigned end_time, const Variables variables):	curre
 	process_ = new Process();
 }
 
-Simulator::~Simulator ( ) {
-	delete chinese_restaurant_;
-}
-
-void Simulator::Init (bool is_step, Log::LogPriority level) {
+void Simulator::Init (const bool is_step, const Log::LogPriority level) {
 	is_step_ = is_step;
 	Log::GetLog()->SetPriority(static_cast<Log::LogPriority>(level));
 	PrepareRestaurant();
@@ -65,6 +61,10 @@ void Simulator::PrepareRestaurant() const {
 	}
 }
 
+void Simulator::CleanRestaurant()
+{
+}
+
 void Simulator::Run() {
 	// Creating the first customer group.
 	(new CustomerGroup(chinese_restaurant_, process_))->Activate(current_time_);
@@ -84,6 +84,7 @@ void Simulator::Run() {
 			system("pause");
 		}
 	}
+	CleanRestaurant();
 }
 
 void Simulator::Status() const {
@@ -95,7 +96,7 @@ void Simulator::Status() const {
 	printf("\nRestaurant Queue (%d groups): ", static_cast<int>(chinese_restaurant_->restaurant_queue.size()));
 	if (!chinese_restaurant_->restaurant_queue.empty()) {
 		for(auto & customer_group: chinese_restaurant_->restaurant_queue) {
-			printf("#%d ", customer_group->GetCustomerGroupID());
+			printf("#%d ", customer_group->GetCustomerGroupId());
 		}
 	}
 	// Queue of Buffet Customer Group
@@ -103,7 +104,7 @@ void Simulator::Status() const {
 	if(!chinese_restaurant_->buffet_queue.empty()) {
 		auto temp_buffet_queue = chinese_restaurant_->buffet_queue;
 		while (!temp_buffet_queue.empty()) {
-			printf("#%d ", temp_buffet_queue.front()->GetCustomerGroupID());
+			printf("#%d ", temp_buffet_queue.front()->GetCustomerGroupId());
 			temp_buffet_queue.pop();
 		}
 	}
@@ -115,7 +116,7 @@ void Simulator::Status() const {
 	if(!chinese_restaurant_->free_waiter_queue.empty()) {
 		auto temp_free_waiter_queue = chinese_restaurant_->free_waiter_queue;
 		while(!temp_free_waiter_queue.empty()) {
-			printf("#%d ", temp_free_waiter_queue.front()->GetWaiterID());
+			printf("#%d ", temp_free_waiter_queue.front()->GetWaiterId());
 			temp_free_waiter_queue.pop();
 		}	
 	}
@@ -123,7 +124,7 @@ void Simulator::Status() const {
 	// Available Tables in the restaurant
 	printf("\nFree Table (%d tables): ", static_cast<int>(chinese_restaurant_->free_restaurant_tables.size()));
 	for (auto & free_restaurant_table : chinese_restaurant_->free_restaurant_tables) printf("#%d(%d seats) ",
-	                                                                                        free_restaurant_table->GetTableID(),
+	                                                                                        free_restaurant_table->GetTableId(),
 	                                                                                        free_restaurant_table->GetSeatNumber());
 	// Available Buffet Seats in the restaurant
 	printf("\nFree Buffet Seats (%d tables): ", static_cast<int>(chinese_restaurant_->free_buffet_seats.size()));
@@ -136,7 +137,7 @@ void Simulator::Status() const {
 	if (!chinese_restaurant_->check_out_queue.empty()) {
 		auto temp_check_out_queue = chinese_restaurant_->check_out_queue;
 		while (!temp_check_out_queue.empty()) {
-			printf("#%d ", temp_check_out_queue.front()->GetCustomerGroupID());
+			printf("#%d ", temp_check_out_queue.front()->GetCustomerGroupId());
 			temp_check_out_queue.pop();
 		}
 	}
@@ -145,7 +146,7 @@ void Simulator::Status() const {
 	if (!chinese_restaurant_->free_cashiers.empty()) {
 		auto temp_free_cashier = chinese_restaurant_->free_cashiers;
 		while (!temp_free_cashier.empty()) {
-			printf("#%d ", temp_free_cashier.front()->GetCashierID());
+			printf("#%d ", temp_free_cashier.front()->GetCashierId());
 			temp_free_cashier.pop();
 		}
 	}

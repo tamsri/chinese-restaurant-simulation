@@ -8,19 +8,19 @@
 struct Variables;
 class Log;
 
-class Simulator {
+class Simulator final {
 public:
 	Simulator(unsigned int end_time, Variables variables );
-	~Simulator();
 	void Init(bool is_step, Log::LogPriority level);
-	void PrepareRestaurant ( ) const;
 	void Run();
-	void Status ( ) const;
 private:
 	unsigned int current_time_;
 	const unsigned int end_time_;
 	bool is_step_;
 	
+	void PrepareRestaurant ( ) const;
+	void CleanRestaurant();
+	void Status ( ) const;
 	Process * process_;
 	ChineseRestaurant * chinese_restaurant_;
 };

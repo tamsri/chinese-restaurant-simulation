@@ -1,7 +1,7 @@
 #ifndef MODEL_CUSTOMER_H
 #define MODEL_CUSTOMER_H
 
-class Customer {
+class Customer final {
 public:
 	Customer();
 	unsigned int GetPersonId() const;

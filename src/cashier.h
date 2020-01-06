@@ -3,10 +3,10 @@
 
 class CustomerGroup;
 
-class Cashier {
+class Cashier final{
 public:
 	Cashier();
-	unsigned int GetCashierID() const;
+	unsigned int GetCashierId() const;
 	void ProvideServiceTo(CustomerGroup * customer_group);
 	void CompleteService();
 	bool IsAvailable() const;

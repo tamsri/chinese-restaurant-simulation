@@ -4,7 +4,7 @@
 struct Variables {
 	const unsigned int number_waiters;								// Number of Waiters
 	const unsigned int number_tables[3];							// Number of Restaurant Tables
-	float probability_persons_in_customer_group[4];					// Probability of CustomerGroup's Number (1 2 3 4)
+	float probability_of_persons_in_group[4];						// Probability of CustomerGroup's Number (1 2 3 4)
 	const unsigned average_arrival_interval;						// Average Time Interval between Two consecutive groups
 	const unsigned variance_arrival_interval;						// Variance Time Interval between Two consecutive groups
 	const unsigned time_queue_to_table;								// Time from Queue to Restaurant Table

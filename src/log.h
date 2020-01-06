@@ -1,6 +1,6 @@
 #pragma once
-#ifndef LOGGER_LOGGER_H
-#define LOGGER_LOGGER_H
+#ifndef UNTILS_LOGGER_H
+#define UTILS_LOGGER_H
 #include <string>
 
 class Log {

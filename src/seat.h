@@ -3,10 +3,9 @@
 
 class Customer;
 
-class Seat {
+class Seat final{
 public:
 	Seat();
-	~Seat();
 	unsigned int GetSeatId() const;
 	bool IsEmpty() const;
 	void OnSit(Customer * customer);
