@@ -16,6 +16,7 @@
 #include "random_generators.h"
 #include "kernels.h"
 #include "timer.h"
+#include "records.h"
 
 Simulator::Simulator (const unsigned int end_time, const Variables & variables, const int kernel_set_index):
 																			current_time_(0),
@@ -23,11 +24,12 @@ Simulator::Simulator (const unsigned int end_time, const Variables & variables, 
 																			is_step_(false)
 																	{
 	// Initialize Timer
-	timer_ = new Timer(28800);
+	timer_ = new Timer(28800); // assume restaurant opens at 8 AM
 	// Initialize variables in simulator
 	chinese_restaurant_                   = new ChineseRestaurant();
 	chinese_restaurant_->variables        = new Variables(variables);
 	chinese_restaurant_->random_generators = new RandomGenerators();
+	chinese_restaurant_->records = new Records();
 	// Initialize random generators
 	auto * kernels = new Kernels();
 	std::string generated_file_path = "./kernels/generated.txt";
@@ -88,24 +90,31 @@ void Simulator::CleanRestaurant()
 }
 
 void Simulator::Run() {
+	printf("-----------------------------------------------------------------------\n");
+	printf("                        OPENED RESTAURANT\n\n");
+	printf("-----------------------------------------------------------------------\n");
 	// Creating the first customer group.
 	(new CustomerGroup(chinese_restaurant_, process_))->Activate(current_time_);
 	// Run the simulation by popping the first event.
 	while (current_time_ <= end_time_) {
 		Event * event = process_->PopEvent();
 		current_time_ = event->event_time;
-		printf("-----------------------------------------------------------------------\n");
-		printf("TIME: %s\n", timer_->SecondsToTime(current_time_).c_str());
+		Log::GetLog()->Print("-----------------------------------------------------------------------\n", Log::P2, Log::NONE);
+		Log::GetLog()->Print("TIME: "+ timer_->SecondsToTime(current_time_)+" \n", Log::P2, Log::NONE);
 		CustomerGroup * customer_group = event->customer_group;
 		customer_group->Execute(current_time_);
 		delete event;
 		if (customer_group->IsTerminated()) delete customer_group;
-		Status();
+		//Status();
 		if(is_step_) {
 			Log::GetLog()->Print("Press any key to continue", Log::P1);
 			system("pause");
 		}
 	}
+	printf("-----------------------------------------------------------------------\n");
+	printf("                        CLOSED RESTAURANT\n\n");
+	printf("-----------------------------------------------------------------------\n");
+	chinese_restaurant_->records->ConcludeGenerators();
 	CleanRestaurant();
 }
 

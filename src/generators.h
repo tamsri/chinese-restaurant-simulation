@@ -30,12 +30,14 @@ class NormalGenerator final {
 public:
 	explicit NormalGenerator(	UniformGenerator * uniform_generator_1, 
 								UniformGenerator * uniform_generator_2,
+								UniformGenerator * uniform_generator_3,
 								double average=0,
 								double variance=1);
 	unsigned int Rand() const;
 private:
 	UniformGenerator * uniform_generator_1_;
 	UniformGenerator * uniform_generator_2_;
+	UniformGenerator * uniform_generator_3_;
 	double average_;
 	double variance_;
 };

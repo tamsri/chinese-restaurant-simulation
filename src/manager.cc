@@ -2,6 +2,8 @@
 
 #include <string>
 #include "log.h"
+#include "records.h"
+
 #include "chinese_restaurant.h"
 #include "customer_group.h"
 #include "variables.h"
@@ -21,12 +23,12 @@ void Manager::Manages (const unsigned int current_time) const {
 		for (unsigned int i_table = 0; i_table < chinese_restaurant_->free_restaurant_tables.size(); i_table++) {
 			auto * table = chinese_restaurant_->free_restaurant_tables[i_table];
 			if (table->GetSeatNumber() >= customer_group->PersonsInGroup()) {
-				//const unsigned int arrive_to_table_time = current_time + chinese_restaurant_->variables->time_queue_to_table;
 				const unsigned int arrive_to_table_time = current_time + chinese_restaurant_->variables->time_queue_to_table;
 				customer_group->AssignTable(table);
 				customer_group->AssignState(CustomerGroup::kRestaurantArriveTableSate);
+				chinese_restaurant_->records->PushCustomerRecord({ customer_group->GetCustomerGroupId(), current_time, CustomerGroup::kRestaurantArriveTableSate });
 				customer_group->Activate(arrive_to_table_time);
-				Log::GetLog()->Print("Manager assigned table #" + std::to_string(table->GetTableId()) + " to customer group #" + std::to_string(customer_group->GetCustomerGroupId())+ " will arrive to table at "+ std::to_string(arrive_to_table_time));
+				Log::GetLog()->Print("Manager assigned table #" + std::to_string(table->GetTableId()) + " to customer group #" + std::to_string(customer_group->GetCustomerGroupId())+ " will arrive to table at "+ std::to_string(arrive_to_table_time) + " seconds");
 				chinese_restaurant_->restaurant_queue.erase(chinese_restaurant_->restaurant_queue.begin() + i_customer_group);
 				chinese_restaurant_->free_restaurant_tables.erase(chinese_restaurant_->free_restaurant_tables.begin() + i_table);
 				return;

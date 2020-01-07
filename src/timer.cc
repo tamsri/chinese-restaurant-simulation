@@ -2,7 +2,7 @@
 #include "log.h"
 
 Timer::Timer (unsigned start_time) : start_time_(start_time) {
-	Log::GetLog()->Print("Restaurant Opens at " + ConvertTime(start_time));
+	Log::GetLog()->Print("Restaurant Opens at " + ConvertTime(start_time) + " O'Clock");
 }
 std::string Timer::ConvertTime(const unsigned int seconds) const {
 	std::string result;

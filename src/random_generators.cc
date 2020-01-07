@@ -14,6 +14,7 @@ void RandomGenerators::Initialize (		Kernels * kernels,
 	
 	interval_arrival_generator = new NormalGenerator(	new UniformGenerator(kernels->GetKernel(Kernels::TIA1, set_index)),
 														new UniformGenerator(kernels->GetKernel(Kernels::TIA2, set_index)),
+														new UniformGenerator(kernels->GetKernel(Kernels::TIA3, set_index)),
 														initializer_form.average_interval_arrival_time,
 														initializer_form.variance_interval_arrival_time);
 	
@@ -22,6 +23,7 @@ void RandomGenerators::Initialize (		Kernels * kernels,
 	
 	buffet_service_generator = new NormalGenerator(new UniformGenerator(kernels->GetKernel(Kernels::TBS1, set_index)),
 													new UniformGenerator(kernels->GetKernel(Kernels::TBS2, set_index)),
+													new UniformGenerator(kernels->GetKernel(Kernels::TIA3, set_index)),
 														initializer_form.average_buffet_service_time, 
 														initializer_form.variance_buffet_service_time);
 	

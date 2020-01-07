@@ -14,6 +14,8 @@ void Log::Print (const std::string & text, const LogPriority priority, const Log
 		break;
 	case INFO:
 		printf("INFO: ");
+	case NONE:
+		break;
 	default:
 		break;
 	}

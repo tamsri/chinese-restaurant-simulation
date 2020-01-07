@@ -22,9 +22,6 @@
     <Filter Include="src\utilities\random generator">
       <UniqueIdentifier>{d9d52a7d-d923-49d4-82a5-51ae22ea571e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\utilities\statistic tools">
-      <UniqueIdentifier>{b93bc3b8-05de-4e03-bb49-7f3316b24f31}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cc">
@@ -76,6 +73,9 @@
       <Filter>src\utilities\random generator</Filter>
     </ClCompile>
     <ClCompile Include="src\timer.cc">
+      <Filter>src\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\records.cc">
       <Filter>src\utilities</Filter>
     </ClCompile>
   </ItemGroup>
@@ -133,6 +133,9 @@
     </ClInclude>
     <ClInclude Include="src\random_generators.h">
       <Filter>src\utilities\random generator</Filter>
+    </ClInclude>
+    <ClInclude Include="src\records.h">
+      <Filter>src\utilities</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -10,6 +10,7 @@ class Waiter;
 class Cashier;
 class Table;
 class Seat;
+class Records;
 
 struct RandomGenerators;
 struct Variables;
@@ -18,7 +19,9 @@ struct ChineseRestaurant {
 
 	RandomGenerators * random_generators;				// pointer to the random generator
 	Variables * variables;								// pointer to variables of the restaurant
+	Records * records;									// pointer to records of simulation
 
+	
 	Manager * manager;									// pointer to the manager
 	
 	std::vector<Table *> free_restaurant_tables;		// free tables in restaurant

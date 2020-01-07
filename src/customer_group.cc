@@ -12,7 +12,7 @@
 #include "customer.h"
 #include "manager.h"
 
-
+#include "records.h"
 #include "log.h"
 #include "table.h"
 #include "seat.h"
@@ -40,20 +40,23 @@ CustomerGroup::CustomerGroup(ChineseRestaurant * chinese_restaurant, Process * p
 	
 	// Generate the amount of persons
 	const auto persons_in_group = chinese_restaurant_->random_generators->persons_generator->Rand();
-	
+	chinese_restaurant_->records->PushGeneratorRecord({ persons_in_group, kPersonsGenerator });
 	// Generate the service time of the group
 	is_buffet_customer_ = chinese_restaurant_->random_generators->buffet_generator->Rand();
+	chinese_restaurant_->records->PushBuffetRecord(is_buffet_customer_);
 	
 	if (is_buffet_customer_) {
 		service_time_ = chinese_restaurant_->random_generators->buffet_service_generator->Rand();
+		chinese_restaurant_->records->PushGeneratorRecord({ service_time_, kBuffetServiceGenerator });
 	}
 	else {
 		service_time_ = chinese_restaurant_->random_generators->waiter_service_generator->Rand();
+		chinese_restaurant_->records->PushGeneratorRecord({ service_time_, kWaiterServiceGenerator });
 	}
 	
 	// Generate the cashier time of the group
 	cashier_time_ = chinese_restaurant_->random_generators->cashier_service_generator->Rand();
-	
+	chinese_restaurant_->records->PushGeneratorRecord({ cashier_time_, kCashierServiceGenerator });
 	// Generate persons in the group
 	for (unsigned int i = 0; i < persons_in_group; ++i) {
 		auto c = new Customer();
@@ -272,15 +275,18 @@ void CustomerGroup::Execute(const unsigned int current_time) {
 // Action when the customer arrives to restaurant
 void CustomerGroup::CustomerGroupArrives (const unsigned int current_time) {
 	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " entered the restaurant", Log::P2, Log::EVENT);
+	chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(),current_time, kArriveState });
 	// Customer enter to the type of service they would like
 	if(is_buffet_customer_) {
 		chinese_restaurant_->buffet_queue.push(this);
 		AssignState(kBuffetQueueState);
+		chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(),current_time, kBuffetQueueState });
 		log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " entered the buffet queue", Log::P3, Log::EVENT);
 	}else {
 		chinese_restaurant_->restaurant_queue.push_back(this);
 		log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " entered the restaurant queue", Log::P3, Log::EVENT);
 		AssignState(kRestaurantQueueState);
+		chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(), current_time, kRestaurantQueueState });
 	}
 }
 
@@ -289,9 +295,9 @@ void CustomerGroup::CreateNextCustomerGroup(const unsigned int current_time) con
 	const auto var = chinese_restaurant_->variables;
 	// Generate the interval time
 	const auto interval_time = chinese_restaurant_->random_generators->interval_arrival_generator->Rand();
+	chinese_restaurant_->records->PushGeneratorRecord({ interval_time, kIntervalArrivalGenerator });
 	// Get next arrival to the restaurant
 	const auto next_arrival_customer_time = current_time + interval_time;
-	auto * next_customer_group = new CustomerGroup(chinese_restaurant_, process_);
 	(new CustomerGroup(chinese_restaurant_, process_))->Activate(next_arrival_customer_time);
 	//log_->Print("Next customer Group  will enter the restaurant at " + std::to_string(next_arrival_customer_time), Log::P4, Log::EVENT);
 }
@@ -321,7 +327,8 @@ bool CustomerGroup::CustomerGroupArrivesToTable (const unsigned int current_time
 	SitOnTable();
 	// Assign the group to wait for the waiter
 	AssignState(kRestaurantWaiterState);
-	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " enter to restaurant table", Log::P3, Log::EVENT);
+	chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(), current_time, kRestaurantWaiterState });
+	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " enters to restaurant table", Log::P3, Log::EVENT);
 	return true;
 }
 
@@ -341,6 +348,7 @@ bool CustomerGroup::CustomerGroupWaitsTheWaiter(const unsigned int current_time)
 }
 // Action when the waiter arrives to the table and start the service
 bool CustomerGroup::CustomerGroupInRestaurantService (const unsigned int current_time) {
+	chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(), current_time, kRestaurantServiceState });
 	// The waiter started to provide service to customer
 	ActivateWaiter();
 	// Start the service when waiter has already assigned to the table
@@ -351,6 +359,7 @@ bool CustomerGroup::CustomerGroupInRestaurantService (const unsigned int current
 }
 
 bool CustomerGroup::CustomerGroupInBuffetService(const unsigned int current_time) {
+	chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(),current_time,kBuffetServiceState });
 	// Sit on the buffet seats
 	SitOnBuffetSeats();
 	// Start the service when everyone sat on the seats
@@ -361,6 +370,7 @@ bool CustomerGroup::CustomerGroupInBuffetService(const unsigned int current_time
 }
 
 bool CustomerGroup::CustomerGroupLeavesService (const unsigned int current_time) {
+	chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(), current_time, kLeaveServiceState });
 	/* ------------------------ Activate the objects in queues ------------------------ */
 	
 	// For restaurant service group, the waiter goes back to free_waiter_queue and leave table
@@ -390,6 +400,7 @@ bool CustomerGroup::CustomerGroupLeavesService (const unsigned int current_time)
 		log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " leaves the buffet seats", Log::P3, Log::EVENT);
 	}
 	AssignState(kCheckoutQueueState);
+	chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(), current_time, kCheckoutQueueState });
 	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " goes to the checkout point", Log::P3, Log::EVENT);
 	return true;
 }
@@ -407,6 +418,7 @@ bool CustomerGroup::CustomerGroupInCheckoutQueue (const unsigned int current_tim
 	AssignCashier();
 	// assign the state to the customer group
 	AssignState(kCheckoutServiceState);
+	chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(), current_time, kCheckoutQueueState });
 	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " arrives to the free cashier", Log::P3, Log::EVENT);
 	return true;
 }
@@ -423,6 +435,7 @@ bool CustomerGroup::CustomerGroupInCashier (const unsigned int current_time) {
 }
 
 bool CustomerGroup::CustomerGroupComplete (const unsigned int current_time) {
+	chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(), current_time, kCompletedState });
 	// Check if the free cashier is empty, then assign cashier activate the waiting group
 	if (!chinese_restaurant_->check_out_queue.empty() && chinese_restaurant_->free_cashiers.empty()) {
 		chinese_restaurant_->check_out_queue.front()->Activate(current_time);	

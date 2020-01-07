@@ -37,9 +37,11 @@ unsigned int ExponentialGenerator::Rand ( ) const {
 
 NormalGenerator::NormalGenerator(	UniformGenerator * uniform_generator_1, 
 									UniformGenerator * uniform_generator_2,
+									UniformGenerator * uniform_generator_3,
 									const double average, const double variance):
 										uniform_generator_1_(uniform_generator_1),
 										uniform_generator_2_(uniform_generator_2),
+										uniform_generator_3_(uniform_generator_3),
 										average_(average),
 										variance_(variance)
 {
@@ -54,7 +56,9 @@ unsigned int NormalGenerator::Rand() const {
 		generated_2 = uniform_generator_2_->Rand();
 		x = -log(generated_1);
 	}
-	return static_cast<unsigned int>(sqrt(variance_)*x+average_);
+	const auto generated_3 = uniform_generator_3_->Rand();
+	const auto sign = (generated_3 <= 0.5f) ? 1 : -1;
+	return static_cast<unsigned int>(sqrt(variance_)*x*sign+average_);
 }
 
 

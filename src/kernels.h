@@ -10,9 +10,11 @@ public:
 	{
 		TIA1 = 0,   // Time Interval Arrival 1
 		TIA2,	    // Time Interval Arrival 2
+		TIA3,		// Time Interval Arrival 3
 		TWS,		// Time Waiter Service
 		TBS1,		// Time Buffet Service 1
 		TBS2,		// Time Buffet Service 2
+		TBS3,		// Time Buffet Service 3
 		TCS,        // Time Cashier Service
 		TPG,		// Persons in Group
 		TPB,		// Buffet Customers

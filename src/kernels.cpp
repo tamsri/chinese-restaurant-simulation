@@ -38,6 +38,7 @@ void Kernels::GenerateKernels (std::string & output_file_path) const {
 				}
 				output_file << uniform_generator->GetKernel() << " ";
 			}
+			printf("\n");
 			output_file << "\n";
 		}
 		output_file.close();

@@ -24,7 +24,7 @@ int main ( ) {
 	printf("                   The Chinese Restaurant\n\n");
 	printf("                                                      By Supawat Tamsri\n");
 	printf("-----------------------------------------------------------------------\n");
-	auto simulator = new Simulator(21600, variables, kernel_set);
+	auto simulator = new Simulator(36000, variables, kernel_set);
 	int mode, priority;
 	do {
 		printf("Select the simulation mode ( 1 - Step by Step, 0 - Non-stop ): ");
@@ -37,13 +37,9 @@ int main ( ) {
 	}
 	while (priority < 1 || priority > 4);
 	simulator->Init(mode == 1, Log::LogPriority(priority));
-	printf("-----------------------------------------------------------------------\n");
-	printf("                        OPENED RESTAURANT\n\n");
-	printf("-----------------------------------------------------------------------\n");
+
 	simulator->Run();
-	printf("-----------------------------------------------------------------------\n");
-	printf("                        CLOSED RESTAURANT\n\n");
-	printf("-----------------------------------------------------------------------\n");
+
 	delete simulator;
 	system("pause");
 	return 0;

@@ -31,6 +31,7 @@
     <ClCompile Include="src\manager.cc" />
     <ClCompile Include="src\process.cc" />
     <ClCompile Include="src\random_generators.cc" />
+    <ClCompile Include="src\records.cc" />
     <ClCompile Include="src\seat.cc" />
     <ClCompile Include="src\simulator.cc" />
     <ClCompile Include="src\table.cc" />
@@ -50,6 +51,7 @@
     <ClInclude Include="src\manager.h" />
     <ClInclude Include="src\process.h" />
     <ClInclude Include="src\random_generators.h" />
+    <ClInclude Include="src\records.h" />
     <ClInclude Include="src\seat.h" />
     <ClInclude Include="src\simulator.h" />
     <ClInclude Include="src\table.h" />
