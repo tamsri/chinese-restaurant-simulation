@@ -23,7 +23,7 @@ public:
 
 	Kernels();
 
-	int GetKernel(GenerateTypes generate_type, int set) const;
+	int GetKernel(GenerateTypes generate_type, unsigned int set) const;
 	void GenerateKernels(std::string & output_file_path) const;
 	void ReadKernels(std::string & input_file_path);
 private:

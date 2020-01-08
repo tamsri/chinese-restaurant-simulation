@@ -11,7 +11,9 @@ class BoolProbabilityGenerator;
 class Kernels;
 
 struct RandomInitializerForm {
-
+	bool	is_generated;
+	unsigned int seed;
+	std::string & generate_file_path;
 	// Parameters For Interval Arrival Time generator (Normal Generator)
 	int average_interval_arrival_time;			// average interval arrival time of customer groups
 	int variance_interval_arrival_time;			// variance interval arrival time of customer groups
@@ -25,15 +27,18 @@ struct RandomInitializerForm {
 
 	// Parameters for Cashier Service Time Generator (Exponential Generator)
 	int average_cashier_service_time;
+	
 	// Parameters for Persons in Group Generator (Probability by Uniform Generator)
-	std::vector<double> persons_in_group_probability; // persons in group probability
+	std::vector<double> persons_in_group_probability;		 // persons in group probability
+	// 
 	// Parameters for Persons in Group Generator (Probability by Uniform Generator)
-	double buffet_probability;					// buffet probability
+	double buffet_probability;									// buffet probability
+
 };
 
 struct RandomGenerators{
 	RandomGenerators();
-	void Initialize( Kernels * kernels,	int set_index, const RandomInitializerForm & initializer_form);
+	void Initialize( Kernels * kernels,	unsigned int set_index, const RandomInitializerForm & initializer_form);
 
 	NormalGenerator *		interval_arrival_generator;		 // Time Interval Arrival Generator
 	ExponentialGenerator *	waiter_service_generator;	 // Time Waiter Service Generator

@@ -12,7 +12,7 @@ Kernels::Kernels(): number_of_sets_(100),
 	}
 }
 
-int Kernels::GetKernel (GenerateTypes generate_type, int set) const {
+int Kernels::GetKernel (GenerateTypes generate_type, unsigned int set) const {
 	assert(kernels_loaded_ && "Kernels::GetKernel(): Kernels not loaded from the file!");
 	assert(generate_type != COUNT && "Kernels::GetKernel(): Wrong generator type!");
 	const auto set_size = kernel_set_.at(generate_type);
@@ -29,7 +29,7 @@ void Kernels::GenerateKernels (std::string & output_file_path) const {
 		// Generate a line of integers for each type of generator
 		for(auto generate_type_index = 0; generate_type_index < COUNT; ++generate_type_index) {
 			
-			printf(" Generator Type #%d/%d Set:\n", generate_type_index + 1, COUNT);
+			printf("Generator Type #%d/%d Set:\n", generate_type_index + 1, COUNT);
 			
 			for(auto set_index = 0; set_index < number_of_sets_; ++set_index) {
 				printf("%d/%d, ", set_index + 1, number_of_sets_);
@@ -50,7 +50,7 @@ void Kernels::GenerateKernels (std::string & output_file_path) const {
 }
 
 void Kernels::ReadKernels (std::string & input_file_path) {
-	printf(" Reading kernels from %s\n", input_file_path.c_str());
+	printf("Reading kernels from %s\n", input_file_path.c_str());
 	std::ifstream file_input(input_file_path);
 	
 	if (file_input.is_open()) {

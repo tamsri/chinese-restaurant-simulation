@@ -8,8 +8,11 @@ class CustomerGroup;
 class Manager;
 class Waiter;
 class Cashier;
+
 class Table;
 class Seat;
+
+class Timer;
 class Records;
 
 struct RandomGenerators;
@@ -20,7 +23,7 @@ struct ChineseRestaurant {
 	RandomGenerators * random_generators;				// pointer to the random generator
 	Variables * variables;								// pointer to variables of the restaurant
 	Records * records;									// pointer to records of simulation
-
+	Timer * clock;										// pointer to the timer
 	
 	Manager * manager;									// pointer to the manager
 	

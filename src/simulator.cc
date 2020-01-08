@@ -18,34 +18,25 @@
 #include "timer.h"
 #include "records.h"
 
-Simulator::Simulator (const unsigned int end_time, const Variables & variables, const int kernel_set_index):
-																			current_time_(0),
-																			end_time_(end_time),
-																			is_step_(false)
-																	{
+Simulator::Simulator (	const TimerForm & timer_form, 
+						const Variables & variables,  
+						const RandomInitializerForm & random_init_form):
+																	current_time_(0),
+																	duration_(timer_form.end_time-timer_form.start_time),
+																	is_step_(false) {
 	// Initialize Timer
-	timer_ = new Timer(28800); // assume restaurant opens at 8 AM
+	timer_ = new Timer(timer_form.start_time);
 	// Initialize variables in simulator
-	chinese_restaurant_                   = new ChineseRestaurant();
-	chinese_restaurant_->variables        = new Variables(variables);
-	chinese_restaurant_->random_generators = new RandomGenerators();
-	chinese_restaurant_->records = new Records();
+	chinese_restaurant_						= new ChineseRestaurant();
+	chinese_restaurant_->variables			= new Variables(variables);
+	chinese_restaurant_->random_generators	= new RandomGenerators();
+	chinese_restaurant_->records			= new Records(random_init_form.seed);
+	chinese_restaurant_->clock				= timer_;
 	// Initialize random generators
-	auto * kernels = new Kernels();
-	std::string generated_file_path = "./kernels/generated.txt";
-	//kernels->GenerateKernels(generated_file_path);
-	kernels->ReadKernels(generated_file_path);
-	const RandomInitializerForm random_init_form = {
-		static_cast<int>(variables.average_arrival_interval),
-		static_cast<int>(variables.variance_arrival_interval),
-		static_cast<int>(variables.average_waiter_service_time),
-		static_cast<int>(variables.average_buffet_time),
-		static_cast<int>(variables.variance_buffet_time),
-		static_cast<int>(variables.average_cashier_service_time),
-							variables.probability_of_persons_in_group,
-							static_cast<double>(variables.probability_buffet_customer_group)
-		};
-	chinese_restaurant_->random_generators->Initialize(kernels, kernel_set_index, random_init_form);
+	auto * kernels                  = new Kernels();
+	if (random_init_form.is_generated) kernels->GenerateKernels(random_init_form.generate_file_path);
+	kernels->ReadKernels(random_init_form.generate_file_path);
+	chinese_restaurant_->random_generators->Initialize(kernels, random_init_form.seed, random_init_form);
 	// Initialize components in process
 	process_ = new Process();
 }
@@ -66,27 +57,49 @@ void Simulator::PrepareRestaurant() const {
 		for(unsigned int j = 0; j < var->number_tables[i]; ++j) {
 			auto table = new Table(i + 2);
 			chinese_restaurant_->free_restaurant_tables.push_back(table);
+			chinese_restaurant_->tables.insert(table);
 		}
 	}
 	// Prepare buffet seats.
 	for (unsigned int i = 0; i < var->number_buffet_seats; i++) {
 		auto seat = new Seat();
 		chinese_restaurant_->free_buffet_seats.push_back(seat);
+		chinese_restaurant_->buffet_seats.insert(seat);
 	}
 	// Prepare waiters.
 	for (unsigned int i = 0; i < var->number_waiters; ++i) {
 		auto waiter = new Waiter();
 		chinese_restaurant_->free_waiter_queue.push(waiter);
+		chinese_restaurant_->waiters.insert(waiter);
 	}
 	// Prepare cashier.
 	for (unsigned int i = 0; i < var->number_cashiers; ++i) {
 		auto cashier = new Cashier();
 		chinese_restaurant_->free_cashiers.push(cashier);
+		chinese_restaurant_->cashiers.insert(cashier);
 	}
 }
 
 void Simulator::CleanRestaurant()
 {
+	// Delete Manager
+	delete chinese_restaurant_->manager;
+	// Delete Tables
+	for(auto & table: chinese_restaurant_->tables)
+		delete table;
+	// Delete Buffet Seats
+	for (auto & seat : chinese_restaurant_->buffet_seats)
+		delete seat;
+	// Delete Waiters
+	for (auto & waiter : chinese_restaurant_->waiters)
+		delete waiter;
+	// Delete Cashiers
+	for (auto & cashier : chinese_restaurant_->cashiers)
+		delete cashier;
+	printf("-----------------------------------------------------------------------\n");
+	printf("                        CLEANED RESTAURANT\n\n");
+	printf("-----------------------------------------------------------------------\n");
+	
 }
 
 void Simulator::Run() {
@@ -96,7 +109,7 @@ void Simulator::Run() {
 	// Creating the first customer group.
 	(new CustomerGroup(chinese_restaurant_, process_))->Activate(current_time_);
 	// Run the simulation by popping the first event.
-	while (current_time_ <= end_time_) {
+	while (current_time_ <= duration_) {
 		Event * event = process_->PopEvent();
 		current_time_ = event->event_time;
 		Log::GetLog()->Print("-----------------------------------------------------------------------\n", Log::P2, Log::NONE);
@@ -105,17 +118,24 @@ void Simulator::Run() {
 		customer_group->Execute(current_time_);
 		delete event;
 		if (customer_group->IsTerminated()) delete customer_group;
-		//Status();
+		Status();
 		if(is_step_) {
-			Log::GetLog()->Print("Press any key to continue", Log::P1);
 			system("pause");
 		}
 	}
 	printf("-----------------------------------------------------------------------\n");
 	printf("                        CLOSED RESTAURANT\n\n");
 	printf("-----------------------------------------------------------------------\n");
-	chinese_restaurant_->records->ConcludeGenerators();
 	CleanRestaurant();
+}
+
+void Simulator::Conclude ( ) {
+	printf("-----------------------------------------------------------------------\n");
+	printf("                        RESTAURANT SUMMARY\n\n");
+	printf("-----------------------------------------------------------------------\n");
+	chinese_restaurant_->records->ConcludeGenerators();
+	chinese_restaurant_->records->ConcludeCustomers();
+	
 }
 
 void Simulator::Status() const {
@@ -127,7 +147,7 @@ void Simulator::Status() const {
 	printf("\nRestaurant Queue (%d groups): ", static_cast<int>(chinese_restaurant_->restaurant_queue.size()));
 	if (!chinese_restaurant_->restaurant_queue.empty()) {
 		for(auto & customer_group: chinese_restaurant_->restaurant_queue) {
-			printf("#%d ", customer_group->GetCustomerGroupId());
+			printf("#%d(%d persons) ", customer_group->GetCustomerGroupId(),customer_group->PersonsInGroup());
 		}
 	}
 	// Queue of Buffet Customer Group

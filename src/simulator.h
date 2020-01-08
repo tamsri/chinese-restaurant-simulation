@@ -8,15 +8,17 @@
 struct Variables;
 class Log;
 class Timer;
-
+struct RandomInitializerForm;
+struct TimerForm;
 class Simulator final {
 public:
-	Simulator(unsigned int end_time, const Variables & variables, int kernel_set_index);
+	Simulator(const TimerForm & timer_form, const Variables & variables, const RandomInitializerForm & random_init_form);
 	void Init(bool is_step, Log::LogPriority level);
 	void Run();
+	void Conclude ();
 private:
 	unsigned int current_time_;
-	const unsigned int end_time_;
+	const unsigned int duration_;
 	bool is_step_;
 	
 	void PrepareRestaurant ( ) const;

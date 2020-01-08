@@ -9,7 +9,7 @@ RandomGenerators::RandomGenerators ( ): interval_arrival_generator(nullptr),
                                         buffet_generator(nullptr) { }
 
 void RandomGenerators::Initialize (		Kernels * kernels,
-										const int set_index,
+										const unsigned int set_index,
 										const RandomInitializerForm & initializer_form) {
 	
 	interval_arrival_generator = new NormalGenerator(	new UniformGenerator(kernels->GetKernel(Kernels::TIA1, set_index)),

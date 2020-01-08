@@ -23,13 +23,13 @@ void Table::OnSit(CustomerGroup * arrival_customer_group) {
 	for (unsigned int i = 0; i < occupied_customer_group_->PersonsInGroup(); ++i) {
 		seats_[i].OnSit(occupied_customer_group_->GetCustomerMember(i));
 	}
-	Log::GetLog()->Print("Customer Group #" + std::to_string(occupied_customer_group_->GetCustomerGroupId()) + "occupied the Restaurant Table #" + std::to_string(GetTableId()), Log::P3);
+	Log::GetLog()->Print("Customer Group #" + std::to_string(occupied_customer_group_->GetCustomerGroupId()) + " occupied the Restaurant Table #" + std::to_string(GetTableId()), Log::P3);
 }
 void Table::OnLeave() {
 	for (auto seat : seats_) {
 		seat.OnLeave();
 	}
-	Log::GetLog()->Print("Customer Group #" + std::to_string(occupied_customer_group_->GetCustomerGroupId()) + "left the Restaurant Table #" + std::to_string(GetTableId()), Log::P3);
+	Log::GetLog()->Print("Customer Group #" + std::to_string(occupied_customer_group_->GetCustomerGroupId()) + " left the Restaurant Table #" + std::to_string(GetTableId()), Log::P3);
 	occupied_customer_group_ = nullptr;
 }
 unsigned int Table::GetSeatNumber() const {

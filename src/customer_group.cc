@@ -63,7 +63,10 @@ CustomerGroup::CustomerGroup(ChineseRestaurant * chinese_restaurant, Process * p
 		customer_members_.push_back(c);
 	}
 	std::string type = is_buffet_customer_ ? "buffet" : "restaurant";
-	log_->Print("Customer Group ("+ std::to_string(PersonsInGroup()) +" persons, " + type +")#" + std::to_string(GetCustomerGroupId()) + " is created. (service time: " + Timer::SecondsToMinutes(service_time_) + ", cashier time: " + Timer::SecondsToMinutes(cashier_time_) + ")");
+	log_->Print("Customer Group ("+ std::to_string(PersonsInGroup()) +" persons, " + type +")#" + 
+	std::to_string(GetCustomerGroupId()) + " is created. (service time: "
+		+ chinese_restaurant_->clock->SecondsToMinutes(service_time_) 
+		+", cashier time: " + chinese_restaurant_->clock->SecondsToMinutes(cashier_time_) + ")");
 }
 
 CustomerGroup::~CustomerGroup() {
@@ -109,7 +112,7 @@ void CustomerGroup::AssignTable(Table * table)
 		return;
 	}
 	table_ = table;
-	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + "is assigned to table #" + std::to_string(table_->GetTableId()));
+	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " is assigned to table #" + std::to_string(table_->GetTableId()));
 }
 
 void CustomerGroup::CallManager (const unsigned int current_time) const {
@@ -141,6 +144,7 @@ void CustomerGroup::AssignWaiter() {
 	}
 	served_by_ = chinese_restaurant_->free_waiter_queue.front();
 	chinese_restaurant_->free_waiter_queue.pop();
+	if (!chinese_restaurant_->wait_waiter_queue.empty()) chinese_restaurant_->wait_waiter_queue.pop();
 }
 void CustomerGroup::ActivateWaiter() const {
 	if (served_by_ == nullptr) {
@@ -380,7 +384,7 @@ bool CustomerGroup::CustomerGroupLeavesService (const unsigned int current_time)
 			chinese_restaurant_->wait_waiter_queue.front()->Activate(current_time);
 		}
 		// If a group is waiting for a table, activate them for getting managed by manager
-		else if (!chinese_restaurant_->restaurant_queue.empty() && chinese_restaurant_->free_restaurant_tables.empty()) {
+		if (!chinese_restaurant_->restaurant_queue.empty() && chinese_restaurant_->free_restaurant_tables.empty()) {
 			chinese_restaurant_->restaurant_queue.front()->Activate(current_time);
 		}
 		/*------ Free Waiter ------*/
