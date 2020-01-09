@@ -15,14 +15,14 @@ public:
 	Simulator(const TimerForm & timer_form, const Variables & variables, const RandomInitializerForm & random_init_form);
 	void Init(bool is_step, Log::LogPriority level);
 	void Run();
-	void Conclude ();
+	void Conclude () const;
 private:
 	unsigned int current_time_;
 	const unsigned int duration_;
 	bool is_step_;
 	
 	void PrepareRestaurant ( ) const;
-	void CleanRestaurant();
+	void CleanRestaurant() const;
 	void Status ( ) const;
 	Process * process_;
 	ChineseRestaurant * chinese_restaurant_;

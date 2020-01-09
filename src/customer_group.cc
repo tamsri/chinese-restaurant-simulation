@@ -422,7 +422,7 @@ bool CustomerGroup::CustomerGroupInCheckoutQueue (const unsigned int current_tim
 	AssignCashier();
 	// assign the state to the customer group
 	AssignState(kCheckoutServiceState);
-	chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(), current_time, kCheckoutQueueState });
+	chinese_restaurant_->records->PushCustomerRecord({ GetCustomerGroupId(), current_time, kCheckoutServiceState });
 	log_->Print("Customer Group #" + std::to_string(GetCustomerGroupId()) + " arrives to the free cashier", Log::P3, Log::EVENT);
 	return true;
 }

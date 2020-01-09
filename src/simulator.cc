@@ -80,8 +80,7 @@ void Simulator::PrepareRestaurant() const {
 	}
 }
 
-void Simulator::CleanRestaurant()
-{
+void Simulator::CleanRestaurant() const {
 	// Delete Manager
 	delete chinese_restaurant_->manager;
 	// Delete Tables
@@ -118,18 +117,19 @@ void Simulator::Run() {
 		customer_group->Execute(current_time_);
 		delete event;
 		if (customer_group->IsTerminated()) delete customer_group;
-		Status();
+		// Status();
 		if(is_step_) {
 			system("pause");
 		}
 	}
+	chinese_restaurant_->records->PushEndTime(current_time_);
 	printf("-----------------------------------------------------------------------\n");
 	printf("                        CLOSED RESTAURANT\n\n");
 	printf("-----------------------------------------------------------------------\n");
 	CleanRestaurant();
 }
 
-void Simulator::Conclude ( ) {
+void Simulator::Conclude ( ) const {
 	printf("-----------------------------------------------------------------------\n");
 	printf("                        RESTAURANT SUMMARY\n\n");
 	printf("-----------------------------------------------------------------------\n");

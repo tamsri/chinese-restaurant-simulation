@@ -5,13 +5,9 @@
 
 unsigned int Waiter::waiter_global_id_ = 0;
 
-Waiter::Waiter():waiter_id_(++waiter_global_id_) {
+Waiter::Waiter():waiter_id_(++waiter_global_id_) , service_to_(nullptr){
 	log_ = Log::GetLog();
 	log_->Print("Waiter #" + std::to_string(GetWaiterId()) +" is created.", Log::P4);
-}
-
-Waiter::~Waiter() {
-	log_->Print("Waiter #" + std::to_string(GetWaiterId()) + " is destroyed.", Log::P4);
 }
 
 unsigned int Waiter::GetWaiterId() const {

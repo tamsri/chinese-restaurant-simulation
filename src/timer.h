@@ -17,6 +17,7 @@ public:
 	explicit Timer(unsigned start_time);
 
 	std::string SecondsToTime(unsigned int seconds) const;
+	static std::string SecondsToMany (unsigned seconds);
 	std::string SecondsToMinutes(unsigned int seconds) const;
 	std::string ConvertTime(unsigned int seconds) const;
 private:

@@ -12,10 +12,10 @@ int main ( ) {
 	printf("                                                      By Supawat Tamsri\n");
 	printf("-----------------------------------------------------------------------\n");
 	// Set up Questions
-	int mode = 1, priority = 4, generate = 0;
+	int mode = -1, priority = -1, generate = -1;
 	
 	while (mode != 1 && mode != 0){
-		printf("Select the simulation mode ( 1 - Step by Step, 0 - Non-stop ): ");
+		printf("Select the simulation mode (0 - Non-stop, 1 - Step by Step): ");
 		std::cin >> mode;
 	}
 	while (generate != 1 && generate != 0){
@@ -29,8 +29,8 @@ int main ( ) {
 
 	// Variable Initializing Form
 	const Variables variables = {
-			1,											// number of waiters
-			{1, 1, 1},									// number of tables in each persons (2,3,4)
+			6,											// number of waiters
+			{8, 14, 4},									// number of tables in each persons (2,3,4)
 			{0.11f, 0.33f, 0.33f, 0.23f},	// possibility of persons in group (1,2,3,4)
 			1500,									// average arrival interval of customer group
 			100*100,								// variance arrival interval of customer group
@@ -38,12 +38,12 @@ int main ( ) {
 			4000,								// average waiter service time
 			220,								// average cashier service time
 			5,											// number of cashiers
-			20,										// number of buffet seats
-			0.1f,							// probability of buffet customer group
+			50,										// number of buffet seats
+			.6f,							// probability of buffet customer group
 			1900,									// average buffet service time
 			200*200									// variance buffet service time
 		};
-	const unsigned int seed = 50;									// selected set of initial kernel set in kernel of generators
+	const unsigned int seed = 99;									// selected set of initial kernel set in kernel of generators
 	std::string kernels_generated_file = "./kernels/generated.txt"; // path of generated kernels file.
 	// Random Initializing Form
 	const RandomInitializerForm random_init_form = {
@@ -62,7 +62,7 @@ int main ( ) {
 	// Time Initializing Form
 	const TimerForm timer_form = {
 		28800,	//	 8 AM
-		64800	//	 6 PM
+		648000	//	 6 PM
 						// this means duration is 10 hours (36000 seconds)
 	};
 

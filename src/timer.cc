@@ -37,5 +37,24 @@ std::string Timer::SecondsToTime(unsigned int seconds) const {
 	answer += " O'Clock (" + std::to_string(seconds) + " seconds)";
 	return answer;
 }
-
+std::string Timer::SecondsToMany(unsigned int seconds){
+	std::string result;
+	if(seconds > 86400) {
+		const unsigned int day = static_cast<int>(seconds) / 86400;
+		seconds = seconds - day * 86400;
+		result += "Day " + std::to_string(day) + " ";
+	}
+	if(seconds > 3600) {
+		const unsigned int hour = static_cast<int>(seconds) / 3600;
+		seconds = seconds - hour * 3600;
+		result += std::to_string(hour) + " hours ";
+	}
+	if (seconds > 60) {
+		const unsigned int minute = static_cast<int>(seconds) / 60;
+		seconds = seconds - minute * 60;
+		result += std::to_string(minute) + " minutes ";
+	}
+	result += std::to_string(seconds) + " seconds";
+	return result;
+}
 

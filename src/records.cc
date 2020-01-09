@@ -2,6 +2,7 @@
 #include "log.h"
 #include <map>
 #include <fstream>
+#include "timer.h"
 
 Records::Records (unsigned int seed): seed_(seed) {
 	Log::GetLog()->Print("Records Class is initialized");
@@ -69,6 +70,9 @@ double Records::FindAverage (std::vector<unsigned> & data) {
 }
 
 void Records::ConcludeGenerators ( ) {
+	printf("---------------------------------------------------------------------------------\n");
+	printf("                              Generators Reports\n");
+	printf("---------------------------------------------------------------------------------\n");
 	// write records to file
 	const std::string records_file_path = "./records/generators-seed-" + std::to_string(seed_) +".txt";
 	std::ofstream record_file(records_file_path);
@@ -94,7 +98,7 @@ void Records::ConcludeGenerators ( ) {
 		const auto variance = FindVariance(recorder, average);
 		printf("\naverage generated: %.0f\n", average);
 		printf("variance generated: %.0f^2\n", sqrt(variance));
-		PrintHistogram(recorder);
+		//PrintHistogram(recorder);
 		record_file << "\nSummary\n";
 		record_file << "The average value of generated data: " << average << std::endl;
 		record_file << "The variance value of generated data: " << variance << "(" << sqrt(variance) << "^2)\n\n";
@@ -128,15 +132,122 @@ void Records::ConcludeGenerators ( ) {
 	}
 	printf("%d Buffet Groups and %d Restaurant Groups (%.001f percents buffet customers)\n", buffets[true], buffets[false], buffets[true] *100/ static_cast<double>(buffet_type_records_.size()));
 	record_file << "\nSummary\n";
-	record_file << buffets[true] << " Buffet Groups and" << buffets[false] << " Restaurant Groups (" << buffets[true] * 100 / static_cast<double>(buffet_type_records_.size()) << " % Buffet Groups)";
+	record_file << buffets[true] << " Buffet Groups and " << buffets[false] << " Restaurant Groups (" << buffets[true] * 100 / static_cast<double>(buffet_type_records_.size()) << " % Buffet Groups)";
 	record_file.close();
 }
 
 void Records::ConcludeCustomers ( ) {
+	std::string activity_list[] = {
+		"arrives to restaurant",
+		"enters buffet queue",
+		"starts buffet service",
+		"enters restaurant queue",
+		"assigned to table",
+		"waits for a waiter",
+		"starts restaurant service",
+		"leaves the service",
+		"enters the checkout queue",
+		"starts checkout service",
+		"finishes checkout & leaves"
+	};
 	const auto records_file_path = "./records/customers-seed-" + std::to_string(seed_) +".txt";
 	std::ofstream record_file(records_file_path);
 	if (!record_file.is_open())
 		Log::GetLog()->Print("The recorder cannot write the file in " + records_file_path, Log::P1, Log::ERROR);
-
+	record_file << "\t\t\tCustomer Groups\n";
+	record_file << "----------------------------------------------------------------------------------\n";
+	record_file << "State numbers\t|\tActivity Times(seconds)\t|\tActions\n";
+	record_file << "----------------------------------------------------------------------------------\n";
+	for(const auto & customer : customer_group_records_) {
+		record_file << "Customer Group #" << customer.first << ":\n";
+		for(auto activity : customer.second) {
+			record_file << "\t"<< activity.record_state << "\t|\t\t" << activity.record_time <<"\t\t|\t" << activity_list[activity.record_state]<< std::endl;
+		}
+	}
 	record_file.close();
+
+	double average_table_wait = 0;
+	double average_waiter_wait = 0;
+	double average_buffet_wait = 0;
+	double average_checkout_wait = 0;
+	unsigned int restaurant_group = 0;
+	unsigned int wait_waiter_group = 0;
+	unsigned int buffet_group = 0;
+	unsigned int checkout_group = 0;
+	// finding average table wait
+	for(auto customer: customer_group_records_) {
+		unsigned int enter_queue_start = 0;
+		unsigned int wait_waiter_start = 0;
+		unsigned int wait_checkout_start = 0;
+		unsigned int wait_waiter_end = end_time_;
+		unsigned int enter_queue_end = end_time_;
+		unsigned int wait_checkout_end = end_time_;
+		bool is_buffet = false;
+		bool is_checkout = false;
+		bool is_waiter = false;
+		// Scanning activities of a customger
+		for(auto activity : customer.second) {			
+			switch (activity.record_state) {
+			case CustomerGroup::kBuffetQueueState:
+				is_buffet = true;
+				enter_queue_start = activity.record_time;
+				break;
+			case CustomerGroup::kRestaurantQueueState:
+				enter_queue_start = activity.record_time;
+				break;
+			case CustomerGroup::kBuffetServiceState:
+				enter_queue_end = activity.record_time;
+				break;
+			case CustomerGroup::kRestaurantArriveTableSate:
+				enter_queue_end = activity.record_time;
+				break;
+			case CustomerGroup::kRestaurantWaiterState:
+				is_waiter = true;
+				wait_waiter_start = activity.record_time;
+				break;
+			case CustomerGroup::kRestaurantServiceState:
+				wait_waiter_end = activity.record_time;
+				break;
+			case CustomerGroup::kCheckoutQueueState:
+				is_checkout = true;
+				wait_checkout_start = activity.record_time;
+				break;
+			case CustomerGroup::kCheckoutServiceState:
+				wait_checkout_end = activity.record_time;
+			default:
+				break;
+			}
+		}
+		if(is_buffet) {
+			average_buffet_wait += enter_queue_end - enter_queue_start;
+			average_buffet_wait += enter_queue_end - enter_queue_start;
+			buffet_group++;
+		} else {
+			average_table_wait += enter_queue_end - enter_queue_start;
+			restaurant_group++;
+		}
+		if (is_waiter) {
+			average_waiter_wait += wait_waiter_end - wait_waiter_start;
+			wait_waiter_group++;
+		}
+		if(is_checkout) {
+			average_checkout_wait += wait_checkout_end - wait_checkout_start;
+			checkout_group++;
+		}
+	}
+	average_table_wait /= restaurant_group;
+	average_buffet_wait /= buffet_group;
+	average_waiter_wait /= wait_waiter_group;
+	average_checkout_wait /= checkout_group;
+	printf("---------------------------------------------------------------------------------\n");
+	printf("                             Simulations Reports\n");
+	printf("---------------------------------------------------------------------------------\n");
+	printf("Average Restaurant Queue Waiting Time:\t %.02f seconds \t\t(%s)\n", average_table_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_table_wait)).c_str());
+	printf("Average Buffet Seats Waiting Time:\t %.02f seconds \t\t(%s)\n", average_buffet_wait, Timer::SecondsToMany(static_cast<unsigned int >(average_buffet_wait)).c_str());
+	printf("Average Waiter Waiting Time on Table:\t %.02f seconds \t\t(%s)\n", average_waiter_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_waiter_wait)).c_str());
+	printf("Average Checkout Queue Waiting Time:\t %.02f seconds \t\t(%s)\n", average_checkout_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_checkout_wait)).c_str());
+}
+
+void Records::PushEndTime (unsigned int end_time) {
+	end_time_ = end_time;
 }

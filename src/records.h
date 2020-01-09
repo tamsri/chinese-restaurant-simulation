@@ -31,10 +31,12 @@ public:
 
 	void ConcludeGenerators();
 	void ConcludeCustomers ( );
+	void PushEndTime(unsigned int end_time);
 	static unsigned FindMax (const std::vector<unsigned> & data);
 	static unsigned FindMin (std::vector<unsigned> data);
 private:
 	unsigned int seed_;
+	unsigned int end_time_;
 	static void PrintHistogram (std::vector<unsigned> & data_set);
 	double FindVariance (std::vector<unsigned int> & data, double & mean) const;
 	static double FindAverage(std::vector<unsigned int> & data);

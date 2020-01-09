@@ -1,0 +1,24 @@
+			Customer Groups
+----------------------------------------------------------------------------------
+State numbers	|	Activity Times(seconds)	|	Actions
+----------------------------------------------------------------------------------
+Customer Group #1:
+	0	|		0		|	arrives to restaurant
+	1	|		0		|	enters buffet queue
+	2	|		0		|	starts buffet service
+	7	|		1831		|	leaves the service
+	8	|		1831		|	enters the checkout queue
+	9	|		1831		|	starts checkout service
+	10	|		2217		|	finishes checkout & leaves
+Customer Group #2:
+	0	|		10		|	arrives to restaurant
+	1	|		10		|	enters buffet queue
+	2	|		10		|	starts buffet service
+	7	|		1692		|	leaves the service
+	8	|		1692		|	enters the checkout queue
+	9	|		1692		|	starts checkout service
+	10	|		2053		|	finishes checkout & leaves
+Customer Group #3:
+	0	|		4294967224		|	arrives to restaurant
+	1	|		4294967224		|	enters buffet queue
+	2	|		4294967224		|	starts buffet service

@@ -7,7 +7,6 @@ class Log;
 class Waiter final {
 public:
 	Waiter();
-	~Waiter();
 	unsigned int GetWaiterId() const;
 	void ProvideServiceTo(Table * table);
 	void CompleteService();

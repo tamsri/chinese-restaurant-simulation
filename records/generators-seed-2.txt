@@ -1,0 +1,40 @@
+
+Interval Arrival Time Generator
+Generated values: 10 4294967214 150 
+Summary
+The average value of generated data: 1.43166e+09
+The variance value of generated data: 4.09928e+18(2.02467e+09^2)
+
+
+Waiter Service Time Generator
+Generated values: 
+Summary
+The average value of generated data: -nan(ind)
+The variance value of generated data: -nan(ind)(-nan(ind)^2)
+
+
+Buffet Service Time Generator
+Generated values: 1831 1682 2027 2119 
+Summary
+The average value of generated data: 1914.75
+The variance value of generated data: 28876.2(169.93^2)
+
+
+Cashier Service Time Generator
+Generated values: 386 361 18 623 
+Summary
+The average value of generated data: 347
+The variance value of generated data: 46533.5(215.716^2)
+
+Persons in Group Generator
+Number of Persons in Groups: 2 3 4 4 
+Summary
+1 persons group: 0 groups (0 %)
+2 persons group: 1 groups (25 %)
+3 persons group: 1 groups (25 %)
+4 persons group: 2 groups (50 %)
+
+Buffet Type Customer Group Generator 
+Type of Customer Groups (1 - Buffet, 0 - Restaurant): 1 1 1 1 
+Summary
+4 Buffet Groups and 0 Restaurant Groups (100 % Buffet Groups)
