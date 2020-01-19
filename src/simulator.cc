@@ -20,17 +20,17 @@
 
 Simulator::Simulator (	const TimerForm & timer_form, 
 						const Variables & variables,  
-						const RandomInitializerForm & random_init_form):
-																	current_time_(0),
-																	duration_(timer_form.end_time-timer_form.start_time),
-																	is_step_(false) {
+						const RandomInitializerForm & random_init_form,
+						const RecorderForm & recorder_form):	current_time_(timer_form.start_time),
+																end_time_(timer_form.end_time),
+																is_step_(false) {
 	// Initialize Timer
 	timer_ = new Timer(timer_form.start_time);
 	// Initialize variables in simulator
 	chinese_restaurant_						= new ChineseRestaurant();
 	chinese_restaurant_->variables			= new Variables(variables);
 	chinese_restaurant_->random_generators	= new RandomGenerators();
-	chinese_restaurant_->records			= new Records(random_init_form.seed);
+	chinese_restaurant_->records			= new Records(recorder_form);
 	chinese_restaurant_->clock				= timer_;
 	// Initialize random generators
 	auto * kernels                  = new Kernels();
@@ -108,7 +108,7 @@ void Simulator::Run() {
 	// Creating the first customer group.
 	(new CustomerGroup(chinese_restaurant_, process_))->Activate(current_time_);
 	// Run the simulation by popping the first event.
-	while (current_time_ <= duration_) {
+	while (current_time_ <= end_time_) {
 		Event * event = process_->PopEvent();
 		current_time_ = event->event_time;
 		Log::GetLog()->Print("-----------------------------------------------------------------------\n", Log::P2, Log::NONE);
@@ -117,12 +117,11 @@ void Simulator::Run() {
 		customer_group->Execute(current_time_);
 		delete event;
 		if (customer_group->IsTerminated()) delete customer_group;
-		// Status();
+		//Status();
 		if(is_step_) {
 			system("pause");
 		}
 	}
-	chinese_restaurant_->records->PushEndTime(current_time_);
 	printf("-----------------------------------------------------------------------\n");
 	printf("                        CLOSED RESTAURANT\n\n");
 	printf("-----------------------------------------------------------------------\n");
@@ -135,12 +134,10 @@ void Simulator::Conclude ( ) const {
 	printf("-----------------------------------------------------------------------\n");
 	chinese_restaurant_->records->ConcludeGenerators();
 	chinese_restaurant_->records->ConcludeCustomers();
-	
 }
 
 void Simulator::Status() const {
 	printf("````````STATUS```````````");
-
 
 	printf("\n -- Front of Restaurant --");
 	// Queue of Restaurant Customer Group

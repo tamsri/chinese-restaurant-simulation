@@ -10,15 +10,19 @@ class Log;
 class Timer;
 struct RandomInitializerForm;
 struct TimerForm;
+struct RecorderForm;
 class Simulator final {
 public:
-	Simulator(const TimerForm & timer_form, const Variables & variables, const RandomInitializerForm & random_init_form);
+	Simulator(	const TimerForm & timer_form, 
+				const Variables & variables,
+				const RandomInitializerForm & random_init_form,
+				const RecorderForm & recorder_form);
 	void Init(bool is_step, Log::LogPriority level);
 	void Run();
 	void Conclude () const;
 private:
 	unsigned int current_time_;
-	const unsigned int duration_;
+	const unsigned int end_time_;
 	bool is_step_;
 	
 	void PrepareRestaurant ( ) const;

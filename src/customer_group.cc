@@ -380,11 +380,11 @@ bool CustomerGroup::CustomerGroupLeavesService (const unsigned int current_time)
 	// For restaurant service group, the waiter goes back to free_waiter_queue and leave table
 	if (!IsBuffetCustomer()) {
 		// If a table is waiting for a waiter, activate them for looking for a waiter
-		if (!chinese_restaurant_->wait_waiter_queue.empty() && chinese_restaurant_->free_waiter_queue.empty()) {
+		if (!chinese_restaurant_->wait_waiter_queue.empty()) {
 			chinese_restaurant_->wait_waiter_queue.front()->Activate(current_time);
 		}
 		// If a group is waiting for a table, activate them for getting managed by manager
-		if (!chinese_restaurant_->restaurant_queue.empty() && chinese_restaurant_->free_restaurant_tables.empty()) {
+		if (!chinese_restaurant_->restaurant_queue.empty()) {
 			chinese_restaurant_->restaurant_queue.front()->Activate(current_time);
 		}
 		/*------ Free Waiter ------*/
@@ -397,7 +397,7 @@ bool CustomerGroup::CustomerGroupLeavesService (const unsigned int current_time)
 	// For buffet service, customer members leave the buffet seats
 	else {
 		// If there's group waiting in the queue and buffet seat
-		if (!chinese_restaurant_->buffet_queue.empty() && (chinese_restaurant_->free_buffet_seats.size() < chinese_restaurant_->buffet_queue.front()->PersonsInGroup() )) {
+		if (!chinese_restaurant_->buffet_queue.empty() && (chinese_restaurant_->free_buffet_seats.size() <= chinese_restaurant_->buffet_queue.front()->PersonsInGroup() )) {
 			chinese_restaurant_->buffet_queue.front()->Activate(current_time);
 		}
 		LeaveBuffetSeats();

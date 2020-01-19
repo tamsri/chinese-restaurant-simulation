@@ -2,11 +2,10 @@
 #include "log.h"
 
 Timer::Timer (unsigned start_time) : start_time_(start_time) {
-	Log::GetLog()->Print("Restaurant will open at " + ConvertTime(0) + " O'Clock");
+	Log::GetLog()->Print("Restaurant will open at " + ConvertTime(start_time_) + " O'Clock");
 }
-std::string Timer::ConvertTime(const unsigned int seconds) const {
+std::string Timer::ConvertTime(unsigned int time) const {
 	std::string result;
-	auto time = start_time_ + seconds;
 	if(time>=86400) {
 		const unsigned int day = static_cast<int>(time) / 86400;
 		time = time - day * 86400;
@@ -42,7 +41,7 @@ std::string Timer::SecondsToMany(unsigned int seconds){
 	if(seconds > 86400) {
 		const unsigned int day = static_cast<int>(seconds) / 86400;
 		seconds = seconds - day * 86400;
-		result += "Day " + std::to_string(day) + " ";
+		result += std::to_string(day) + " days ";
 	}
 	if(seconds > 3600) {
 		const unsigned int hour = static_cast<int>(seconds) / 3600;

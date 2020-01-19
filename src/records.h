@@ -13,6 +13,11 @@ enum Generators {
 	kBuffetTypeGenerator,
 	kEnd
 };
+struct RecorderForm {
+	unsigned int selected_seed;
+	unsigned int start_time;
+	unsigned int end_time;
+};
 struct CustomerGroupRecord{
 	unsigned int id;
 	unsigned int record_time;
@@ -22,24 +27,24 @@ struct GeneratorRecord {
 	unsigned int value;
 	Generators generator_type;
 };
-class Records final{
+class Records final {
 public:
-	explicit Records(unsigned int seed);
+	explicit Records(RecorderForm recorder_form);
 	void PushCustomerRecord(CustomerGroupRecord customer_group_record);
 	void PushGeneratorRecord(GeneratorRecord generator_record);
 	void PushBuffetRecord(bool is_buffet);
-
+	
 	void ConcludeGenerators();
 	void ConcludeCustomers ( );
-	void PushEndTime(unsigned int end_time);
 	static unsigned FindMax (const std::vector<unsigned> & data);
 	static unsigned FindMin (std::vector<unsigned> data);
 private:
 	unsigned int seed_;
+	unsigned int start_time_;
 	unsigned int end_time_;
 	static void PrintHistogram (std::vector<unsigned> & data_set);
-	double FindVariance (std::vector<unsigned int> & data, double & mean) const;
-	static double FindAverage(std::vector<unsigned int> & data);
+	long double FindVariance (std::vector<unsigned> & data, long double & mean) const;
+	static long double FindAverage (std::vector<unsigned int> & data);
 	std::map<int, std::vector<CustomerGroupRecord>> customer_group_records_;
 	std::vector<GeneratorRecord> generator_records_;
 	std::vector<bool> buffet_type_records_;

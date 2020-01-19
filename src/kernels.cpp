@@ -12,7 +12,7 @@ Kernels::Kernels(): number_of_sets_(100),
 	}
 }
 
-int Kernels::GetKernel (GenerateTypes generate_type, unsigned int set) const {
+int Kernels::GetKernel (const GenerateTypes generate_type, const unsigned int & set) const {
 	assert(kernels_loaded_ && "Kernels::GetKernel(): Kernels not loaded from the file!");
 	assert(generate_type != COUNT && "Kernels::GetKernel(): Wrong generator type!");
 	const auto set_size = kernel_set_.at(generate_type);

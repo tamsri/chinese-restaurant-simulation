@@ -4,7 +4,9 @@
 #include <fstream>
 #include "timer.h"
 
-Records::Records (unsigned int seed): seed_(seed) {
+Records::Records(const RecorderForm recorder_form) :	seed_(recorder_form.selected_seed),
+														start_time_(recorder_form.start_time),
+														end_time_(recorder_form.end_time){
 	Log::GetLog()->Print("Records Class is initialized");
 }
 
@@ -16,21 +18,24 @@ void Records::PushGeneratorRecord (const GeneratorRecord generator_record) {
 	generator_records_.push_back(generator_record);
 }
 
-void Records::PushBuffetRecord (bool is_buffet) {
+void Records::PushBuffetRecord (const bool is_buffet) {
 	buffet_type_records_.push_back(is_buffet);
 }
+
 unsigned int Records::FindMax(const std::vector<unsigned int> & data) {
 	unsigned int max = 0;
 	for (auto one : data)
 		if (one > max) max = one;
 	return max;
 }
+
 unsigned int Records::FindMin(std::vector<unsigned int> data) {
 	auto min = data[0];
 	for (auto one : data)
 		if (one < min) min = one;
 	return min;
 }
+
 void Records::PrintHistogram(std::vector<unsigned int> & data_set) {
 	std::map<unsigned int, int> histogram;
 	const auto step = (data_set.size() < 10) ? static_cast<int>(data_set.size()) : 10;
@@ -52,8 +57,9 @@ void Records::PrintHistogram(std::vector<unsigned int> & data_set) {
 		higher += width;
 	}
 }
-double Records::FindVariance(std::vector<unsigned int> & data, double & mean) const {
-	double result = 0;
+
+long double Records::FindVariance(std::vector<unsigned int> & data, long double & mean) const {
+	long double result = 0;
 	for(auto one : data) {
 		result += pow(mean - one, 2);
 	}
@@ -61,8 +67,8 @@ double Records::FindVariance(std::vector<unsigned int> & data, double & mean) co
 	return result;
 }
 
-double Records::FindAverage (std::vector<unsigned> & data) {
-	double result = 0;
+long double Records::FindAverage (std::vector<unsigned> & data) {
+	long double result = 0;
 	for (auto one : data)
 		result += one;
 	result /= data.size();
@@ -74,7 +80,7 @@ void Records::ConcludeGenerators ( ) {
 	printf("                              Generators Reports\n");
 	printf("---------------------------------------------------------------------------------\n");
 	// write records to file
-	const std::string records_file_path = "./records/generators-seed-" + std::to_string(seed_) +".txt";
+	const auto records_file_path = "./records/generators-seed-" + std::to_string(seed_) +".txt";
 	std::ofstream record_file(records_file_path);
 	if (!record_file.is_open())
 		Log::GetLog()->Print("The recorder cannot write the file in " + records_file_path, Log::P1,Log::ERROR);
@@ -96,8 +102,8 @@ void Records::ConcludeGenerators ( ) {
 			};
 		auto average = FindAverage(recorder);
 		const auto variance = FindVariance(recorder, average);
-		printf("\naverage generated: %.0f\n", average);
-		printf("variance generated: %.0f^2\n", sqrt(variance));
+		printf("\naverage generated: %.0Lf\n", average);
+		printf("variance generated: %.0Lf^2\n", sqrt(variance));
 		//PrintHistogram(recorder);
 		record_file << "\nSummary\n";
 		record_file << "The average value of generated data: " << average << std::endl;
@@ -154,7 +160,7 @@ void Records::ConcludeCustomers ( ) {
 	std::ofstream record_file(records_file_path);
 	if (!record_file.is_open())
 		Log::GetLog()->Print("The recorder cannot write the file in " + records_file_path, Log::P1, Log::ERROR);
-	record_file << "\t\t\tCustomer Groups\n";
+	record_file << "\t\t\tCustomer Groups - Seed: " << std::to_string(seed_) <<"\n";
 	record_file << "----------------------------------------------------------------------------------\n";
 	record_file << "State numbers\t|\tActivity Times(seconds)\t|\tActions\n";
 	record_file << "----------------------------------------------------------------------------------\n";
@@ -166,63 +172,65 @@ void Records::ConcludeCustomers ( ) {
 	}
 	record_file.close();
 
-	double average_table_wait = 0;
-	double average_waiter_wait = 0;
-	double average_buffet_wait = 0;
-	double average_checkout_wait = 0;
+	long double average_table_wait = 0;
+	long double average_waiter_wait = 0;
+	long double average_buffet_wait = 0;  
+	long double average_checkout_wait = 0;
 	unsigned int restaurant_group = 0;
 	unsigned int wait_waiter_group = 0;
 	unsigned int buffet_group = 0;
 	unsigned int checkout_group = 0;
 	// finding average table wait
-	for(auto customer: customer_group_records_) {
-		unsigned int enter_queue_start = 0;
-		unsigned int wait_waiter_start = 0;
-		unsigned int wait_checkout_start = 0;
-		unsigned int wait_waiter_end = end_time_;
-		unsigned int enter_queue_end = end_time_;
-		unsigned int wait_checkout_end = end_time_;
-		bool is_buffet = false;
-		bool is_checkout = false;
-		bool is_waiter = false;
-		// Scanning activities of a customger
+	for(const auto & customer: customer_group_records_) {
+		auto enter_queue_start = start_time_;
+		auto wait_waiter_start = start_time_;
+		auto wait_checkout_start = start_time_;
+		auto wait_waiter_end = end_time_;
+		auto enter_queue_end = end_time_;
+		auto wait_checkout_end = end_time_;
+		auto is_buffet = false;
+		auto is_restaurant = false;
+		auto is_checkout = false;
+		auto is_waiter = false;
+		// Scanning activities of a customer
 		for(auto activity : customer.second) {			
 			switch (activity.record_state) {
 			case CustomerGroup::kBuffetQueueState:
-				is_buffet = true;
 				enter_queue_start = activity.record_time;
 				break;
 			case CustomerGroup::kRestaurantQueueState:
 				enter_queue_start = activity.record_time;
 				break;
 			case CustomerGroup::kBuffetServiceState:
+				is_buffet = true;
 				enter_queue_end = activity.record_time;
 				break;
 			case CustomerGroup::kRestaurantArriveTableSate:
+				is_restaurant = true;
 				enter_queue_end = activity.record_time;
 				break;
 			case CustomerGroup::kRestaurantWaiterState:
-				is_waiter = true;
 				wait_waiter_start = activity.record_time;
 				break;
 			case CustomerGroup::kRestaurantServiceState:
 				wait_waiter_end = activity.record_time;
+				is_waiter = true;
 				break;
 			case CustomerGroup::kCheckoutQueueState:
-				is_checkout = true;
 				wait_checkout_start = activity.record_time;
 				break;
 			case CustomerGroup::kCheckoutServiceState:
 				wait_checkout_end = activity.record_time;
+				is_checkout = true;
 			default:
 				break;
 			}
 		}
 		if(is_buffet) {
 			average_buffet_wait += enter_queue_end - enter_queue_start;
-			average_buffet_wait += enter_queue_end - enter_queue_start;
 			buffet_group++;
-		} else {
+		}
+		if(is_restaurant){
 			average_table_wait += enter_queue_end - enter_queue_start;
 			restaurant_group++;
 		}
@@ -242,12 +250,8 @@ void Records::ConcludeCustomers ( ) {
 	printf("---------------------------------------------------------------------------------\n");
 	printf("                             Simulations Reports\n");
 	printf("---------------------------------------------------------------------------------\n");
-	printf("Average Restaurant Queue Waiting Time:\t %.02f seconds \t\t(%s)\n", average_table_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_table_wait)).c_str());
-	printf("Average Buffet Seats Waiting Time:\t %.02f seconds \t\t(%s)\n", average_buffet_wait, Timer::SecondsToMany(static_cast<unsigned int >(average_buffet_wait)).c_str());
-	printf("Average Waiter Waiting Time on Table:\t %.02f seconds \t\t(%s)\n", average_waiter_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_waiter_wait)).c_str());
-	printf("Average Checkout Queue Waiting Time:\t %.02f seconds \t\t(%s)\n", average_checkout_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_checkout_wait)).c_str());
-}
-
-void Records::PushEndTime (unsigned int end_time) {
-	end_time_ = end_time;
+	printf("Average Restaurant Queue Waiting Time:\t %.2Lf seconds \t\t(%s)\n", average_table_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_table_wait)).c_str());
+	printf("Average Buffet Seats Waiting Time:\t %.02Lf seconds \t\t(%s)\n", average_buffet_wait, Timer::SecondsToMany(static_cast<unsigned int >(average_buffet_wait)).c_str());
+	printf("Average Waiter Waiting Time on Table:\t %.02Lf seconds \t\t(%s)\n", average_waiter_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_waiter_wait)).c_str());
+	printf("Average Checkout Queue Waiting Time:\t %.02Lf seconds \t\t(%s)\n", average_checkout_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_checkout_wait)).c_str());
 }

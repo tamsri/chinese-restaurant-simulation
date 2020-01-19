@@ -9,7 +9,7 @@ RandomGenerators::RandomGenerators ( ): interval_arrival_generator(nullptr),
                                         buffet_generator(nullptr) { }
 
 void RandomGenerators::Initialize (		Kernels * kernels,
-										const unsigned int set_index,
+										const unsigned int & set_index,
 										const RandomInitializerForm & initializer_form) {
 	
 	interval_arrival_generator = new NormalGenerator(	new UniformGenerator(kernels->GetKernel(Kernels::TIA1, set_index)),
@@ -23,7 +23,7 @@ void RandomGenerators::Initialize (		Kernels * kernels,
 	
 	buffet_service_generator = new NormalGenerator(new UniformGenerator(kernels->GetKernel(Kernels::TBS1, set_index)),
 													new UniformGenerator(kernels->GetKernel(Kernels::TBS2, set_index)),
-													new UniformGenerator(kernels->GetKernel(Kernels::TIA3, set_index)),
+													new UniformGenerator(kernels->GetKernel(Kernels::TBS3, set_index)),
 														initializer_form.average_buffet_service_time, 
 														initializer_form.variance_buffet_service_time);
 	
