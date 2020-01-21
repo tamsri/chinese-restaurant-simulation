@@ -17,16 +17,18 @@ public:
 				const Variables & variables,
 				const RandomInitializerForm & random_init_form,
 				const RecorderForm & recorder_form);
-	void Init(bool is_step, Log::LogPriority level);
+	void Init(const bool is_step, const Log::LogPriority level, const bool is_status);
 	void Run();
 	void Conclude () const;
+	void CleanRestaurant() const;
 private:
 	unsigned int current_time_;
 	const unsigned int end_time_;
 	bool is_step_;
+	bool is_status_;
 	
 	void PrepareRestaurant ( ) const;
-	void CleanRestaurant() const;
+
 	void Status ( ) const;
 	Process * process_;
 	ChineseRestaurant * chinese_restaurant_;

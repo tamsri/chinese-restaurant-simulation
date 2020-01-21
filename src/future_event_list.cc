@@ -41,12 +41,12 @@ void FutureEventList::insert (Event * input_event) {
 
 	
 	// Event Lists checker
-	/* Event * check_event = first_event_;
+	/*Event * check_event = first_event_;
 	while (check_event != nullptr) {
 		printf("%d ", check_event->event_time);
 		check_event = check_event->next_event;
 	}
-	printf("\n");*/
+	printf("\n");//*/
 }
 
 Event * FutureEventList::pop ( ) {

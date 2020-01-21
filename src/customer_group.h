@@ -14,7 +14,7 @@ class Cashier;
 
 class CustomerGroup final {
 public:
-	CustomerGroup(ChineseRestaurant * chinese_restaurant, Process * process);
+	CustomerGroup(ChineseRestaurant * chinese_restaurant, Process * process, unsigned int current_time);
 	~CustomerGroup();
 	enum State {
 			// states for 
@@ -47,6 +47,10 @@ public:
 	void Activate(unsigned int current_time);		// activate the customer group for manager
 	// To be accessible by simulator
 	void Execute(unsigned int current_time);		// execute the process inside the customer group
+	// verbs to prevent contemporary bugs
+	void Call();
+	void UnCall();
+	bool IsCalled() const;
 private:
 	/*----------- variables in a customer group ----------------*/
 	
@@ -56,7 +60,7 @@ private:
 	unsigned int service_time_;						// the initially generated service time of the customer group
 	unsigned int cashier_time_;						// the initially generated cashier time of the customer group
 	bool is_buffet_customer_;						// indicator type of the customer group
-	
+	bool is_called_;
 	/*----------- variables for a restaurant customer group ----------------*/
 	
 	std::vector<Customer *> customer_members_;		// customer members in the customer group
@@ -82,18 +86,9 @@ private:
 	// verbs for restaurant customer groups
 	void CallManager(const unsigned int current_time) const;	// the action for customer group to call the manager to provide the table
 	void SitOnTable();											// the action for customer group sitting on the table
-	void AssignWaiter ();										// the action for customer group assign the given waiter
-	void ActivateWaiter ( ) const;								// the action for customer group to activate the waiter service
-	void LeaveTable();											// the action for customer group leaving the table
-	void LeaveWaiter();											// the action for customer group leaving the waiter
 	// verbs for buffet customer groups
-	void AssignBuffetSeats();	// the action for customer group entering the available seats
 	void SitOnBuffetSeats();	// the action for customer group sitting on buffet seats
 	void LeaveBuffetSeats();	// the action for customer group leaving the buffet seats
-	// verbs for cashiers
-	void AssignCashier ();
-	void ActivateCashier();
-	void LeaveCashier();
 	/*----------- methods for executing the process ----------------*/
 
 	// executes for customer group on queues
@@ -101,7 +96,7 @@ private:
 	void CreateNextCustomerGroup(const unsigned int current_time) const; // execute generating the next customer group
 
 	bool CustomerGroupWaitsTheWaiter (const unsigned int current_time);
-	bool CustomerGroupWaitsInRestaurantQueue (const unsigned int current_time) const; // execute customer group waiting in restaurant queue
+	bool CustomerGroupWaitsInRestaurantQueue (const unsigned int current_time); // execute customer group waiting in restaurant queue
 	bool CustomerGroupWaitsInBuffetQueue(const  unsigned int current_time); // execute customer group waiting in buffet queue
 	bool CustomerGroupInCheckoutQueue(const unsigned int current_time); // execute customer group waiting in checkout queue
 	

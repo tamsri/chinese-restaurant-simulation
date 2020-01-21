@@ -3,23 +3,41 @@
 #include <map>
 #include <fstream>
 #include "timer.h"
-
-Records::Records(const RecorderForm recorder_form) :	seed_(recorder_form.selected_seed),
+#include "chinese_restaurant.h"
+Records::Records(const RecorderForm recorder_form, ChineseRestaurant *chinese_restaurant) :	seed_(recorder_form.selected_seed),
 														start_time_(recorder_form.start_time),
-														end_time_(recorder_form.end_time){
+														end_time_(recorder_form.end_time),
+														chinese_restaurant_(chinese_restaurant){
+	// Initialize queue records
+	for(auto i = 0; i != kQueueEnd; ++i) {
+		queue_records_[static_cast<Queues>(i)].first = start_time_;
+		queue_records_[static_cast<Queues>(i)].second = 0;
+	}
 	Log::GetLog()->Print("Records Class is initialized");
 }
 
 void Records::PushCustomerRecord (const CustomerGroupRecord customer_group_record) {
+	if (customer_group_record.record_time < start_time_) return;
+	if (customer_group_record.record_time > end_time_) return;
 	customer_group_records_[customer_group_record.id].push_back(customer_group_record);
 }
 
 void Records::PushGeneratorRecord (const GeneratorRecord generator_record) {
+	if (generator_record.record_time < start_time_) return;
+	if (generator_record.record_time > end_time_) return;
 	generator_records_.push_back(generator_record);
 }
 
 void Records::PushBuffetRecord (const bool is_buffet) {
 	buffet_type_records_.push_back(is_buffet);
+}
+
+void Records::PushQueueRecord (const QueueRecord queue_record) {
+	if (queue_record.record_time < start_time_) return;
+	if (queue_record.record_time > end_time_) return;
+	const auto last_check = queue_records_[queue_record.queue_type].first;
+	queue_records_[queue_record.queue_type].second += (queue_record.record_time - last_check)*queue_record.queue_size;
+	queue_records_[queue_record.queue_type].first = queue_record.record_time;
 }
 
 unsigned int Records::FindMax(const std::vector<unsigned int> & data) {
@@ -171,29 +189,34 @@ void Records::ConcludeCustomers ( ) {
 		}
 	}
 	record_file.close();
+}
 
+void Records::ConcludeResult ( ) {
 	long double average_table_wait = 0;
 	long double average_waiter_wait = 0;
-	long double average_buffet_wait = 0;  
+	long double average_buffet_wait = 0;
 	long double average_checkout_wait = 0;
 	unsigned int restaurant_group = 0;
 	unsigned int wait_waiter_group = 0;
 	unsigned int buffet_group = 0;
 	unsigned int checkout_group = 0;
 	// finding average table wait
-	for(const auto & customer: customer_group_records_) {
+	for (const auto & customer : customer_group_records_) {
 		auto enter_queue_start = start_time_;
 		auto wait_waiter_start = start_time_;
 		auto wait_checkout_start = start_time_;
+
 		auto wait_waiter_end = end_time_;
 		auto enter_queue_end = end_time_;
 		auto wait_checkout_end = end_time_;
+
 		auto is_buffet = false;
 		auto is_restaurant = false;
 		auto is_checkout = false;
 		auto is_waiter = false;
+
 		// Scanning activities of a customer
-		for(auto activity : customer.second) {			
+		for (auto activity : customer.second) {
 			switch (activity.record_state) {
 			case CustomerGroup::kBuffetQueueState:
 				enter_queue_start = activity.record_time;
@@ -202,7 +225,7 @@ void Records::ConcludeCustomers ( ) {
 				enter_queue_start = activity.record_time;
 				break;
 			case CustomerGroup::kBuffetServiceState:
-				is_buffet = true;
+				is_buffet = true;		//Calculate only groups who finish waiting
 				enter_queue_end = activity.record_time;
 				break;
 			case CustomerGroup::kRestaurantArriveTableSate:
@@ -222,15 +245,18 @@ void Records::ConcludeCustomers ( ) {
 			case CustomerGroup::kCheckoutServiceState:
 				wait_checkout_end = activity.record_time;
 				is_checkout = true;
+				break;
 			default:
 				break;
 			}
 		}
-		if(is_buffet) {
+		// Calculate average buffet wait
+		if (is_buffet) {
 			average_buffet_wait += enter_queue_end - enter_queue_start;
 			buffet_group++;
 		}
-		if(is_restaurant){
+		// calculate average b
+		if (is_restaurant) {
 			average_table_wait += enter_queue_end - enter_queue_start;
 			restaurant_group++;
 		}
@@ -238,7 +264,7 @@ void Records::ConcludeCustomers ( ) {
 			average_waiter_wait += wait_waiter_end - wait_waiter_start;
 			wait_waiter_group++;
 		}
-		if(is_checkout) {
+		if (is_checkout) {
 			average_checkout_wait += wait_checkout_end - wait_checkout_start;
 			checkout_group++;
 		}
@@ -247,11 +273,31 @@ void Records::ConcludeCustomers ( ) {
 	average_buffet_wait /= buffet_group;
 	average_waiter_wait /= wait_waiter_group;
 	average_checkout_wait /= checkout_group;
+	// Conclude Queue Records
+	for (auto i = 0; i != kQueueEnd; ++i) {
+		const auto end_time = queue_records_[static_cast<Queues>(i)].first;
+		queue_records_[static_cast<Queues>(i)].second /= (end_time-start_time_);
+	}
 	printf("---------------------------------------------------------------------------------\n");
-	printf("                             Simulations Reports\n");
+	printf("                             Simulations Results\n");
 	printf("---------------------------------------------------------------------------------\n");
-	printf("Average Restaurant Queue Waiting Time:\t %.2Lf seconds \t\t(%s)\n", average_table_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_table_wait)).c_str());
-	printf("Average Buffet Seats Waiting Time:\t %.02Lf seconds \t\t(%s)\n", average_buffet_wait, Timer::SecondsToMany(static_cast<unsigned int >(average_buffet_wait)).c_str());
-	printf("Average Waiter Waiting Time on Table:\t %.02Lf seconds \t\t(%s)\n", average_waiter_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_waiter_wait)).c_str());
-	printf("Average Checkout Queue Waiting Time:\t %.02Lf seconds \t\t(%s)\n", average_checkout_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_checkout_wait)).c_str());
+	printf("                             Average Waiting Times\n");
+	printf("Restaurant Queue Waiting Time:\t %.2Lf seconds \t\t(%s)\n", average_table_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_table_wait)).c_str());
+	printf("Buffet Seats Waiting Time:\t %.02Lf seconds \t\t(%s)\n", average_buffet_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_buffet_wait)).c_str());
+	printf("Waiter Waiting Time on Table:\t %.02Lf seconds \t\t(%s)\n", average_waiter_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_waiter_wait)).c_str());
+	printf("Checkout Queue Waiting Time:\t %.02Lf seconds \t\t(%s)\n", average_checkout_wait, Timer::SecondsToMany(static_cast<unsigned int>(average_checkout_wait)).c_str());
+	printf("                             Average Queue Lengths\n");
+	std::string queues_intro[] = {
+		"Table Queue Length",
+		"Buffet Queue Length",
+		"Free Waiter Queue Length",
+		"Waiting Waiter Queue Length",
+		"Checkout Queue Length",
+		"Cashier Queue Length"
+	};
+	for(auto i = 0; i != kQueueEnd; ++i) {
+		printf("%s:\t %.10Lf \t\t\n", queues_intro[i].c_str()
+											, queue_records_[static_cast<Queues>(i)].second);
+		
+	}
 }

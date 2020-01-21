@@ -1,8 +1,9 @@
 #include "timer.h"
 #include "log.h"
 
-Timer::Timer (unsigned start_time) : start_time_(start_time) {
+Timer::Timer (unsigned int start_time, unsigned int end_time) : start_time_(start_time), end_time_(end_time) {
 	Log::GetLog()->Print("Restaurant will open at " + ConvertTime(start_time_) + " O'Clock");
+	Log::GetLog()->Print("Restaurant will close at " + ConvertTime(end_time_) + " O'Clock");
 }
 std::string Timer::ConvertTime(unsigned int time) const {
 	std::string result;
@@ -33,7 +34,8 @@ std::string Timer::SecondsToMinutes (const unsigned int seconds) const {
 std::string Timer::SecondsToTime(unsigned int seconds) const {
 	std::string answer;
 	answer += ConvertTime(seconds);
-	answer += " O'Clock (" + std::to_string(seconds) + " seconds)";
+	answer += " O'Clock (" + std::to_string(seconds) + " seconds) (";
+	answer += std::to_string(seconds - start_time_) + " seconds from open)";
 	return answer;
 }
 std::string Timer::SecondsToMany(unsigned int seconds){

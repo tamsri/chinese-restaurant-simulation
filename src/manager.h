@@ -7,9 +7,13 @@ struct ChineseRestaurant;
 class Manager final {
 public:
 	explicit Manager(ChineseRestaurant * chinese_restaurant);
-	void Manages (unsigned int current_time) const;
+	void Manages (unsigned int current_time);
+	bool IsFree() const;
+	void MakeFree();
+	void MakeBusy();
 private:
 	ChineseRestaurant * chinese_restaurant_;
+	bool is_free_;
 };
 
 

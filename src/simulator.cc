@@ -23,14 +23,15 @@ Simulator::Simulator (	const TimerForm & timer_form,
 						const RandomInitializerForm & random_init_form,
 						const RecorderForm & recorder_form):	current_time_(timer_form.start_time),
 																end_time_(timer_form.end_time),
-																is_step_(false) {
+																is_step_(false),
+																is_status_(false){
 	// Initialize Timer
-	timer_ = new Timer(timer_form.start_time);
+	timer_ = new Timer(timer_form.start_time, timer_form.end_time);
 	// Initialize variables in simulator
 	chinese_restaurant_						= new ChineseRestaurant();
 	chinese_restaurant_->variables			= new Variables(variables);
 	chinese_restaurant_->random_generators	= new RandomGenerators();
-	chinese_restaurant_->records			= new Records(recorder_form);
+	chinese_restaurant_->records			= new Records(recorder_form, chinese_restaurant_);
 	chinese_restaurant_->clock				= timer_;
 	// Initialize random generators
 	auto * kernels                  = new Kernels();
@@ -41,8 +42,9 @@ Simulator::Simulator (	const TimerForm & timer_form,
 	process_ = new Process();
 }
 
-void Simulator::Init (const bool is_step, const Log::LogPriority level) {
+void Simulator::Init (const bool is_step, const Log::LogPriority level, const bool is_status) {
 	is_step_ = is_step;
+	is_status_ = is_status;
 	Log::GetLog()->SetPriority(static_cast<Log::LogPriority>(level));
 	PrepareRestaurant();
 }
@@ -72,12 +74,14 @@ void Simulator::PrepareRestaurant() const {
 		chinese_restaurant_->free_waiter_queue.push(waiter);
 		chinese_restaurant_->waiters.insert(waiter);
 	}
+	chinese_restaurant_->records->PushQueueRecord({ current_time_,static_cast<unsigned int>(chinese_restaurant_->free_waiter_queue.size()),Queues::kFreeWaiterQueue });
 	// Prepare cashier.
 	for (unsigned int i = 0; i < var->number_cashiers; ++i) {
 		auto cashier = new Cashier();
 		chinese_restaurant_->free_cashiers.push(cashier);
 		chinese_restaurant_->cashiers.insert(cashier);
 	}
+	chinese_restaurant_->records->PushQueueRecord({ current_time_,static_cast<unsigned int>(chinese_restaurant_->free_cashiers.size()),Queues::kFreeCashierQueue });
 }
 
 void Simulator::CleanRestaurant() const {
@@ -106,7 +110,7 @@ void Simulator::Run() {
 	printf("                        OPENED RESTAURANT\n\n");
 	printf("-----------------------------------------------------------------------\n");
 	// Creating the first customer group.
-	(new CustomerGroup(chinese_restaurant_, process_))->Activate(current_time_);
+	(new CustomerGroup(chinese_restaurant_, process_, current_time_))->Activate(current_time_);
 	// Run the simulation by popping the first event.
 	while (current_time_ <= end_time_) {
 		Event * event = process_->PopEvent();
@@ -117,23 +121,30 @@ void Simulator::Run() {
 		customer_group->Execute(current_time_);
 		delete event;
 		if (customer_group->IsTerminated()) delete customer_group;
-		//Status();
-		if(is_step_) {
+		if(is_status_)
+			Status();
+		if(is_step_) 
 			system("pause");
-		}
 	}
 	printf("-----------------------------------------------------------------------\n");
 	printf("                        CLOSED RESTAURANT\n\n");
 	printf("-----------------------------------------------------------------------\n");
-	CleanRestaurant();
 }
 
 void Simulator::Conclude ( ) const {
+	// conclude queue records
+	chinese_restaurant_->records->PushQueueRecord({ current_time_, static_cast<unsigned int>(chinese_restaurant_->restaurant_queue.size()), kTableQueue });
+	chinese_restaurant_->records->PushQueueRecord({ current_time_, static_cast<unsigned int>(chinese_restaurant_->buffet_queue.size()), kBuffetQueue });
+	chinese_restaurant_->records->PushQueueRecord({ current_time_, static_cast<unsigned int>(chinese_restaurant_->free_waiter_queue.size()), kFreeWaiterQueue });
+	chinese_restaurant_->records->PushQueueRecord({ current_time_, static_cast<unsigned int>(chinese_restaurant_->wait_waiter_queue.size()), kWaitWaiterQueue });
+	chinese_restaurant_->records->PushQueueRecord({ current_time_, static_cast<unsigned int>(chinese_restaurant_->check_out_queue.size()), kCheckoutQueue });
+	chinese_restaurant_->records->PushQueueRecord({ current_time_, static_cast<unsigned int>(chinese_restaurant_->free_cashiers.size()), kFreeCashierQueue });
 	printf("-----------------------------------------------------------------------\n");
 	printf("                        RESTAURANT SUMMARY\n\n");
 	printf("-----------------------------------------------------------------------\n");
 	chinese_restaurant_->records->ConcludeGenerators();
 	chinese_restaurant_->records->ConcludeCustomers();
+	chinese_restaurant_->records->ConcludeResult();
 }
 
 void Simulator::Status() const {
@@ -152,7 +163,7 @@ void Simulator::Status() const {
 	if(!chinese_restaurant_->buffet_queue.empty()) {
 		auto temp_buffet_queue = chinese_restaurant_->buffet_queue;
 		while (!temp_buffet_queue.empty()) {
-			printf("#%d ", temp_buffet_queue.front()->GetCustomerGroupId());
+			printf("#%d(%d persons) ", temp_buffet_queue.front()->GetCustomerGroupId(), temp_buffet_queue.front()->PersonsInGroup());
 			temp_buffet_queue.pop();
 		}
 	}
@@ -175,7 +186,7 @@ void Simulator::Status() const {
 	                                                                                        free_restaurant_table->GetTableId(),
 	                                                                                        free_restaurant_table->GetSeatNumber());
 	// Available Buffet Seats in the restaurant
-	printf("\nFree Buffet Seats (%d tables): ", static_cast<int>(chinese_restaurant_->free_buffet_seats.size()));
+	printf("\nFree Buffet Seats (%d seats): ", static_cast<int>(chinese_restaurant_->free_buffet_seats.size()));
 	for (auto & free_buffet_seat : chinese_restaurant_->free_buffet_seats) printf("#%d ", free_buffet_seat->GetSeatId());
 
 	
