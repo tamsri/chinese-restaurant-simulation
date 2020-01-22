@@ -6,15 +6,15 @@ class CustomerGroup;
 class Log;
 class Seat;
 
-class Table final{
+class Table final {
 public:
-	explicit Table(const unsigned int seat_number);
-	unsigned int GetTableId() const;
-	unsigned int GetSeatNumber() const;
+	explicit Table (unsigned int seat_number);
+	unsigned int GetTableId ( ) const;
+	unsigned int GetSeatNumber ( ) const;
 	bool IsFree ( ) const;
 
 	void OnSit (CustomerGroup * arrival_customer_group);
-	void OnLeave();
+	void OnLeave ( );
 	CustomerGroup * occupied_customer_group_;
 
 private:

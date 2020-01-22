@@ -5,26 +5,26 @@
 
 unsigned int Waiter::waiter_global_id_ = 0;
 
-Waiter::Waiter():waiter_id_(++waiter_global_id_) , service_to_(nullptr){
+Waiter::Waiter ( ): waiter_id_(++waiter_global_id_), service_to_(nullptr) {
 	log_ = Log::GetLog();
-	log_->Print("Waiter #" + std::to_string(GetWaiterId()) +" is created.", Log::P4);
+	log_->Print("Waiter #" + std::to_string(GetWaiterId()) + " is created.", Log::P4);
 }
 
-unsigned int Waiter::GetWaiterId() const {
-	return waiter_id_;
-}
+unsigned int Waiter::GetWaiterId ( ) const { return waiter_id_; }
 
-void Waiter::ProvideServiceTo(Table * table) {
+void Waiter::ProvideServiceTo (Table * table) {
 	service_to_ = table;
-	log_->Print("Waiter #" + std::to_string(GetWaiterId()) + " started service on Table #" + std::to_string(service_to_->GetTableId()), Log::P4);
+	log_->Print("Waiter #" + std::to_string(GetWaiterId()) + " started service on Table #" + std::
+	            to_string(service_to_->GetTableId()), Log::P4);
 }
 
-void Waiter::CompleteService() {
-	log_->Print("Waiter #" + std::to_string(GetWaiterId()) + " finished service on Table #" + std::to_string(service_to_->GetTableId()), Log::P4);
+void Waiter::CompleteService ( ) {
+	log_->Print("Waiter #" + std::to_string(GetWaiterId()) + " finished service on Table #" + std::
+	            to_string(service_to_->GetTableId()), Log::P4);
 	service_to_ = nullptr;
 }
 
-bool Waiter::IsAvailable() const {
+bool Waiter::IsAvailable ( ) const {
 	if (service_to_ != nullptr) return false;
 	return true;
 }

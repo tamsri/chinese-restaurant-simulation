@@ -4,12 +4,12 @@ struct Event;
 
 class FutureEventList final {
 public:
-	FutureEventList();
-	~FutureEventList();
+	explicit FutureEventList (bool print_event_list);
 	void insert (Event * event);
-	Event * pop();
+	Event* pop ( );
 private:
 	Event * first_event_;
+	bool print_event_list_;
 };
 
 #endif

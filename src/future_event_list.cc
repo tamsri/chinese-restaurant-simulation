@@ -3,56 +3,50 @@
 #include <cassert>
 #include "log.h"
 #include "event.h"
+#include  "customer_group.h"
 
-FutureEventList::FutureEventList ( ) : first_event_(nullptr){
+FutureEventList::FutureEventList (const bool print_event_list) : first_event_(nullptr), print_event_list_(print_event_list) {
 	Log::GetLog()->Print("Future Event List is created");
 }
 
-FutureEventList::~FutureEventList ( ) {
-	while(first_event_!=nullptr) {
-		Event * deleted_event = first_event_;
-		first_event_ = first_event_->next_event;
-		delete deleted_event;
-	}
-	Log::GetLog()->Print("Future Event List is deleted");
-}
-
-void FutureEventList::insert (Event * input_event) {
+void FutureEventList::insert (Event * event) {
 	// if the event list is empty
-	if(first_event_ == nullptr) first_event_ = input_event;
-	// if the event list is not empty
-	else if (input_event->event_time < first_event_->event_time) {
-		input_event->next_event = first_event_;
-		first_event_ = input_event;
+	if (first_event_ == nullptr) first_event_ = event;
+		// if the event list is not empty
+	else if (event->event_time < first_event_->event_time) {
+		event->next_event = first_event_;
+		first_event_      = event;
 	}
-	else if (input_event->event_time == first_event_->event_time) {
-		input_event->next_event = first_event_->next_event;
-		first_event_->next_event = input_event;
+	else if (event->event_time == first_event_->event_time) {
+		event->next_event        = first_event_->next_event;
+		first_event_->next_event = event;
 	}
 	else {
-		Event * current_event = first_event_;
-		while(current_event->next_event != nullptr) {
-			if (input_event->event_time <= current_event->next_event->event_time || input_event->event_time <= current_event->event_time) break;
+		auto * current_event = first_event_;
+		while (current_event->next_event != nullptr) {
+			if (event->event_time <= current_event->next_event->event_time || event->event_time <= current_event->
+			    event_time)
+				break;
 			current_event = current_event->next_event;
 		}
-		if(current_event->next_event != nullptr) input_event->next_event = current_event->next_event;
-		current_event->next_event = input_event;
+		if (current_event->next_event != nullptr) event->next_event = current_event->next_event;
+		current_event->next_event = event;
 	}
 
-	
 	// Event Lists checker
-	/*Event * check_event = first_event_;
+	if (!print_event_list_) return;
+	auto * check_event = first_event_;
 	while (check_event != nullptr) {
-		printf("%d ", check_event->event_time);
+		printf("%d(#%d) ", check_event->event_time, check_event->customer_group->GetCustomerGroupId());
 		check_event = check_event->next_event;
 	}
-	printf("\n");//*/
+	printf("\n");
 }
 
-Event * FutureEventList::pop ( ) {
-	if (first_event_ == nullptr) assert("No future event to pop");
-	Event * pop_event = first_event_;
-	first_event_ = pop_event->next_event;
+Event* FutureEventList::pop ( ) {
+	if (first_event_ == nullptr)
+		assert("No future event to pop");
+	auto * pop_event = first_event_;
+	first_event_     = pop_event->next_event;
 	return pop_event;
 }
-

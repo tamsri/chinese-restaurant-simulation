@@ -4,7 +4,7 @@ Log * Log::log_ = nullptr;
 
 void Log::Print (const std::string & text, const LogPriority priority, const LogType type) const {
 	if (priority > priority_) return;
-	
+
 	switch (type) {
 	case ERROR:
 		printf("ERROR: ");
@@ -23,11 +23,9 @@ void Log::Print (const std::string & text, const LogPriority priority, const Log
 	printf("%s\n", text.c_str());
 }
 
-Log * Log::GetLog ( ) {
+Log* Log::GetLog ( ) {
 	if (log_ == nullptr) log_ = new Log();
 	return log_;
 }
 
-void Log::SetPriority (const LogPriority priority) {
-	priority_ = priority;
-}
+void Log::SetPriority (const LogPriority priority) { priority_ = priority; }

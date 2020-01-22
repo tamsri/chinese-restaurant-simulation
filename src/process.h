@@ -4,12 +4,11 @@
 class FutureEventList;
 struct Event;
 
-class Process {
+class Process final {
 public:
-	Process();
-	~Process();
-	void InsertEvent(Event * event) const;
-	Event * PopEvent() const;
+	explicit Process (bool print_event_list);
+	void InsertEvent (Event * event) const;
+	Event* PopEvent ( ) const;
 private:
 	FutureEventList * future_event_list_;
 };

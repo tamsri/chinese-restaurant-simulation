@@ -20,29 +20,29 @@ struct Variables;
 
 struct ChineseRestaurant {
 
-	RandomGenerators * random_generators;				// pointer to the random generator
-	Variables * variables;								// pointer to variables of the restaurant
-	Records * records;									// pointer to records of simulation
-	Timer * clock;										// pointer to the timer
-	
-	Manager * manager;									// pointer to the manager
-	
-	std::vector<Table *> free_restaurant_tables;		// free tables in restaurant
-	std::vector<Seat * > free_buffet_seats;				// free buffet seats in restaurant
-	
-	std::queue<Waiter* > free_waiter_queue;				// free waiters in restaurant
-	std::queue<Cashier * > free_cashiers;				// free cashiers in restaurant
+	RandomGenerators * random_generators; // pointer to the random generator
+	Variables * variables;                // pointer to variables of the restaurant
+	Records * records;                    // pointer to records of simulation
+	Timer * clock;                        // pointer to the timer
 
-	std::queue<CustomerGroup *> wait_waiter_queue;		// queue of customer group waiting for a waiter
-	std::vector<CustomerGroup * > restaurant_queue;		// queue of customer group waiting for a table
-	std::queue<CustomerGroup * > buffet_queue;			// queue of customer group waiting for buffet seats
-	std::queue<CustomerGroup * > check_out_queue;		// queue of customer group waiting for a cashier
+	Manager * manager; // pointer to the manager
 
-	std::set<Waiter *> waiters;							// waiters in restaurant
-	std::set<Cashier *> cashiers;						// cashiers in restaurant
-	std::set<Table *> tables;							// tables in restaurant
-	std::set<Seat *> buffet_seats;						// buffet seats in restaurant
-	std::set<CustomerGroup *> customers;				// customers in restaurant
+	std::vector<Table *> free_restaurant_tables; // free tables in restaurant
+	std::vector<Seat *> free_buffet_seats;       // free buffet seats in restaurant
+
+	std::queue<Waiter*> free_waiter_queue; // free waiters in restaurant
+	std::queue<Cashier *> free_cashiers;   // free cashiers in restaurant
+
+	std::queue<CustomerGroup *> wait_waiter_queue; // queue of customer group waiting for a waiter
+	std::vector<CustomerGroup *> restaurant_queue; // queue of customer group waiting for a table
+	std::queue<CustomerGroup *> buffet_queue;      // queue of customer group waiting for buffet seats
+	std::queue<CustomerGroup *> check_out_queue;   // queue of customer group waiting for a cashier
+
+	std::set<Waiter *> waiters;          // waiters in restaurant
+	std::set<Cashier *> cashiers;        // cashiers in restaurant
+	std::set<Table *> tables;            // tables in restaurant
+	std::set<Seat *> buffet_seats;       // buffet seats in restaurant
+	std::set<CustomerGroup *> customers; // customers in restaurant
 };
 
 #endif // MODEL_CHINESE_RESTAURANT_H

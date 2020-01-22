@@ -6,11 +6,11 @@ class Log;
 
 class Waiter final {
 public:
-	Waiter();
-	unsigned int GetWaiterId() const;
-	void ProvideServiceTo(Table * table);
-	void CompleteService();
-	bool IsAvailable() const;
+	Waiter ( );
+	unsigned int GetWaiterId ( ) const;
+	void ProvideServiceTo (Table * table);
+	void CompleteService ( );
+	bool IsAvailable ( ) const;
 private:
 	const unsigned int waiter_id_;
 	static unsigned int waiter_global_id_;

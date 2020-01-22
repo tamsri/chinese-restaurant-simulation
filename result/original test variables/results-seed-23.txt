@@ -1,0 +1,8 @@
+The Simulation Result
+Seed Number:23 || Total Customer Groups: 232
+Start Record Time: 28800 End Record Time: 288000
+the average waiting time for the table:	 441.343
+the average table queue length:		 0.368563
+the average waiting time for the waiter: 1515.14
+the average cashier queue length:	0.0650069
+23	441.343	0.368563	1515.14	0.0650069

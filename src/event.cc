@@ -10,6 +10,6 @@ Event::Event (CustomerGroup * customer_group, const unsigned time) : customer_gr
 	//	Log::P2, Log::EVENT);
 }
 
-bool  EventComparator::operator()  (const Event * first, const Event * second) const {
+bool EventComparator::operator() (const Event * first, const Event * second) const {
 	return first->event_time < second->event_time;
 }

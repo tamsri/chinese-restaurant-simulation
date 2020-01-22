@@ -3,8 +3,8 @@
 
 class Customer final {
 public:
-	Customer();
-	unsigned int GetPersonId() const;
+	Customer ( );
+	unsigned int GetPersonId ( ) const;
 private:
 	const unsigned int customer_id_;
 	static unsigned int customer_global_id_;

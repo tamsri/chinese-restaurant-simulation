@@ -1,0 +1,3776 @@
+			Customer Groups - Seed: 31
+----------------------------------------------------------------------------------
+State numbers	|	Activity Times(seconds)	|	Actions
+----------------------------------------------------------------------------------
+Customer Group #1306:
+	0	|		28800		|	arrives to restaurant
+	1	|		28800		|	enters buffet queue
+	2	|		28800		|	starts buffet service
+	7	|		34570		|	leaves the service
+	8	|		34570		|	enters the checkout queue
+	9	|		34570		|	starts checkout service
+	10	|		34736		|	finishes checkout & leaves
+Customer Group #1307:
+	0	|		29299		|	arrives to restaurant
+	3	|		29299		|	enters restaurant queue
+	4	|		29299		|	assigned to table
+	5	|		30299		|	waits for a waiter
+	6	|		30299		|	starts restaurant service
+	7	|		47159		|	leaves the service
+	8	|		47159		|	enters the checkout queue
+	9	|		47308		|	starts checkout service
+	10	|		47368		|	finishes checkout & leaves
+Customer Group #1308:
+	0	|		29889		|	arrives to restaurant
+	1	|		29889		|	enters buffet queue
+	2	|		29889		|	starts buffet service
+	7	|		35581		|	leaves the service
+	8	|		35581		|	enters the checkout queue
+	9	|		35581		|	starts checkout service
+	10	|		35639		|	finishes checkout & leaves
+Customer Group #1309:
+	0	|		30395		|	arrives to restaurant
+	3	|		30395		|	enters restaurant queue
+	4	|		30395		|	assigned to table
+	5	|		31395		|	waits for a waiter
+	6	|		31395		|	starts restaurant service
+	7	|		33074		|	leaves the service
+	8	|		33074		|	enters the checkout queue
+	9	|		33074		|	starts checkout service
+	10	|		33077		|	finishes checkout & leaves
+Customer Group #1310:
+	0	|		30995		|	arrives to restaurant
+	1	|		30995		|	enters buffet queue
+	2	|		30995		|	starts buffet service
+	7	|		37293		|	leaves the service
+	8	|		37293		|	enters the checkout queue
+	9	|		37293		|	starts checkout service
+	10	|		38167		|	finishes checkout & leaves
+Customer Group #1311:
+	0	|		31623		|	arrives to restaurant
+	3	|		31623		|	enters restaurant queue
+	4	|		31623		|	assigned to table
+	5	|		32623		|	waits for a waiter
+	6	|		32623		|	starts restaurant service
+	7	|		38462		|	leaves the service
+	8	|		38462		|	enters the checkout queue
+	9	|		38950		|	starts checkout service
+	10	|		39323		|	finishes checkout & leaves
+Customer Group #1312:
+	0	|		32109		|	arrives to restaurant
+	3	|		32109		|	enters restaurant queue
+	4	|		32623		|	assigned to table
+	5	|		33623		|	waits for a waiter
+	6	|		33623		|	starts restaurant service
+	7	|		37919		|	leaves the service
+	8	|		37919		|	enters the checkout queue
+	9	|		38167		|	starts checkout service
+	10	|		38309		|	finishes checkout & leaves
+Customer Group #1313:
+	0	|		32704		|	arrives to restaurant
+	3	|		32704		|	enters restaurant queue
+	4	|		33074		|	assigned to table
+	5	|		34074		|	waits for a waiter
+	6	|		34074		|	starts restaurant service
+	7	|		45295		|	leaves the service
+	8	|		45295		|	enters the checkout queue
+	9	|		46465		|	starts checkout service
+	10	|		46856		|	finishes checkout & leaves
+Customer Group #1314:
+	0	|		33234		|	arrives to restaurant
+	1	|		33234		|	enters buffet queue
+	2	|		33234		|	starts buffet service
+	7	|		39833		|	leaves the service
+	8	|		39833		|	enters the checkout queue
+	9	|		39833		|	starts checkout service
+	10	|		39978		|	finishes checkout & leaves
+Customer Group #1315:
+	0	|		33872		|	arrives to restaurant
+	1	|		33872		|	enters buffet queue
+	2	|		33872		|	starts buffet service
+	7	|		40292		|	leaves the service
+	8	|		40292		|	enters the checkout queue
+	9	|		40292		|	starts checkout service
+	10	|		40881		|	finishes checkout & leaves
+Customer Group #1316:
+	0	|		34523		|	arrives to restaurant
+	1	|		34523		|	enters buffet queue
+	2	|		34523		|	starts buffet service
+	7	|		41100		|	leaves the service
+	8	|		41100		|	enters the checkout queue
+	9	|		41100		|	starts checkout service
+	10	|		41446		|	finishes checkout & leaves
+Customer Group #1317:
+	0	|		35084		|	arrives to restaurant
+	3	|		35084		|	enters restaurant queue
+	4	|		35084		|	assigned to table
+	5	|		36084		|	waits for a waiter
+	6	|		36084		|	starts restaurant service
+	7	|		38435		|	leaves the service
+	8	|		38435		|	enters the checkout queue
+	9	|		38775		|	starts checkout service
+	10	|		38950		|	finishes checkout & leaves
+Customer Group #1318:
+	0	|		35780		|	arrives to restaurant
+	3	|		35780		|	enters restaurant queue
+	4	|		36084		|	assigned to table
+	5	|		37084		|	waits for a waiter
+	6	|		37084		|	starts restaurant service
+	7	|		38022		|	leaves the service
+	8	|		38022		|	enters the checkout queue
+	9	|		38309		|	starts checkout service
+	10	|		38684		|	finishes checkout & leaves
+Customer Group #1319:
+	0	|		36317		|	arrives to restaurant
+	1	|		36317		|	enters buffet queue
+	2	|		36317		|	starts buffet service
+	7	|		42453		|	leaves the service
+	8	|		42453		|	enters the checkout queue
+	9	|		42453		|	starts checkout service
+	10	|		43538		|	finishes checkout & leaves
+Customer Group #1320:
+	0	|		36888		|	arrives to restaurant
+	3	|		36888		|	enters restaurant queue
+	4	|		37084		|	assigned to table
+	5	|		38084		|	waits for a waiter
+	6	|		38084		|	starts restaurant service
+	7	|		38141		|	leaves the service
+	8	|		38141		|	enters the checkout queue
+	9	|		38684		|	starts checkout service
+	10	|		38775		|	finishes checkout & leaves
+Customer Group #1321:
+	0	|		37406		|	arrives to restaurant
+	1	|		37406		|	enters buffet queue
+	2	|		37406		|	starts buffet service
+	7	|		44016		|	leaves the service
+	8	|		44016		|	enters the checkout queue
+	9	|		46410		|	starts checkout service
+	10	|		46465		|	finishes checkout & leaves
+Customer Group #1322:
+	0	|		37897		|	arrives to restaurant
+	1	|		37897		|	enters buffet queue
+	2	|		37897		|	starts buffet service
+	7	|		43089		|	leaves the service
+	8	|		43089		|	enters the checkout queue
+	9	|		43538		|	starts checkout service
+	10	|		43650		|	finishes checkout & leaves
+Customer Group #1323:
+	0	|		38492		|	arrives to restaurant
+	3	|		38492		|	enters restaurant queue
+	4	|		38492		|	assigned to table
+	5	|		39492		|	waits for a waiter
+	6	|		39492		|	starts restaurant service
+	7	|		46880		|	leaves the service
+	8	|		46880		|	enters the checkout queue
+	9	|		47229		|	starts checkout service
+	10	|		47308		|	finishes checkout & leaves
+Customer Group #1324:
+	0	|		39065		|	arrives to restaurant
+	3	|		39065		|	enters restaurant queue
+	4	|		39492		|	assigned to table
+	5	|		40492		|	waits for a waiter
+	6	|		40492		|	starts restaurant service
+	7	|		41551		|	leaves the service
+	8	|		41551		|	enters the checkout queue
+	9	|		41551		|	starts checkout service
+	10	|		41727		|	finishes checkout & leaves
+Customer Group #1325:
+	0	|		39586		|	arrives to restaurant
+	1	|		39586		|	enters buffet queue
+	2	|		39586		|	starts buffet service
+	7	|		46610		|	leaves the service
+	8	|		46610		|	enters the checkout queue
+	9	|		46857		|	starts checkout service
+	10	|		47039		|	finishes checkout & leaves
+Customer Group #1326:
+	0	|		40089		|	arrives to restaurant
+	3	|		40089		|	enters restaurant queue
+	4	|		40492		|	assigned to table
+	5	|		41492		|	waits for a waiter
+	6	|		41492		|	starts restaurant service
+	7	|		43256		|	leaves the service
+	8	|		43256		|	enters the checkout queue
+	9	|		43650		|	starts checkout service
+	10	|		45119		|	finishes checkout & leaves
+Customer Group #1327:
+	0	|		40719		|	arrives to restaurant
+	3	|		40719		|	enters restaurant queue
+	4	|		41492		|	assigned to table
+	5	|		42492		|	waits for a waiter
+	6	|		42492		|	starts restaurant service
+	7	|		43517		|	leaves the service
+	8	|		43517		|	enters the checkout queue
+	9	|		45187		|	starts checkout service
+	10	|		46410		|	finishes checkout & leaves
+Customer Group #1328:
+	0	|		41348		|	arrives to restaurant
+	3	|		41348		|	enters restaurant queue
+	4	|		41551		|	assigned to table
+	5	|		42551		|	waits for a waiter
+	6	|		42551		|	starts restaurant service
+	7	|		43334		|	leaves the service
+	8	|		43334		|	enters the checkout queue
+	9	|		45119		|	starts checkout service
+	10	|		45187		|	finishes checkout & leaves
+Customer Group #1329:
+	0	|		41820		|	arrives to restaurant
+	3	|		41820		|	enters restaurant queue
+	4	|		42492		|	assigned to table
+	5	|		43492		|	waits for a waiter
+	6	|		43492		|	starts restaurant service
+	7	|		47357		|	leaves the service
+	8	|		47357		|	enters the checkout queue
+	9	|		47368		|	starts checkout service
+	10	|		47557		|	finishes checkout & leaves
+Customer Group #1330:
+	0	|		42466		|	arrives to restaurant
+	3	|		42466		|	enters restaurant queue
+	4	|		42551		|	assigned to table
+	5	|		43551		|	waits for a waiter
+	6	|		43551		|	starts restaurant service
+	7	|		46272		|	leaves the service
+	8	|		46272		|	enters the checkout queue
+	9	|		46856		|	starts checkout service
+	10	|		46857		|	finishes checkout & leaves
+Customer Group #1331:
+	0	|		43059		|	arrives to restaurant
+	1	|		43059		|	enters buffet queue
+	2	|		43059		|	starts buffet service
+	7	|		49419		|	leaves the service
+	8	|		49419		|	enters the checkout queue
+	9	|		49419		|	starts checkout service
+	10	|		49828		|	finishes checkout & leaves
+Customer Group #1332:
+	0	|		43562		|	arrives to restaurant
+	3	|		43562		|	enters restaurant queue
+	4	|		43562		|	assigned to table
+	5	|		44562		|	waits for a waiter
+	6	|		44562		|	starts restaurant service
+	7	|		46668		|	leaves the service
+	8	|		46668		|	enters the checkout queue
+	9	|		47039		|	starts checkout service
+	10	|		47229		|	finishes checkout & leaves
+Customer Group #1333:
+	0	|		44258		|	arrives to restaurant
+	3	|		44258		|	enters restaurant queue
+	4	|		44562		|	assigned to table
+	5	|		45562		|	waits for a waiter
+	6	|		45562		|	starts restaurant service
+	7	|		53877		|	leaves the service
+	8	|		53877		|	enters the checkout queue
+	9	|		53877		|	starts checkout service
+	10	|		53919		|	finishes checkout & leaves
+Customer Group #1334:
+	0	|		44772		|	arrives to restaurant
+	3	|		44772		|	enters restaurant queue
+	4	|		45295		|	assigned to table
+	5	|		46295		|	waits for a waiter
+	6	|		46295		|	starts restaurant service
+	7	|		48138		|	leaves the service
+	8	|		48138		|	enters the checkout queue
+	9	|		48138		|	starts checkout service
+	10	|		48208		|	finishes checkout & leaves
+Customer Group #1335:
+	0	|		45283		|	arrives to restaurant
+	3	|		45283		|	enters restaurant queue
+	4	|		45562		|	assigned to table
+	5	|		46562		|	waits for a waiter
+	6	|		46668		|	starts restaurant service
+	7	|		50727		|	leaves the service
+	8	|		50727		|	enters the checkout queue
+	9	|		50727		|	starts checkout service
+	10	|		50852		|	finishes checkout & leaves
+Customer Group #1336:
+	0	|		45827		|	arrives to restaurant
+	1	|		45827		|	enters buffet queue
+	2	|		45827		|	starts buffet service
+	7	|		51956		|	leaves the service
+	8	|		51956		|	enters the checkout queue
+	9	|		51956		|	starts checkout service
+	10	|		52285		|	finishes checkout & leaves
+Customer Group #1337:
+	0	|		46192		|	arrives to restaurant
+	1	|		46192		|	enters buffet queue
+	2	|		46192		|	starts buffet service
+	7	|		52665		|	leaves the service
+	8	|		52665		|	enters the checkout queue
+	9	|		52665		|	starts checkout service
+	10	|		52788		|	finishes checkout & leaves
+Customer Group #1338:
+	0	|		46755		|	arrives to restaurant
+	1	|		46755		|	enters buffet queue
+	2	|		46755		|	starts buffet service
+	7	|		52241		|	leaves the service
+	8	|		52241		|	enters the checkout queue
+	9	|		52285		|	starts checkout service
+	10	|		52295		|	finishes checkout & leaves
+Customer Group #1339:
+	0	|		47361		|	arrives to restaurant
+	3	|		47361		|	enters restaurant queue
+	4	|		47361		|	assigned to table
+	5	|		48361		|	waits for a waiter
+	6	|		48361		|	starts restaurant service
+	7	|		73393		|	leaves the service
+	8	|		73393		|	enters the checkout queue
+	9	|		73477		|	starts checkout service
+	10	|		74888		|	finishes checkout & leaves
+Customer Group #1340:
+	0	|		47966		|	arrives to restaurant
+	3	|		47966		|	enters restaurant queue
+	4	|		48138		|	assigned to table
+	5	|		49138		|	waits for a waiter
+	6	|		49138		|	starts restaurant service
+	7	|		54774		|	leaves the service
+	8	|		54774		|	enters the checkout queue
+	9	|		54774		|	starts checkout service
+	10	|		55079		|	finishes checkout & leaves
+Customer Group #1341:
+	0	|		48514		|	arrives to restaurant
+	3	|		48514		|	enters restaurant queue
+	4	|		48514		|	assigned to table
+	5	|		49514		|	waits for a waiter
+	6	|		49514		|	starts restaurant service
+	7	|		54288		|	leaves the service
+	8	|		54288		|	enters the checkout queue
+	9	|		54352		|	starts checkout service
+	10	|		54613		|	finishes checkout & leaves
+Customer Group #1342:
+	0	|		49250		|	arrives to restaurant
+	1	|		49250		|	enters buffet queue
+	2	|		49250		|	starts buffet service
+	7	|		54234		|	leaves the service
+	8	|		54234		|	enters the checkout queue
+	9	|		54234		|	starts checkout service
+	10	|		54352		|	finishes checkout & leaves
+Customer Group #1343:
+	0	|		49958		|	arrives to restaurant
+	3	|		49958		|	enters restaurant queue
+	4	|		49958		|	assigned to table
+	5	|		50958		|	waits for a waiter
+	6	|		50958		|	starts restaurant service
+	7	|		61304		|	leaves the service
+	8	|		61304		|	enters the checkout queue
+	9	|		61658		|	starts checkout service
+	10	|		62073		|	finishes checkout & leaves
+Customer Group #1344:
+	0	|		50592		|	arrives to restaurant
+	3	|		50592		|	enters restaurant queue
+	4	|		50727		|	assigned to table
+	5	|		51727		|	waits for a waiter
+	6	|		51727		|	starts restaurant service
+	7	|		55227		|	leaves the service
+	8	|		55227		|	enters the checkout queue
+	9	|		55227		|	starts checkout service
+	10	|		55364		|	finishes checkout & leaves
+Customer Group #1345:
+	0	|		51013		|	arrives to restaurant
+	3	|		51013		|	enters restaurant queue
+	4	|		51013		|	assigned to table
+	5	|		52013		|	waits for a waiter
+	6	|		53877		|	starts restaurant service
+	7	|		58453		|	leaves the service
+	8	|		58453		|	enters the checkout queue
+	9	|		58782		|	starts checkout service
+	10	|		58952		|	finishes checkout & leaves
+Customer Group #1346:
+	0	|		51620		|	arrives to restaurant
+	1	|		51620		|	enters buffet queue
+	2	|		51620		|	starts buffet service
+	7	|		58376		|	leaves the service
+	8	|		58376		|	enters the checkout queue
+	9	|		58376		|	starts checkout service
+	10	|		58782		|	finishes checkout & leaves
+Customer Group #1347:
+	0	|		52148		|	arrives to restaurant
+	1	|		52148		|	enters buffet queue
+	2	|		52148		|	starts buffet service
+	7	|		57969		|	leaves the service
+	8	|		57969		|	enters the checkout queue
+	9	|		57969		|	starts checkout service
+	10	|		57989		|	finishes checkout & leaves
+Customer Group #1348:
+	0	|		52676		|	arrives to restaurant
+	1	|		52676		|	enters buffet queue
+	2	|		52676		|	starts buffet service
+	7	|		59498		|	leaves the service
+	8	|		59498		|	enters the checkout queue
+	9	|		59498		|	starts checkout service
+	10	|		59667		|	finishes checkout & leaves
+Customer Group #1349:
+	0	|		53266		|	arrives to restaurant
+	1	|		53266		|	enters buffet queue
+	2	|		53266		|	starts buffet service
+	7	|		60546		|	leaves the service
+	8	|		60546		|	enters the checkout queue
+	9	|		60546		|	starts checkout service
+	10	|		60737		|	finishes checkout & leaves
+Customer Group #1350:
+	0	|		53844		|	arrives to restaurant
+	1	|		53844		|	enters buffet queue
+	2	|		53844		|	starts buffet service
+	7	|		60979		|	leaves the service
+	8	|		60979		|	enters the checkout queue
+	9	|		60979		|	starts checkout service
+	10	|		61658		|	finishes checkout & leaves
+Customer Group #1351:
+	0	|		54507		|	arrives to restaurant
+	1	|		54507		|	enters buffet queue
+	2	|		54507		|	starts buffet service
+	7	|		60086		|	leaves the service
+	8	|		60086		|	enters the checkout queue
+	9	|		60086		|	starts checkout service
+	10	|		60095		|	finishes checkout & leaves
+Customer Group #1352:
+	0	|		55141		|	arrives to restaurant
+	1	|		55141		|	enters buffet queue
+	2	|		57969		|	starts buffet service
+	7	|		63695		|	leaves the service
+	8	|		63695		|	enters the checkout queue
+	9	|		63695		|	starts checkout service
+	10	|		63790		|	finishes checkout & leaves
+Customer Group #1353:
+	0	|		55773		|	arrives to restaurant
+	1	|		55773		|	enters buffet queue
+	2	|		57969		|	starts buffet service
+	7	|		64022		|	leaves the service
+	8	|		64022		|	enters the checkout queue
+	9	|		64022		|	starts checkout service
+	10	|		64355		|	finishes checkout & leaves
+Customer Group #1354:
+	0	|		56309		|	arrives to restaurant
+	3	|		56309		|	enters restaurant queue
+	4	|		56309		|	assigned to table
+	5	|		57309		|	waits for a waiter
+	6	|		57309		|	starts restaurant service
+	7	|		64537		|	leaves the service
+	8	|		64537		|	enters the checkout queue
+	9	|		64537		|	starts checkout service
+	10	|		64947		|	finishes checkout & leaves
+Customer Group #1355:
+	0	|		56892		|	arrives to restaurant
+	3	|		56892		|	enters restaurant queue
+	4	|		57309		|	assigned to table
+	5	|		58309		|	waits for a waiter
+	6	|		58309		|	starts restaurant service
+	7	|		68138		|	leaves the service
+	8	|		68138		|	enters the checkout queue
+	9	|		68138		|	starts checkout service
+	10	|		68176		|	finishes checkout & leaves
+Customer Group #1356:
+	0	|		57412		|	arrives to restaurant
+	1	|		57412		|	enters buffet queue
+	2	|		59498		|	starts buffet service
+	7	|		65421		|	leaves the service
+	8	|		65421		|	enters the checkout queue
+	9	|		65421		|	starts checkout service
+	10	|		65565		|	finishes checkout & leaves
+Customer Group #1357:
+	0	|		57884		|	arrives to restaurant
+	1	|		57884		|	enters buffet queue
+	2	|		59498		|	starts buffet service
+	7	|		66191		|	leaves the service
+	8	|		66191		|	enters the checkout queue
+	9	|		66191		|	starts checkout service
+	10	|		66389		|	finishes checkout & leaves
+Customer Group #1358:
+	0	|		58560		|	arrives to restaurant
+	1	|		58560		|	enters buffet queue
+	2	|		60086		|	starts buffet service
+	7	|		66331		|	leaves the service
+	8	|		66331		|	enters the checkout queue
+	9	|		66389		|	starts checkout service
+	10	|		66711		|	finishes checkout & leaves
+Customer Group #1359:
+	0	|		59140		|	arrives to restaurant
+	1	|		59140		|	enters buffet queue
+	2	|		60086		|	starts buffet service
+	7	|		67143		|	leaves the service
+	8	|		67143		|	enters the checkout queue
+	9	|		67143		|	starts checkout service
+	10	|		67709		|	finishes checkout & leaves
+Customer Group #1360:
+	0	|		59617		|	arrives to restaurant
+	1	|		59617		|	enters buffet queue
+	2	|		60546		|	starts buffet service
+	7	|		65862		|	leaves the service
+	8	|		65862		|	enters the checkout queue
+	9	|		65862		|	starts checkout service
+	10	|		65896		|	finishes checkout & leaves
+Customer Group #1361:
+	0	|		60169		|	arrives to restaurant
+	1	|		60169		|	enters buffet queue
+	2	|		60546		|	starts buffet service
+	7	|		67249		|	leaves the service
+	8	|		67249		|	enters the checkout queue
+	9	|		67744		|	starts checkout service
+	10	|		67758		|	finishes checkout & leaves
+Customer Group #1362:
+	0	|		60658		|	arrives to restaurant
+	1	|		60658		|	enters buffet queue
+	2	|		60658		|	starts buffet service
+	7	|		66612		|	leaves the service
+	8	|		66612		|	enters the checkout queue
+	9	|		66711		|	starts checkout service
+	10	|		66842		|	finishes checkout & leaves
+Customer Group #1363:
+	0	|		61171		|	arrives to restaurant
+	1	|		61171		|	enters buffet queue
+	2	|		61171		|	starts buffet service
+	7	|		67155		|	leaves the service
+	8	|		67155		|	enters the checkout queue
+	9	|		67709		|	starts checkout service
+	10	|		67744		|	finishes checkout & leaves
+Customer Group #1364:
+	0	|		61732		|	arrives to restaurant
+	1	|		61732		|	enters buffet queue
+	2	|		64022		|	starts buffet service
+	7	|		70472		|	leaves the service
+	8	|		70472		|	enters the checkout queue
+	9	|		70472		|	starts checkout service
+	10	|		70635		|	finishes checkout & leaves
+Customer Group #1365:
+	0	|		62361		|	arrives to restaurant
+	1	|		62361		|	enters buffet queue
+	2	|		65421		|	starts buffet service
+	7	|		71501		|	leaves the service
+	8	|		71501		|	enters the checkout queue
+	9	|		72102		|	starts checkout service
+	10	|		72130		|	finishes checkout & leaves
+Customer Group #1366:
+	0	|		62918		|	arrives to restaurant
+	1	|		62918		|	enters buffet queue
+	2	|		65862		|	starts buffet service
+	7	|		72557		|	leaves the service
+	8	|		72557		|	enters the checkout queue
+	9	|		72557		|	starts checkout service
+	10	|		72603		|	finishes checkout & leaves
+Customer Group #1367:
+	0	|		63553		|	arrives to restaurant
+	1	|		63553		|	enters buffet queue
+	2	|		66331		|	starts buffet service
+	7	|		71755		|	leaves the service
+	8	|		71755		|	enters the checkout queue
+	9	|		72130		|	starts checkout service
+	10	|		72344		|	finishes checkout & leaves
+Customer Group #1368:
+	0	|		64099		|	arrives to restaurant
+	1	|		64099		|	enters buffet queue
+	2	|		66612		|	starts buffet service
+	7	|		71870		|	leaves the service
+	8	|		71870		|	enters the checkout queue
+	9	|		72344		|	starts checkout service
+	10	|		72378		|	finishes checkout & leaves
+Customer Group #1369:
+	0	|		64631		|	arrives to restaurant
+	1	|		64631		|	enters buffet queue
+	2	|		67155		|	starts buffet service
+	7	|		73329		|	leaves the service
+	8	|		73329		|	enters the checkout queue
+	9	|		73329		|	starts checkout service
+	10	|		73477		|	finishes checkout & leaves
+Customer Group #1370:
+	0	|		65146		|	arrives to restaurant
+	1	|		65146		|	enters buffet queue
+	2	|		70472		|	starts buffet service
+	7	|		77245		|	leaves the service
+	8	|		77245		|	enters the checkout queue
+	9	|		77245		|	starts checkout service
+	10	|		77483		|	finishes checkout & leaves
+Customer Group #1371:
+	0	|		65645		|	arrives to restaurant
+	3	|		65645		|	enters restaurant queue
+	4	|		65645		|	assigned to table
+	5	|		66645		|	waits for a waiter
+	6	|		66645		|	starts restaurant service
+	7	|		73852		|	leaves the service
+	8	|		73852		|	enters the checkout queue
+	9	|		75122		|	starts checkout service
+	10	|		75191		|	finishes checkout & leaves
+Customer Group #1372:
+	0	|		66252		|	arrives to restaurant
+	1	|		66252		|	enters buffet queue
+	2	|		70472		|	starts buffet service
+	7	|		76486		|	leaves the service
+	8	|		76486		|	enters the checkout queue
+	9	|		76486		|	starts checkout service
+	10	|		76525		|	finishes checkout & leaves
+Customer Group #1373:
+	0	|		66856		|	arrives to restaurant
+	3	|		66856		|	enters restaurant queue
+	4	|		66856		|	assigned to table
+	5	|		67856		|	waits for a waiter
+	6	|		67856		|	starts restaurant service
+	7	|		81933		|	leaves the service
+	8	|		81933		|	enters the checkout queue
+	9	|		81933		|	starts checkout service
+	10	|		82133		|	finishes checkout & leaves
+Customer Group #1374:
+	0	|		67413		|	arrives to restaurant
+	3	|		67413		|	enters restaurant queue
+	4	|		67856		|	assigned to table
+	5	|		68856		|	waits for a waiter
+	6	|		68856		|	starts restaurant service
+	7	|		70521		|	leaves the service
+	8	|		70521		|	enters the checkout queue
+	9	|		70635		|	starts checkout service
+	10	|		72102		|	finishes checkout & leaves
+Customer Group #1375:
+	0	|		68013		|	arrives to restaurant
+	3	|		68013		|	enters restaurant queue
+	4	|		68138		|	assigned to table
+	5	|		69138		|	waits for a waiter
+	6	|		69138		|	starts restaurant service
+	7	|		72293		|	leaves the service
+	8	|		72293		|	enters the checkout queue
+	9	|		72378		|	starts checkout service
+	10	|		72546		|	finishes checkout & leaves
+Customer Group #1376:
+	0	|		68673		|	arrives to restaurant
+	1	|		68673		|	enters buffet queue
+	2	|		70472		|	starts buffet service
+	7	|		76113		|	leaves the service
+	8	|		76113		|	enters the checkout queue
+	9	|		76113		|	starts checkout service
+	10	|		76223		|	finishes checkout & leaves
+Customer Group #1377:
+	0	|		69302		|	arrives to restaurant
+	3	|		69302		|	enters restaurant queue
+	4	|		69302		|	assigned to table
+	5	|		70302		|	waits for a waiter
+	6	|		70302		|	starts restaurant service
+	7	|		84435		|	leaves the service
+	8	|		84435		|	enters the checkout queue
+	9	|		84435		|	starts checkout service
+	10	|		84506		|	finishes checkout & leaves
+Customer Group #1378:
+	0	|		69959		|	arrives to restaurant
+	1	|		69959		|	enters buffet queue
+	2	|		73329		|	starts buffet service
+	7	|		79142		|	leaves the service
+	8	|		79142		|	enters the checkout queue
+	9	|		79142		|	starts checkout service
+	10	|		79165		|	finishes checkout & leaves
+Customer Group #1379:
+	0	|		70591		|	arrives to restaurant
+	3	|		70591		|	enters restaurant queue
+	4	|		70591		|	assigned to table
+	5	|		71591		|	waits for a waiter
+	6	|		71591		|	starts restaurant service
+	7	|		73491		|	leaves the service
+	8	|		73491		|	enters the checkout queue
+	9	|		74888		|	starts checkout service
+	10	|		75122		|	finishes checkout & leaves
+Customer Group #1380:
+	0	|		71151		|	arrives to restaurant
+	3	|		71151		|	enters restaurant queue
+	4	|		71591		|	assigned to table
+	5	|		72591		|	waits for a waiter
+	6	|		72591		|	starts restaurant service
+	7	|		72958		|	leaves the service
+	8	|		72958		|	enters the checkout queue
+	9	|		72958		|	starts checkout service
+	10	|		73094		|	finishes checkout & leaves
+Customer Group #1381:
+	0	|		71708		|	arrives to restaurant
+	3	|		71708		|	enters restaurant queue
+	4	|		72293		|	assigned to table
+	5	|		73293		|	waits for a waiter
+	6	|		73293		|	starts restaurant service
+	7	|		74884		|	leaves the service
+	8	|		74884		|	enters the checkout queue
+	9	|		75382		|	starts checkout service
+	10	|		75582		|	finishes checkout & leaves
+Customer Group #1382:
+	0	|		72218		|	arrives to restaurant
+	1	|		72218		|	enters buffet queue
+	2	|		73329		|	starts buffet service
+	7	|		80268		|	leaves the service
+	8	|		80268		|	enters the checkout queue
+	9	|		80268		|	starts checkout service
+	10	|		80519		|	finishes checkout & leaves
+Customer Group #1383:
+	0	|		72760		|	arrives to restaurant
+	1	|		72760		|	enters buffet queue
+	2	|		73329		|	starts buffet service
+	7	|		78835		|	leaves the service
+	8	|		78835		|	enters the checkout queue
+	9	|		78835		|	starts checkout service
+	10	|		78854		|	finishes checkout & leaves
+Customer Group #1384:
+	0	|		73456		|	arrives to restaurant
+	3	|		73456		|	enters restaurant queue
+	4	|		73456		|	assigned to table
+	5	|		74456		|	waits for a waiter
+	6	|		74456		|	starts restaurant service
+	7	|		74510		|	leaves the service
+	8	|		74510		|	enters the checkout queue
+	9	|		75191		|	starts checkout service
+	10	|		75382		|	finishes checkout & leaves
+Customer Group #1385:
+	0	|		74133		|	arrives to restaurant
+	1	|		74133		|	enters buffet queue
+	2	|		74133		|	starts buffet service
+	7	|		80494		|	leaves the service
+	8	|		80494		|	enters the checkout queue
+	9	|		80519		|	starts checkout service
+	10	|		81167		|	finishes checkout & leaves
+Customer Group #1386:
+	0	|		74772		|	arrives to restaurant
+	1	|		74772		|	enters buffet queue
+	2	|		74772		|	starts buffet service
+	7	|		81274		|	leaves the service
+	8	|		81274		|	enters the checkout queue
+	9	|		81382		|	starts checkout service
+	10	|		81763		|	finishes checkout & leaves
+Customer Group #1387:
+	0	|		75316		|	arrives to restaurant
+	3	|		75316		|	enters restaurant queue
+	4	|		75316		|	assigned to table
+	5	|		76316		|	waits for a waiter
+	6	|		76316		|	starts restaurant service
+	7	|		78423		|	leaves the service
+	8	|		78423		|	enters the checkout queue
+	9	|		78434		|	starts checkout service
+	10	|		78699		|	finishes checkout & leaves
+Customer Group #1388:
+	0	|		75871		|	arrives to restaurant
+	3	|		75871		|	enters restaurant queue
+	4	|		76316		|	assigned to table
+	5	|		77316		|	waits for a waiter
+	6	|		77316		|	starts restaurant service
+	7	|		99644		|	leaves the service
+	8	|		99644		|	enters the checkout queue
+	9	|		99644		|	starts checkout service
+	10	|		99913		|	finishes checkout & leaves
+Customer Group #1389:
+	0	|		76501		|	arrives to restaurant
+	3	|		76501		|	enters restaurant queue
+	4	|		77316		|	assigned to table
+	5	|		78316		|	waits for a waiter
+	6	|		78316		|	starts restaurant service
+	7	|		78391		|	leaves the service
+	8	|		78391		|	enters the checkout queue
+	9	|		78391		|	starts checkout service
+	10	|		78434		|	finishes checkout & leaves
+Customer Group #1390:
+	0	|		77200		|	arrives to restaurant
+	3	|		77200		|	enters restaurant queue
+	4	|		78316		|	assigned to table
+	5	|		79316		|	waits for a waiter
+	6	|		79316		|	starts restaurant service
+	7	|		115685		|	leaves the service
+	8	|		115685		|	enters the checkout queue
+	9	|		115685		|	starts checkout service
+	10	|		115695		|	finishes checkout & leaves
+Customer Group #1391:
+	0	|		77697		|	arrives to restaurant
+	1	|		77697		|	enters buffet queue
+	2	|		77697		|	starts buffet service
+	7	|		84018		|	leaves the service
+	8	|		84018		|	enters the checkout queue
+	9	|		84018		|	starts checkout service
+	10	|		84152		|	finishes checkout & leaves
+Customer Group #1392:
+	0	|		78338		|	arrives to restaurant
+	3	|		78338		|	enters restaurant queue
+	4	|		78391		|	assigned to table
+	5	|		79391		|	waits for a waiter
+	6	|		79391		|	starts restaurant service
+	7	|		82412		|	leaves the service
+	8	|		82412		|	enters the checkout queue
+	9	|		82412		|	starts checkout service
+	10	|		82503		|	finishes checkout & leaves
+Customer Group #1393:
+	0	|		78971		|	arrives to restaurant
+	3	|		78971		|	enters restaurant queue
+	4	|		79316		|	assigned to table
+	5	|		80316		|	waits for a waiter
+	6	|		80316		|	starts restaurant service
+	7	|		80757		|	leaves the service
+	8	|		80757		|	enters the checkout queue
+	9	|		81167		|	starts checkout service
+	10	|		81382		|	finishes checkout & leaves
+Customer Group #1394:
+	0	|		79552		|	arrives to restaurant
+	1	|		79552		|	enters buffet queue
+	2	|		79552		|	starts buffet service
+	7	|		85182		|	leaves the service
+	8	|		85182		|	enters the checkout queue
+	9	|		85317		|	starts checkout service
+	10	|		85474		|	finishes checkout & leaves
+Customer Group #1395:
+	0	|		80146		|	arrives to restaurant
+	3	|		80146		|	enters restaurant queue
+	4	|		80146		|	assigned to table
+	5	|		81146		|	waits for a waiter
+	6	|		81146		|	starts restaurant service
+	7	|		87025		|	leaves the service
+	8	|		87025		|	enters the checkout queue
+	9	|		87025		|	starts checkout service
+	10	|		87122		|	finishes checkout & leaves
+Customer Group #1396:
+	0	|		80695		|	arrives to restaurant
+	3	|		80695		|	enters restaurant queue
+	4	|		80695		|	assigned to table
+	5	|		81695		|	waits for a waiter
+	6	|		81933		|	starts restaurant service
+	7	|		86519		|	leaves the service
+	8	|		86519		|	enters the checkout queue
+	9	|		86547		|	starts checkout service
+	10	|		86635		|	finishes checkout & leaves
+Customer Group #1397:
+	0	|		81337		|	arrives to restaurant
+	3	|		81337		|	enters restaurant queue
+	4	|		81337		|	assigned to table
+	5	|		82337		|	waits for a waiter
+	6	|		82412		|	starts restaurant service
+	7	|		85154		|	leaves the service
+	8	|		85154		|	enters the checkout queue
+	9	|		85154		|	starts checkout service
+	10	|		85317		|	finishes checkout & leaves
+Customer Group #1398:
+	0	|		82020		|	arrives to restaurant
+	1	|		82020		|	enters buffet queue
+	2	|		82020		|	starts buffet service
+	7	|		87333		|	leaves the service
+	8	|		87333		|	enters the checkout queue
+	9	|		87333		|	starts checkout service
+	10	|		88024		|	finishes checkout & leaves
+Customer Group #1399:
+	0	|		82615		|	arrives to restaurant
+	1	|		82615		|	enters buffet queue
+	2	|		82615		|	starts buffet service
+	7	|		89049		|	leaves the service
+	8	|		89049		|	enters the checkout queue
+	9	|		89131		|	starts checkout service
+	10	|		89994		|	finishes checkout & leaves
+Customer Group #1400:
+	0	|		83304		|	arrives to restaurant
+	1	|		83304		|	enters buffet queue
+	2	|		83304		|	starts buffet service
+	7	|		88627		|	leaves the service
+	8	|		88627		|	enters the checkout queue
+	9	|		88627		|	starts checkout service
+	10	|		89131		|	finishes checkout & leaves
+Customer Group #1401:
+	0	|		83935		|	arrives to restaurant
+	1	|		83935		|	enters buffet queue
+	2	|		83935		|	starts buffet service
+	7	|		89821		|	leaves the service
+	8	|		89821		|	enters the checkout queue
+	9	|		90205		|	starts checkout service
+	10	|		90730		|	finishes checkout & leaves
+Customer Group #1402:
+	0	|		84499		|	arrives to restaurant
+	1	|		84499		|	enters buffet queue
+	2	|		84499		|	starts buffet service
+	7	|		91074		|	leaves the service
+	8	|		91074		|	enters the checkout queue
+	9	|		91074		|	starts checkout service
+	10	|		91187		|	finishes checkout & leaves
+Customer Group #1403:
+	0	|		85062		|	arrives to restaurant
+	3	|		85062		|	enters restaurant queue
+	4	|		85062		|	assigned to table
+	5	|		86062		|	waits for a waiter
+	6	|		86062		|	starts restaurant service
+	7	|		86135		|	leaves the service
+	8	|		86135		|	enters the checkout queue
+	9	|		86135		|	starts checkout service
+	10	|		86547		|	finishes checkout & leaves
+Customer Group #1404:
+	0	|		85594		|	arrives to restaurant
+	3	|		85594		|	enters restaurant queue
+	4	|		86062		|	assigned to table
+	5	|		87062		|	waits for a waiter
+	6	|		87062		|	starts restaurant service
+	7	|		98168		|	leaves the service
+	8	|		98168		|	enters the checkout queue
+	9	|		98168		|	starts checkout service
+	10	|		98595		|	finishes checkout & leaves
+Customer Group #1405:
+	0	|		86142		|	arrives to restaurant
+	1	|		86142		|	enters buffet queue
+	2	|		86142		|	starts buffet service
+	7	|		92927		|	leaves the service
+	8	|		92927		|	enters the checkout queue
+	9	|		92927		|	starts checkout service
+	10	|		93223		|	finishes checkout & leaves
+Customer Group #1406:
+	0	|		86783		|	arrives to restaurant
+	1	|		86783		|	enters buffet queue
+	2	|		88627		|	starts buffet service
+	7	|		94560		|	leaves the service
+	8	|		94560		|	enters the checkout queue
+	9	|		94717		|	starts checkout service
+	10	|		94799		|	finishes checkout & leaves
+Customer Group #1407:
+	0	|		87344		|	arrives to restaurant
+	1	|		87344		|	enters buffet queue
+	2	|		88627		|	starts buffet service
+	7	|		95510		|	leaves the service
+	8	|		95510		|	enters the checkout queue
+	9	|		95510		|	starts checkout service
+	10	|		95533		|	finishes checkout & leaves
+Customer Group #1408:
+	0	|		87985		|	arrives to restaurant
+	3	|		87985		|	enters restaurant queue
+	4	|		87985		|	assigned to table
+	5	|		88985		|	waits for a waiter
+	6	|		88985		|	starts restaurant service
+	7	|		89188		|	leaves the service
+	8	|		89188		|	enters the checkout queue
+	9	|		89994		|	starts checkout service
+	10	|		90205		|	finishes checkout & leaves
+Customer Group #1409:
+	0	|		88615		|	arrives to restaurant
+	1	|		88615		|	enters buffet queue
+	2	|		88627		|	starts buffet service
+	7	|		94129		|	leaves the service
+	8	|		94129		|	enters the checkout queue
+	9	|		94129		|	starts checkout service
+	10	|		94717		|	finishes checkout & leaves
+Customer Group #1410:
+	0	|		89213		|	arrives to restaurant
+	3	|		89213		|	enters restaurant queue
+	4	|		89213		|	assigned to table
+	5	|		90213		|	waits for a waiter
+	6	|		90213		|	starts restaurant service
+	7	|		97037		|	leaves the service
+	8	|		97037		|	enters the checkout queue
+	9	|		97037		|	starts checkout service
+	10	|		97151		|	finishes checkout & leaves
+Customer Group #1411:
+	0	|		89821		|	arrives to restaurant
+	1	|		89821		|	enters buffet queue
+	2	|		89821		|	starts buffet service
+	7	|		96573		|	leaves the service
+	8	|		96573		|	enters the checkout queue
+	9	|		96573		|	starts checkout service
+	10	|		96798		|	finishes checkout & leaves
+Customer Group #1412:
+	0	|		90427		|	arrives to restaurant
+	3	|		90427		|	enters restaurant queue
+	4	|		90427		|	assigned to table
+	5	|		91427		|	waits for a waiter
+	6	|		91427		|	starts restaurant service
+	7	|		93397		|	leaves the service
+	8	|		93397		|	enters the checkout queue
+	9	|		93397		|	starts checkout service
+	10	|		93578		|	finishes checkout & leaves
+Customer Group #1413:
+	0	|		91071		|	arrives to restaurant
+	1	|		91071		|	enters buffet queue
+	2	|		91071		|	starts buffet service
+	7	|		96450		|	leaves the service
+	8	|		96450		|	enters the checkout queue
+	9	|		96450		|	starts checkout service
+	10	|		96569		|	finishes checkout & leaves
+Customer Group #1414:
+	0	|		91624		|	arrives to restaurant
+	3	|		91624		|	enters restaurant queue
+	4	|		91624		|	assigned to table
+	5	|		92624		|	waits for a waiter
+	6	|		92624		|	starts restaurant service
+	7	|		101324		|	leaves the service
+	8	|		101324		|	enters the checkout queue
+	9	|		101543		|	starts checkout service
+	10	|		101737		|	finishes checkout & leaves
+Customer Group #1415:
+	0	|		92196		|	arrives to restaurant
+	1	|		92196		|	enters buffet queue
+	2	|		92196		|	starts buffet service
+	7	|		98415		|	leaves the service
+	8	|		98415		|	enters the checkout queue
+	9	|		98595		|	starts checkout service
+	10	|		98632		|	finishes checkout & leaves
+Customer Group #1416:
+	0	|		92714		|	arrives to restaurant
+	3	|		92714		|	enters restaurant queue
+	4	|		92714		|	assigned to table
+	5	|		93714		|	waits for a waiter
+	6	|		93714		|	starts restaurant service
+	7	|		99261		|	leaves the service
+	8	|		99261		|	enters the checkout queue
+	9	|		99261		|	starts checkout service
+	10	|		99303		|	finishes checkout & leaves
+Customer Group #1417:
+	0	|		93212		|	arrives to restaurant
+	3	|		93212		|	enters restaurant queue
+	4	|		93397		|	assigned to table
+	5	|		94397		|	waits for a waiter
+	6	|		97037		|	starts restaurant service
+	7	|		112857		|	leaves the service
+	8	|		112857		|	enters the checkout queue
+	9	|		113476		|	starts checkout service
+	10	|		113840		|	finishes checkout & leaves
+Customer Group #1418:
+	0	|		93824		|	arrives to restaurant
+	1	|		93824		|	enters buffet queue
+	2	|		93824		|	starts buffet service
+	7	|		100809		|	leaves the service
+	8	|		100809		|	enters the checkout queue
+	9	|		101227		|	starts checkout service
+	10	|		101543		|	finishes checkout & leaves
+Customer Group #1419:
+	0	|		94344		|	arrives to restaurant
+	1	|		94344		|	enters buffet queue
+	2	|		94344		|	starts buffet service
+	7	|		100658		|	leaves the service
+	8	|		100658		|	enters the checkout queue
+	9	|		100716		|	starts checkout service
+	10	|		101227		|	finishes checkout & leaves
+Customer Group #1420:
+	0	|		95012		|	arrives to restaurant
+	3	|		95012		|	enters restaurant queue
+	4	|		95012		|	assigned to table
+	5	|		96012		|	waits for a waiter
+	6	|		98168		|	starts restaurant service
+	7	|		99676		|	leaves the service
+	8	|		99676		|	enters the checkout queue
+	9	|		99913		|	starts checkout service
+	10	|		100239		|	finishes checkout & leaves
+Customer Group #1421:
+	0	|		95545		|	arrives to restaurant
+	3	|		95545		|	enters restaurant queue
+	4	|		96012		|	assigned to table
+	5	|		97012		|	waits for a waiter
+	6	|		99261		|	starts restaurant service
+	7	|		100569		|	leaves the service
+	8	|		100569		|	enters the checkout queue
+	9	|		100569		|	starts checkout service
+	10	|		100716		|	finishes checkout & leaves
+Customer Group #1422:
+	0	|		96119		|	arrives to restaurant
+	3	|		96119		|	enters restaurant queue
+	4	|		97012		|	assigned to table
+	5	|		98012		|	waits for a waiter
+	6	|		99644		|	starts restaurant service
+	7	|		100376		|	leaves the service
+	8	|		100376		|	enters the checkout queue
+	9	|		100376		|	starts checkout service
+	10	|		100427		|	finishes checkout & leaves
+Customer Group #1423:
+	0	|		96622		|	arrives to restaurant
+	1	|		96622		|	enters buffet queue
+	2	|		96622		|	starts buffet service
+	7	|		103103		|	leaves the service
+	8	|		103103		|	enters the checkout queue
+	9	|		103160		|	starts checkout service
+	10	|		103259		|	finishes checkout & leaves
+Customer Group #1424:
+	0	|		97281		|	arrives to restaurant
+	1	|		97281		|	enters buffet queue
+	2	|		97281		|	starts buffet service
+	7	|		103318		|	leaves the service
+	8	|		103318		|	enters the checkout queue
+	9	|		103318		|	starts checkout service
+	10	|		103798		|	finishes checkout & leaves
+Customer Group #1425:
+	0	|		97866		|	arrives to restaurant
+	3	|		97866		|	enters restaurant queue
+	4	|		98012		|	assigned to table
+	5	|		99012		|	waits for a waiter
+	6	|		99676		|	starts restaurant service
+	7	|		99875		|	leaves the service
+	8	|		99875		|	enters the checkout queue
+	9	|		100239		|	starts checkout service
+	10	|		100242		|	finishes checkout & leaves
+Customer Group #1426:
+	0	|		98416		|	arrives to restaurant
+	1	|		98416		|	enters buffet queue
+	2	|		98416		|	starts buffet service
+	7	|		104434		|	leaves the service
+	8	|		104434		|	enters the checkout queue
+	9	|		104696		|	starts checkout service
+	10	|		104822		|	finishes checkout & leaves
+Customer Group #1427:
+	0	|		99046		|	arrives to restaurant
+	1	|		99046		|	enters buffet queue
+	2	|		99046		|	starts buffet service
+	7	|		104270		|	leaves the service
+	8	|		104270		|	enters the checkout queue
+	9	|		104270		|	starts checkout service
+	10	|		104696		|	finishes checkout & leaves
+Customer Group #1428:
+	0	|		99541		|	arrives to restaurant
+	1	|		99541		|	enters buffet queue
+	2	|		104270		|	starts buffet service
+	7	|		110509		|	leaves the service
+	8	|		110509		|	enters the checkout queue
+	9	|		110509		|	starts checkout service
+	10	|		110580		|	finishes checkout & leaves
+Customer Group #1429:
+	0	|		100061		|	arrives to restaurant
+	1	|		100061		|	enters buffet queue
+	2	|		104270		|	starts buffet service
+	7	|		110567		|	leaves the service
+	8	|		110567		|	enters the checkout queue
+	9	|		110803		|	starts checkout service
+	10	|		111169		|	finishes checkout & leaves
+Customer Group #1430:
+	0	|		100563		|	arrives to restaurant
+	3	|		100563		|	enters restaurant queue
+	4	|		100563		|	assigned to table
+	5	|		101563		|	waits for a waiter
+	6	|		101563		|	starts restaurant service
+	7	|		105001		|	leaves the service
+	8	|		105001		|	enters the checkout queue
+	9	|		105001		|	starts checkout service
+	10	|		105057		|	finishes checkout & leaves
+Customer Group #1431:
+	0	|		101216		|	arrives to restaurant
+	3	|		101216		|	enters restaurant queue
+	4	|		101324		|	assigned to table
+	5	|		102324		|	waits for a waiter
+	6	|		102324		|	starts restaurant service
+	7	|		103002		|	leaves the service
+	8	|		103002		|	enters the checkout queue
+	9	|		103002		|	starts checkout service
+	10	|		103160		|	finishes checkout & leaves
+Customer Group #1432:
+	0	|		101761		|	arrives to restaurant
+	3	|		101761		|	enters restaurant queue
+	4	|		101761		|	assigned to table
+	5	|		102761		|	waits for a waiter
+	6	|		102761		|	starts restaurant service
+	7	|		103881		|	leaves the service
+	8	|		103881		|	enters the checkout queue
+	9	|		103881		|	starts checkout service
+	10	|		104090		|	finishes checkout & leaves
+Customer Group #1433:
+	0	|		102385		|	arrives to restaurant
+	3	|		102385		|	enters restaurant queue
+	4	|		102385		|	assigned to table
+	5	|		103385		|	waits for a waiter
+	6	|		103385		|	starts restaurant service
+	7	|		115942		|	leaves the service
+	8	|		115942		|	enters the checkout queue
+	9	|		115942		|	starts checkout service
+	10	|		116112		|	finishes checkout & leaves
+Customer Group #1434:
+	0	|		102849		|	arrives to restaurant
+	3	|		102849		|	enters restaurant queue
+	4	|		102849		|	assigned to table
+	5	|		103849		|	waits for a waiter
+	6	|		103849		|	starts restaurant service
+	7	|		105421		|	leaves the service
+	8	|		105421		|	enters the checkout queue
+	9	|		105421		|	starts checkout service
+	10	|		105548		|	finishes checkout & leaves
+Customer Group #1435:
+	0	|		103511		|	arrives to restaurant
+	1	|		103511		|	enters buffet queue
+	2	|		104270		|	starts buffet service
+	7	|		110532		|	leaves the service
+	8	|		110532		|	enters the checkout queue
+	9	|		110580		|	starts checkout service
+	10	|		110803		|	finishes checkout & leaves
+Customer Group #1436:
+	0	|		104038		|	arrives to restaurant
+	1	|		104038		|	enters buffet queue
+	2	|		104270		|	starts buffet service
+	7	|		109557		|	leaves the service
+	8	|		109557		|	enters the checkout queue
+	9	|		109677		|	starts checkout service
+	10	|		109786		|	finishes checkout & leaves
+Customer Group #1437:
+	0	|		104591		|	arrives to restaurant
+	3	|		104591		|	enters restaurant queue
+	4	|		104591		|	assigned to table
+	5	|		105591		|	waits for a waiter
+	6	|		105591		|	starts restaurant service
+	7	|		118543		|	leaves the service
+	8	|		118543		|	enters the checkout queue
+	9	|		118543		|	starts checkout service
+	10	|		118689		|	finishes checkout & leaves
+Customer Group #1438:
+	0	|		105338		|	arrives to restaurant
+	1	|		105338		|	enters buffet queue
+	2	|		105338		|	starts buffet service
+	7	|		111798		|	leaves the service
+	8	|		111798		|	enters the checkout queue
+	9	|		111798		|	starts checkout service
+	10	|		112022		|	finishes checkout & leaves
+Customer Group #1439:
+	0	|		106066		|	arrives to restaurant
+	3	|		106066		|	enters restaurant queue
+	4	|		106066		|	assigned to table
+	5	|		107066		|	waits for a waiter
+	6	|		107066		|	starts restaurant service
+	7	|		107411		|	leaves the service
+	8	|		107411		|	enters the checkout queue
+	9	|		107411		|	starts checkout service
+	10	|		107819		|	finishes checkout & leaves
+Customer Group #1440:
+	0	|		106642		|	arrives to restaurant
+	1	|		106642		|	enters buffet queue
+	2	|		106642		|	starts buffet service
+	7	|		112847		|	leaves the service
+	8	|		112847		|	enters the checkout queue
+	9	|		112847		|	starts checkout service
+	10	|		113476		|	finishes checkout & leaves
+Customer Group #1441:
+	0	|		107189		|	arrives to restaurant
+	3	|		107189		|	enters restaurant queue
+	4	|		107189		|	assigned to table
+	5	|		108189		|	waits for a waiter
+	6	|		108189		|	starts restaurant service
+	7	|		121337		|	leaves the service
+	8	|		121337		|	enters the checkout queue
+	9	|		121458		|	starts checkout service
+	10	|		121894		|	finishes checkout & leaves
+Customer Group #1442:
+	0	|		107829		|	arrives to restaurant
+	3	|		107829		|	enters restaurant queue
+	4	|		108189		|	assigned to table
+	5	|		109189		|	waits for a waiter
+	6	|		109189		|	starts restaurant service
+	7	|		109388		|	leaves the service
+	8	|		109388		|	enters the checkout queue
+	9	|		109388		|	starts checkout service
+	10	|		109677		|	finishes checkout & leaves
+Customer Group #1443:
+	0	|		108335		|	arrives to restaurant
+	3	|		108335		|	enters restaurant queue
+	4	|		109189		|	assigned to table
+	5	|		110189		|	waits for a waiter
+	6	|		110189		|	starts restaurant service
+	7	|		132366		|	leaves the service
+	8	|		132366		|	enters the checkout queue
+	9	|		132435		|	starts checkout service
+	10	|		132469		|	finishes checkout & leaves
+Customer Group #1444:
+	0	|		108893		|	arrives to restaurant
+	1	|		108893		|	enters buffet queue
+	2	|		108893		|	starts buffet service
+	7	|		114622		|	leaves the service
+	8	|		114622		|	enters the checkout queue
+	9	|		114622		|	starts checkout service
+	10	|		114877		|	finishes checkout & leaves
+Customer Group #1445:
+	0	|		109539		|	arrives to restaurant
+	1	|		109539		|	enters buffet queue
+	2	|		109539		|	starts buffet service
+	7	|		115362		|	leaves the service
+	8	|		115362		|	enters the checkout queue
+	9	|		115362		|	starts checkout service
+	10	|		115386		|	finishes checkout & leaves
+Customer Group #1446:
+	0	|		110102		|	arrives to restaurant
+	3	|		110102		|	enters restaurant queue
+	4	|		110189		|	assigned to table
+	5	|		111189		|	waits for a waiter
+	6	|		112857		|	starts restaurant service
+	7	|		127142		|	leaves the service
+	8	|		127142		|	enters the checkout queue
+	9	|		127178		|	starts checkout service
+	10	|		127301		|	finishes checkout & leaves
+Customer Group #1447:
+	0	|		110675		|	arrives to restaurant
+	3	|		110675		|	enters restaurant queue
+	4	|		111189		|	assigned to table
+	5	|		112189		|	waits for a waiter
+	6	|		115685		|	starts restaurant service
+	7	|		119026		|	leaves the service
+	8	|		119026		|	enters the checkout queue
+	9	|		119026		|	starts checkout service
+	10	|		119080		|	finishes checkout & leaves
+Customer Group #1448:
+	0	|		111286		|	arrives to restaurant
+	1	|		111286		|	enters buffet queue
+	2	|		111286		|	starts buffet service
+	7	|		117869		|	leaves the service
+	8	|		117869		|	enters the checkout queue
+	9	|		117869		|	starts checkout service
+	10	|		118086		|	finishes checkout & leaves
+Customer Group #1449:
+	0	|		111879		|	arrives to restaurant
+	3	|		111879		|	enters restaurant queue
+	4	|		112189		|	assigned to table
+	5	|		113189		|	waits for a waiter
+	6	|		115942		|	starts restaurant service
+	7	|		128768		|	leaves the service
+	8	|		128768		|	enters the checkout queue
+	9	|		128768		|	starts checkout service
+	10	|		128947		|	finishes checkout & leaves
+Customer Group #1450:
+	0	|		112504		|	arrives to restaurant
+	3	|		112504		|	enters restaurant queue
+	4	|		112857		|	assigned to table
+	5	|		113857		|	waits for a waiter
+	6	|		118543		|	starts restaurant service
+	7	|		119953		|	leaves the service
+	8	|		119953		|	enters the checkout queue
+	9	|		120595		|	starts checkout service
+	10	|		120741		|	finishes checkout & leaves
+Customer Group #1451:
+	0	|		113091		|	arrives to restaurant
+	1	|		113091		|	enters buffet queue
+	2	|		113091		|	starts buffet service
+	7	|		119983		|	leaves the service
+	8	|		119983		|	enters the checkout queue
+	9	|		120741		|	starts checkout service
+	10	|		120758		|	finishes checkout & leaves
+Customer Group #1452:
+	0	|		113719		|	arrives to restaurant
+	1	|		113719		|	enters buffet queue
+	2	|		113719		|	starts buffet service
+	7	|		120184		|	leaves the service
+	8	|		120184		|	enters the checkout queue
+	9	|		120758		|	starts checkout service
+	10	|		120792		|	finishes checkout & leaves
+Customer Group #1453:
+	0	|		114295		|	arrives to restaurant
+	1	|		114295		|	enters buffet queue
+	2	|		114295		|	starts buffet service
+	7	|		120977		|	leaves the service
+	8	|		120977		|	enters the checkout queue
+	9	|		121421		|	starts checkout service
+	10	|		121458		|	finishes checkout & leaves
+Customer Group #1454:
+	0	|		115016		|	arrives to restaurant
+	3	|		115016		|	enters restaurant queue
+	4	|		115016		|	assigned to table
+	5	|		116016		|	waits for a waiter
+	6	|		119026		|	starts restaurant service
+	7	|		119920		|	leaves the service
+	8	|		119920		|	enters the checkout queue
+	9	|		119920		|	starts checkout service
+	10	|		120595		|	finishes checkout & leaves
+Customer Group #1455:
+	0	|		115570		|	arrives to restaurant
+	1	|		115570		|	enters buffet queue
+	2	|		115570		|	starts buffet service
+	7	|		122109		|	leaves the service
+	8	|		122109		|	enters the checkout queue
+	9	|		122109		|	starts checkout service
+	10	|		122520		|	finishes checkout & leaves
+Customer Group #1456:
+	0	|		116207		|	arrives to restaurant
+	3	|		116207		|	enters restaurant queue
+	4	|		116207		|	assigned to table
+	5	|		117207		|	waits for a waiter
+	6	|		119920		|	starts restaurant service
+	7	|		120913		|	leaves the service
+	8	|		120913		|	enters the checkout queue
+	9	|		120913		|	starts checkout service
+	10	|		121421		|	finishes checkout & leaves
+Customer Group #1457:
+	0	|		116793		|	arrives to restaurant
+	3	|		116793		|	enters restaurant queue
+	4	|		117207		|	assigned to table
+	5	|		118207		|	waits for a waiter
+	6	|		119953		|	starts restaurant service
+	7	|		124436		|	leaves the service
+	8	|		124436		|	enters the checkout queue
+	9	|		124930		|	starts checkout service
+	10	|		125066		|	finishes checkout & leaves
+Customer Group #1458:
+	0	|		117321		|	arrives to restaurant
+	3	|		117321		|	enters restaurant queue
+	4	|		118207		|	assigned to table
+	5	|		119207		|	waits for a waiter
+	6	|		120913		|	starts restaurant service
+	7	|		123554		|	leaves the service
+	8	|		123554		|	enters the checkout queue
+	9	|		123554		|	starts checkout service
+	10	|		123602		|	finishes checkout & leaves
+Customer Group #1459:
+	0	|		117889		|	arrives to restaurant
+	3	|		117889		|	enters restaurant queue
+	4	|		118543		|	assigned to table
+	5	|		119543		|	waits for a waiter
+	6	|		121337		|	starts restaurant service
+	7	|		121979		|	leaves the service
+	8	|		121979		|	enters the checkout queue
+	9	|		121979		|	starts checkout service
+	10	|		122062		|	finishes checkout & leaves
+Customer Group #1460:
+	0	|		118342		|	arrives to restaurant
+	3	|		118342		|	enters restaurant queue
+	4	|		119026		|	assigned to table
+	5	|		120026		|	waits for a waiter
+	6	|		121979		|	starts restaurant service
+	7	|		122409		|	leaves the service
+	8	|		122409		|	enters the checkout queue
+	9	|		122520		|	starts checkout service
+	10	|		122777		|	finishes checkout & leaves
+Customer Group #1461:
+	0	|		118940		|	arrives to restaurant
+	3	|		118940		|	enters restaurant queue
+	4	|		119207		|	assigned to table
+	5	|		120207		|	waits for a waiter
+	6	|		122409		|	starts restaurant service
+	7	|		137918		|	leaves the service
+	8	|		137918		|	enters the checkout queue
+	9	|		137918		|	starts checkout service
+	10	|		137937		|	finishes checkout & leaves
+Customer Group #1462:
+	0	|		119525		|	arrives to restaurant
+	1	|		119525		|	enters buffet queue
+	2	|		119525		|	starts buffet service
+	7	|		126216		|	leaves the service
+	8	|		126216		|	enters the checkout queue
+	9	|		126658		|	starts checkout service
+	10	|		126728		|	finishes checkout & leaves
+Customer Group #1463:
+	0	|		120080		|	arrives to restaurant
+	1	|		120080		|	enters buffet queue
+	2	|		120080		|	starts buffet service
+	7	|		125974		|	leaves the service
+	8	|		125974		|	enters the checkout queue
+	9	|		125974		|	starts checkout service
+	10	|		126658		|	finishes checkout & leaves
+Customer Group #1464:
+	0	|		120784		|	arrives to restaurant
+	1	|		120784		|	enters buffet queue
+	2	|		120784		|	starts buffet service
+	7	|		127103		|	leaves the service
+	8	|		127103		|	enters the checkout queue
+	9	|		127103		|	starts checkout service
+	10	|		127178		|	finishes checkout & leaves
+Customer Group #1465:
+	0	|		121456		|	arrives to restaurant
+	3	|		121456		|	enters restaurant queue
+	4	|		121456		|	assigned to table
+	5	|		122456		|	waits for a waiter
+	6	|		123554		|	starts restaurant service
+	7	|		124295		|	leaves the service
+	8	|		124295		|	enters the checkout queue
+	9	|		124295		|	starts checkout service
+	10	|		124930		|	finishes checkout & leaves
+Customer Group #1466:
+	0	|		122070		|	arrives to restaurant
+	3	|		122070		|	enters restaurant queue
+	4	|		122409		|	assigned to table
+	5	|		123409		|	waits for a waiter
+	6	|		124295		|	starts restaurant service
+	7	|		125100		|	leaves the service
+	8	|		125100		|	enters the checkout queue
+	9	|		125100		|	starts checkout service
+	10	|		125138		|	finishes checkout & leaves
+Customer Group #1467:
+	0	|		122615		|	arrives to restaurant
+	3	|		122615		|	enters restaurant queue
+	4	|		122615		|	assigned to table
+	5	|		123615		|	waits for a waiter
+	6	|		124436		|	starts restaurant service
+	7	|		127234		|	leaves the service
+	8	|		127234		|	enters the checkout queue
+	9	|		127301		|	starts checkout service
+	10	|		127533		|	finishes checkout & leaves
+Customer Group #1468:
+	0	|		123260		|	arrives to restaurant
+	3	|		123260		|	enters restaurant queue
+	4	|		123409		|	assigned to table
+	5	|		124409		|	waits for a waiter
+	6	|		125100		|	starts restaurant service
+	7	|		128891		|	leaves the service
+	8	|		128891		|	enters the checkout queue
+	9	|		128947		|	starts checkout service
+	10	|		129286		|	finishes checkout & leaves
+Customer Group #1469:
+	0	|		123842		|	arrives to restaurant
+	1	|		123842		|	enters buffet queue
+	2	|		123842		|	starts buffet service
+	7	|		129454		|	leaves the service
+	8	|		129454		|	enters the checkout queue
+	9	|		129454		|	starts checkout service
+	10	|		129518		|	finishes checkout & leaves
+Customer Group #1470:
+	0	|		124435		|	arrives to restaurant
+	3	|		124435		|	enters restaurant queue
+	4	|		124435		|	assigned to table
+	5	|		125435		|	waits for a waiter
+	6	|		127142		|	starts restaurant service
+	7	|		129446		|	leaves the service
+	8	|		129446		|	enters the checkout queue
+	9	|		129446		|	starts checkout service
+	10	|		129449		|	finishes checkout & leaves
+Customer Group #1471:
+	0	|		125082		|	arrives to restaurant
+	1	|		125082		|	enters buffet queue
+	2	|		125082		|	starts buffet service
+	7	|		131346		|	leaves the service
+	8	|		131346		|	enters the checkout queue
+	9	|		131346		|	starts checkout service
+	10	|		131525		|	finishes checkout & leaves
+Customer Group #1472:
+	0	|		125593		|	arrives to restaurant
+	3	|		125593		|	enters restaurant queue
+	4	|		128891		|	assigned to table
+	5	|		129891		|	waits for a waiter
+	6	|		129891		|	starts restaurant service
+	7	|		143861		|	leaves the service
+	8	|		143861		|	enters the checkout queue
+	9	|		143861		|	starts checkout service
+	10	|		144124		|	finishes checkout & leaves
+Customer Group #1473:
+	0	|		126225		|	arrives to restaurant
+	1	|		126225		|	enters buffet queue
+	2	|		126225		|	starts buffet service
+	7	|		132196		|	leaves the service
+	8	|		132196		|	enters the checkout queue
+	9	|		132196		|	starts checkout service
+	10	|		132435		|	finishes checkout & leaves
+Customer Group #1474:
+	0	|		126863		|	arrives to restaurant
+	1	|		126863		|	enters buffet queue
+	2	|		126863		|	starts buffet service
+	7	|		132643		|	leaves the service
+	8	|		132643		|	enters the checkout queue
+	9	|		132643		|	starts checkout service
+	10	|		133170		|	finishes checkout & leaves
+Customer Group #1475:
+	0	|		127495		|	arrives to restaurant
+	1	|		127495		|	enters buffet queue
+	2	|		127495		|	starts buffet service
+	7	|		133304		|	leaves the service
+	8	|		133304		|	enters the checkout queue
+	9	|		133304		|	starts checkout service
+	10	|		133442		|	finishes checkout & leaves
+Customer Group #1476:
+	0	|		128084		|	arrives to restaurant
+	1	|		128084		|	enters buffet queue
+	2	|		128084		|	starts buffet service
+	7	|		133506		|	leaves the service
+	8	|		133506		|	enters the checkout queue
+	9	|		133506		|	starts checkout service
+	10	|		133681		|	finishes checkout & leaves
+Customer Group #1477:
+	0	|		128666		|	arrives to restaurant
+	3	|		128666		|	enters restaurant queue
+	4	|		128666		|	assigned to table
+	5	|		129666		|	waits for a waiter
+	6	|		129666		|	starts restaurant service
+	7	|		133517		|	leaves the service
+	8	|		133517		|	enters the checkout queue
+	9	|		133681		|	starts checkout service
+	10	|		134033		|	finishes checkout & leaves
+Customer Group #1478:
+	0	|		129343		|	arrives to restaurant
+	3	|		129343		|	enters restaurant queue
+	4	|		129446		|	assigned to table
+	5	|		130446		|	waits for a waiter
+	6	|		130446		|	starts restaurant service
+	7	|		135243		|	leaves the service
+	8	|		135243		|	enters the checkout queue
+	9	|		135243		|	starts checkout service
+	10	|		135258		|	finishes checkout & leaves
+Customer Group #1479:
+	0	|		129878		|	arrives to restaurant
+	1	|		129878		|	enters buffet queue
+	2	|		129878		|	starts buffet service
+	7	|		136289		|	leaves the service
+	8	|		136289		|	enters the checkout queue
+	9	|		136289		|	starts checkout service
+	10	|		136691		|	finishes checkout & leaves
+Customer Group #1480:
+	0	|		130541		|	arrives to restaurant
+	3	|		130541		|	enters restaurant queue
+	4	|		130541		|	assigned to table
+	5	|		131541		|	waits for a waiter
+	6	|		131541		|	starts restaurant service
+	7	|		148731		|	leaves the service
+	8	|		148731		|	enters the checkout queue
+	9	|		149304		|	starts checkout service
+	10	|		149404		|	finishes checkout & leaves
+Customer Group #1481:
+	0	|		131152		|	arrives to restaurant
+	3	|		131152		|	enters restaurant queue
+	4	|		131541		|	assigned to table
+	5	|		132541		|	waits for a waiter
+	6	|		132541		|	starts restaurant service
+	7	|		159961		|	leaves the service
+	8	|		159961		|	enters the checkout queue
+	9	|		159961		|	starts checkout service
+	10	|		160043		|	finishes checkout & leaves
+Customer Group #1482:
+	0	|		131763		|	arrives to restaurant
+	3	|		131763		|	enters restaurant queue
+	4	|		132366		|	assigned to table
+	5	|		133366		|	waits for a waiter
+	6	|		133517		|	starts restaurant service
+	7	|		134130		|	leaves the service
+	8	|		134130		|	enters the checkout queue
+	9	|		134130		|	starts checkout service
+	10	|		134547		|	finishes checkout & leaves
+Customer Group #1483:
+	0	|		132278		|	arrives to restaurant
+	1	|		132278		|	enters buffet queue
+	2	|		132278		|	starts buffet service
+	7	|		137652		|	leaves the service
+	8	|		137652		|	enters the checkout queue
+	9	|		137652		|	starts checkout service
+	10	|		137777		|	finishes checkout & leaves
+Customer Group #1484:
+	0	|		132793		|	arrives to restaurant
+	1	|		132793		|	enters buffet queue
+	2	|		132793		|	starts buffet service
+	7	|		139722		|	leaves the service
+	8	|		139722		|	enters the checkout queue
+	9	|		139790		|	starts checkout service
+	10	|		140387		|	finishes checkout & leaves
+Customer Group #1485:
+	0	|		133448		|	arrives to restaurant
+	3	|		133448		|	enters restaurant queue
+	4	|		133448		|	assigned to table
+	5	|		134448		|	waits for a waiter
+	6	|		134448		|	starts restaurant service
+	7	|		136310		|	leaves the service
+	8	|		136310		|	enters the checkout queue
+	9	|		136691		|	starts checkout service
+	10	|		136959		|	finishes checkout & leaves
+Customer Group #1486:
+	0	|		133876		|	arrives to restaurant
+	3	|		133876		|	enters restaurant queue
+	4	|		134130		|	assigned to table
+	5	|		135130		|	waits for a waiter
+	6	|		135243		|	starts restaurant service
+	7	|		135394		|	leaves the service
+	8	|		135394		|	enters the checkout queue
+	9	|		135394		|	starts checkout service
+	10	|		135679		|	finishes checkout & leaves
+Customer Group #1487:
+	0	|		134477		|	arrives to restaurant
+	1	|		134477		|	enters buffet queue
+	2	|		134477		|	starts buffet service
+	7	|		140554		|	leaves the service
+	8	|		140554		|	enters the checkout queue
+	9	|		140554		|	starts checkout service
+	10	|		140638		|	finishes checkout & leaves
+Customer Group #1488:
+	0	|		135033		|	arrives to restaurant
+	1	|		135033		|	enters buffet queue
+	2	|		135033		|	starts buffet service
+	7	|		141310		|	leaves the service
+	8	|		141310		|	enters the checkout queue
+	9	|		141467		|	starts checkout service
+	10	|		141478		|	finishes checkout & leaves
+Customer Group #1489:
+	0	|		135605		|	arrives to restaurant
+	1	|		135605		|	enters buffet queue
+	2	|		135605		|	starts buffet service
+	7	|		142962		|	leaves the service
+	8	|		142962		|	enters the checkout queue
+	9	|		142962		|	starts checkout service
+	10	|		143033		|	finishes checkout & leaves
+Customer Group #1490:
+	0	|		136252		|	arrives to restaurant
+	3	|		136252		|	enters restaurant queue
+	4	|		136252		|	assigned to table
+	5	|		137252		|	waits for a waiter
+	6	|		137252		|	starts restaurant service
+	7	|		139601		|	leaves the service
+	8	|		139601		|	enters the checkout queue
+	9	|		139601		|	starts checkout service
+	10	|		139790		|	finishes checkout & leaves
+Customer Group #1491:
+	0	|		136784		|	arrives to restaurant
+	3	|		136784		|	enters restaurant queue
+	4	|		137252		|	assigned to table
+	5	|		138252		|	waits for a waiter
+	6	|		138252		|	starts restaurant service
+	7	|		139893		|	leaves the service
+	8	|		139893		|	enters the checkout queue
+	9	|		140387		|	starts checkout service
+	10	|		140472		|	finishes checkout & leaves
+Customer Group #1492:
+	0	|		137448		|	arrives to restaurant
+	3	|		137448		|	enters restaurant queue
+	4	|		137918		|	assigned to table
+	5	|		138918		|	waits for a waiter
+	6	|		138918		|	starts restaurant service
+	7	|		144236		|	leaves the service
+	8	|		144236		|	enters the checkout queue
+	9	|		144236		|	starts checkout service
+	10	|		145124		|	finishes checkout & leaves
+Customer Group #1493:
+	0	|		138012		|	arrives to restaurant
+	3	|		138012		|	enters restaurant queue
+	4	|		138252		|	assigned to table
+	5	|		139252		|	waits for a waiter
+	6	|		139601		|	starts restaurant service
+	7	|		142136		|	leaves the service
+	8	|		142136		|	enters the checkout queue
+	9	|		142136		|	starts checkout service
+	10	|		142454		|	finishes checkout & leaves
+Customer Group #1494:
+	0	|		138525		|	arrives to restaurant
+	3	|		138525		|	enters restaurant queue
+	4	|		138918		|	assigned to table
+	5	|		139918		|	waits for a waiter
+	6	|		139918		|	starts restaurant service
+	7	|		141083		|	leaves the service
+	8	|		141083		|	enters the checkout queue
+	9	|		141083		|	starts checkout service
+	10	|		141467		|	finishes checkout & leaves
+Customer Group #1495:
+	0	|		139128		|	arrives to restaurant
+	1	|		139128		|	enters buffet queue
+	2	|		139128		|	starts buffet service
+	7	|		144822		|	leaves the service
+	8	|		144822		|	enters the checkout queue
+	9	|		145124		|	starts checkout service
+	10	|		145676		|	finishes checkout & leaves
+Customer Group #1496:
+	0	|		139669		|	arrives to restaurant
+	3	|		139669		|	enters restaurant queue
+	4	|		139669		|	assigned to table
+	5	|		140669		|	waits for a waiter
+	6	|		141083		|	starts restaurant service
+	7	|		150406		|	leaves the service
+	8	|		150406		|	enters the checkout queue
+	9	|		150904		|	starts checkout service
+	10	|		151406		|	finishes checkout & leaves
+Customer Group #1497:
+	0	|		140205		|	arrives to restaurant
+	1	|		140205		|	enters buffet queue
+	2	|		140205		|	starts buffet service
+	7	|		146587		|	leaves the service
+	8	|		146587		|	enters the checkout queue
+	9	|		146587		|	starts checkout service
+	10	|		147557		|	finishes checkout & leaves
+Customer Group #1498:
+	0	|		140830		|	arrives to restaurant
+	1	|		140830		|	enters buffet queue
+	2	|		140830		|	starts buffet service
+	7	|		147546		|	leaves the service
+	8	|		147546		|	enters the checkout queue
+	9	|		147637		|	starts checkout service
+	10	|		147876		|	finishes checkout & leaves
+Customer Group #1499:
+	0	|		141510		|	arrives to restaurant
+	1	|		141510		|	enters buffet queue
+	2	|		141510		|	starts buffet service
+	7	|		147553		|	leaves the service
+	8	|		147553		|	enters the checkout queue
+	9	|		147876		|	starts checkout service
+	10	|		148967		|	finishes checkout & leaves
+Customer Group #1500:
+	0	|		142174		|	arrives to restaurant
+	1	|		142174		|	enters buffet queue
+	2	|		142174		|	starts buffet service
+	7	|		148707		|	leaves the service
+	8	|		148707		|	enters the checkout queue
+	9	|		149043		|	starts checkout service
+	10	|		149304		|	finishes checkout & leaves
+Customer Group #1501:
+	0	|		142779		|	arrives to restaurant
+	3	|		142779		|	enters restaurant queue
+	4	|		142779		|	assigned to table
+	5	|		143779		|	waits for a waiter
+	6	|		143779		|	starts restaurant service
+	7	|		148628		|	leaves the service
+	8	|		148628		|	enters the checkout queue
+	9	|		148967		|	starts checkout service
+	10	|		149043		|	finishes checkout & leaves
+Customer Group #1502:
+	0	|		143518		|	arrives to restaurant
+	1	|		143518		|	enters buffet queue
+	2	|		143518		|	starts buffet service
+	7	|		149926		|	leaves the service
+	8	|		149926		|	enters the checkout queue
+	9	|		149926		|	starts checkout service
+	10	|		149930		|	finishes checkout & leaves
+Customer Group #1503:
+	0	|		144163		|	arrives to restaurant
+	1	|		144163		|	enters buffet queue
+	2	|		144163		|	starts buffet service
+	7	|		151310		|	leaves the service
+	8	|		151310		|	enters the checkout queue
+	9	|		151415		|	starts checkout service
+	10	|		151847		|	finishes checkout & leaves
+Customer Group #1504:
+	0	|		144791		|	arrives to restaurant
+	3	|		144791		|	enters restaurant queue
+	4	|		144791		|	assigned to table
+	5	|		145791		|	waits for a waiter
+	6	|		145791		|	starts restaurant service
+	7	|		147008		|	leaves the service
+	8	|		147008		|	enters the checkout queue
+	9	|		147557		|	starts checkout service
+	10	|		147637		|	finishes checkout & leaves
+Customer Group #1505:
+	0	|		145350		|	arrives to restaurant
+	3	|		145350		|	enters restaurant queue
+	4	|		145791		|	assigned to table
+	5	|		146791		|	waits for a waiter
+	6	|		146791		|	starts restaurant service
+	7	|		151085		|	leaves the service
+	8	|		151085		|	enters the checkout queue
+	9	|		151406		|	starts checkout service
+	10	|		151415		|	finishes checkout & leaves
+Customer Group #1506:
+	0	|		145883		|	arrives to restaurant
+	1	|		145883		|	enters buffet queue
+	2	|		145883		|	starts buffet service
+	7	|		152936		|	leaves the service
+	8	|		152936		|	enters the checkout queue
+	9	|		152936		|	starts checkout service
+	10	|		152972		|	finishes checkout & leaves
+Customer Group #1507:
+	0	|		146559		|	arrives to restaurant
+	3	|		146559		|	enters restaurant queue
+	4	|		146791		|	assigned to table
+	5	|		147791		|	waits for a waiter
+	6	|		147791		|	starts restaurant service
+	7	|		150380		|	leaves the service
+	8	|		150380		|	enters the checkout queue
+	9	|		150380		|	starts checkout service
+	10	|		150904		|	finishes checkout & leaves
+Customer Group #1508:
+	0	|		147220		|	arrives to restaurant
+	1	|		147220		|	enters buffet queue
+	2	|		147220		|	starts buffet service
+	7	|		154118		|	leaves the service
+	8	|		154118		|	enters the checkout queue
+	9	|		154118		|	starts checkout service
+	10	|		154469		|	finishes checkout & leaves
+Customer Group #1509:
+	0	|		147857		|	arrives to restaurant
+	1	|		147857		|	enters buffet queue
+	2	|		147857		|	starts buffet service
+	7	|		155150		|	leaves the service
+	8	|		155150		|	enters the checkout queue
+	9	|		155150		|	starts checkout service
+	10	|		155197		|	finishes checkout & leaves
+Customer Group #1510:
+	0	|		148439		|	arrives to restaurant
+	1	|		148439		|	enters buffet queue
+	2	|		148439		|	starts buffet service
+	7	|		154511		|	leaves the service
+	8	|		154511		|	enters the checkout queue
+	9	|		154511		|	starts checkout service
+	10	|		154818		|	finishes checkout & leaves
+Customer Group #1511:
+	0	|		149037		|	arrives to restaurant
+	3	|		149037		|	enters restaurant queue
+	4	|		149037		|	assigned to table
+	5	|		150037		|	waits for a waiter
+	6	|		150037		|	starts restaurant service
+	7	|		168685		|	leaves the service
+	8	|		168685		|	enters the checkout queue
+	9	|		168685		|	starts checkout service
+	10	|		168888		|	finishes checkout & leaves
+Customer Group #1512:
+	0	|		149637		|	arrives to restaurant
+	3	|		149637		|	enters restaurant queue
+	4	|		150037		|	assigned to table
+	5	|		151037		|	waits for a waiter
+	6	|		151037		|	starts restaurant service
+	7	|		161492		|	leaves the service
+	8	|		161492		|	enters the checkout queue
+	9	|		161492		|	starts checkout service
+	10	|		161798		|	finishes checkout & leaves
+Customer Group #1513:
+	0	|		150216		|	arrives to restaurant
+	3	|		150216		|	enters restaurant queue
+	4	|		150380		|	assigned to table
+	5	|		151380		|	waits for a waiter
+	6	|		151380		|	starts restaurant service
+	7	|		158942		|	leaves the service
+	8	|		158942		|	enters the checkout queue
+	9	|		159080		|	starts checkout service
+	10	|		159437		|	finishes checkout & leaves
+Customer Group #1514:
+	0	|		150727		|	arrives to restaurant
+	1	|		150727		|	enters buffet queue
+	2	|		150727		|	starts buffet service
+	7	|		157223		|	leaves the service
+	8	|		157223		|	enters the checkout queue
+	9	|		157223		|	starts checkout service
+	10	|		157229		|	finishes checkout & leaves
+Customer Group #1515:
+	0	|		151284		|	arrives to restaurant
+	3	|		151284		|	enters restaurant queue
+	4	|		151284		|	assigned to table
+	5	|		152284		|	waits for a waiter
+	6	|		152284		|	starts restaurant service
+	7	|		156110		|	leaves the service
+	8	|		156110		|	enters the checkout queue
+	9	|		156300		|	starts checkout service
+	10	|		156863		|	finishes checkout & leaves
+Customer Group #1516:
+	0	|		151899		|	arrives to restaurant
+	3	|		151899		|	enters restaurant queue
+	4	|		151899		|	assigned to table
+	5	|		152899		|	waits for a waiter
+	6	|		152899		|	starts restaurant service
+	7	|		155787		|	leaves the service
+	8	|		155787		|	enters the checkout queue
+	9	|		155787		|	starts checkout service
+	10	|		156300		|	finishes checkout & leaves
+Customer Group #1517:
+	0	|		152452		|	arrives to restaurant
+	1	|		152452		|	enters buffet queue
+	2	|		152452		|	starts buffet service
+	7	|		158738		|	leaves the service
+	8	|		158738		|	enters the checkout queue
+	9	|		158738		|	starts checkout service
+	10	|		158879		|	finishes checkout & leaves
+Customer Group #1518:
+	0	|		153077		|	arrives to restaurant
+	3	|		153077		|	enters restaurant queue
+	4	|		153077		|	assigned to table
+	5	|		154077		|	waits for a waiter
+	6	|		155787		|	starts restaurant service
+	7	|		177081		|	leaves the service
+	8	|		177081		|	enters the checkout queue
+	9	|		177081		|	starts checkout service
+	10	|		177434		|	finishes checkout & leaves
+Customer Group #1519:
+	0	|		153624		|	arrives to restaurant
+	3	|		153624		|	enters restaurant queue
+	4	|		154077		|	assigned to table
+	5	|		155077		|	waits for a waiter
+	6	|		156110		|	starts restaurant service
+	7	|		156182		|	leaves the service
+	8	|		156182		|	enters the checkout queue
+	9	|		156863		|	starts checkout service
+	10	|		156886		|	finishes checkout & leaves
+Customer Group #1520:
+	0	|		154318		|	arrives to restaurant
+	3	|		154318		|	enters restaurant queue
+	4	|		155077		|	assigned to table
+	5	|		156077		|	waits for a waiter
+	6	|		156182		|	starts restaurant service
+	7	|		158863		|	leaves the service
+	8	|		158863		|	enters the checkout queue
+	9	|		158879		|	starts checkout service
+	10	|		159080		|	finishes checkout & leaves
+Customer Group #1521:
+	0	|		154952		|	arrives to restaurant
+	1	|		154952		|	enters buffet queue
+	2	|		154952		|	starts buffet service
+	7	|		161063		|	leaves the service
+	8	|		161063		|	enters the checkout queue
+	9	|		161063		|	starts checkout service
+	10	|		161432		|	finishes checkout & leaves
+Customer Group #1522:
+	0	|		155578		|	arrives to restaurant
+	3	|		155578		|	enters restaurant queue
+	4	|		155787		|	assigned to table
+	5	|		156787		|	waits for a waiter
+	6	|		158863		|	starts restaurant service
+	7	|		162803		|	leaves the service
+	8	|		162803		|	enters the checkout queue
+	9	|		162803		|	starts checkout service
+	10	|		162889		|	finishes checkout & leaves
+Customer Group #1523:
+	0	|		156237		|	arrives to restaurant
+	3	|		156237		|	enters restaurant queue
+	4	|		156237		|	assigned to table
+	5	|		157237		|	waits for a waiter
+	6	|		158942		|	starts restaurant service
+	7	|		165394		|	leaves the service
+	8	|		165394		|	enters the checkout queue
+	9	|		165394		|	starts checkout service
+	10	|		165538		|	finishes checkout & leaves
+Customer Group #1524:
+	0	|		156832		|	arrives to restaurant
+	3	|		156832		|	enters restaurant queue
+	4	|		156832		|	assigned to table
+	5	|		157832		|	waits for a waiter
+	6	|		159961		|	starts restaurant service
+	7	|		162204		|	leaves the service
+	8	|		162204		|	enters the checkout queue
+	9	|		162204		|	starts checkout service
+	10	|		162513		|	finishes checkout & leaves
+Customer Group #1525:
+	0	|		157346		|	arrives to restaurant
+	3	|		157346		|	enters restaurant queue
+	4	|		157346		|	assigned to table
+	5	|		158346		|	waits for a waiter
+	6	|		161492		|	starts restaurant service
+	7	|		163857		|	leaves the service
+	8	|		163857		|	enters the checkout queue
+	9	|		163857		|	starts checkout service
+	10	|		164026		|	finishes checkout & leaves
+Customer Group #1526:
+	0	|		158001		|	arrives to restaurant
+	1	|		158001		|	enters buffet queue
+	2	|		158001		|	starts buffet service
+	7	|		164720		|	leaves the service
+	8	|		164720		|	enters the checkout queue
+	9	|		164720		|	starts checkout service
+	10	|		164778		|	finishes checkout & leaves
+Customer Group #1527:
+	0	|		158517		|	arrives to restaurant
+	1	|		158517		|	enters buffet queue
+	2	|		158517		|	starts buffet service
+	7	|		164752		|	leaves the service
+	8	|		164752		|	enters the checkout queue
+	9	|		164778		|	starts checkout service
+	10	|		164900		|	finishes checkout & leaves
+Customer Group #1528:
+	0	|		159086		|	arrives to restaurant
+	3	|		159086		|	enters restaurant queue
+	4	|		159086		|	assigned to table
+	5	|		160086		|	waits for a waiter
+	6	|		162204		|	starts restaurant service
+	7	|		164078		|	leaves the service
+	8	|		164078		|	enters the checkout queue
+	9	|		164078		|	starts checkout service
+	10	|		164393		|	finishes checkout & leaves
+Customer Group #1529:
+	0	|		159637		|	arrives to restaurant
+	1	|		159637		|	enters buffet queue
+	2	|		159637		|	starts buffet service
+	7	|		165879		|	leaves the service
+	8	|		165879		|	enters the checkout queue
+	9	|		165973		|	starts checkout service
+	10	|		166605		|	finishes checkout & leaves
+Customer Group #1530:
+	0	|		160273		|	arrives to restaurant
+	3	|		160273		|	enters restaurant queue
+	4	|		160273		|	assigned to table
+	5	|		161273		|	waits for a waiter
+	6	|		162803		|	starts restaurant service
+	7	|		180840		|	leaves the service
+	8	|		180840		|	enters the checkout queue
+	9	|		180840		|	starts checkout service
+	10	|		181035		|	finishes checkout & leaves
+Customer Group #1531:
+	0	|		160813		|	arrives to restaurant
+	1	|		160813		|	enters buffet queue
+	2	|		160813		|	starts buffet service
+	7	|		166857		|	leaves the service
+	8	|		166857		|	enters the checkout queue
+	9	|		166857		|	starts checkout service
+	10	|		166928		|	finishes checkout & leaves
+Customer Group #1532:
+	0	|		161489		|	arrives to restaurant
+	3	|		161489		|	enters restaurant queue
+	4	|		161489		|	assigned to table
+	5	|		162489		|	waits for a waiter
+	6	|		163857		|	starts restaurant service
+	7	|		165782		|	leaves the service
+	8	|		165782		|	enters the checkout queue
+	9	|		165782		|	starts checkout service
+	10	|		165973		|	finishes checkout & leaves
+Customer Group #1533:
+	0	|		162042		|	arrives to restaurant
+	3	|		162042		|	enters restaurant queue
+	4	|		162204		|	assigned to table
+	5	|		163204		|	waits for a waiter
+	6	|		164078		|	starts restaurant service
+	7	|		168515		|	leaves the service
+	8	|		168515		|	enters the checkout queue
+	9	|		168515		|	starts checkout service
+	10	|		168667		|	finishes checkout & leaves
+Customer Group #1534:
+	0	|		162559		|	arrives to restaurant
+	3	|		162559		|	enters restaurant queue
+	4	|		162559		|	assigned to table
+	5	|		163559		|	waits for a waiter
+	6	|		165394		|	starts restaurant service
+	7	|		185881		|	leaves the service
+	8	|		185881		|	enters the checkout queue
+	9	|		185881		|	starts checkout service
+	10	|		186134		|	finishes checkout & leaves
+Customer Group #1535:
+	0	|		163111		|	arrives to restaurant
+	1	|		163111		|	enters buffet queue
+	2	|		163111		|	starts buffet service
+	7	|		170276		|	leaves the service
+	8	|		170276		|	enters the checkout queue
+	9	|		170673		|	starts checkout service
+	10	|		170767		|	finishes checkout & leaves
+Customer Group #1536:
+	0	|		163736		|	arrives to restaurant
+	1	|		163736		|	enters buffet queue
+	2	|		163736		|	starts buffet service
+	7	|		170101		|	leaves the service
+	8	|		170101		|	enters the checkout queue
+	9	|		170101		|	starts checkout service
+	10	|		170493		|	finishes checkout & leaves
+Customer Group #1537:
+	0	|		164247		|	arrives to restaurant
+	1	|		164247		|	enters buffet queue
+	2	|		170101		|	starts buffet service
+	7	|		175477		|	leaves the service
+	8	|		175477		|	enters the checkout queue
+	9	|		175477		|	starts checkout service
+	10	|		175804		|	finishes checkout & leaves
+Customer Group #1538:
+	0	|		164928		|	arrives to restaurant
+	1	|		164928		|	enters buffet queue
+	2	|		170101		|	starts buffet service
+	7	|		176338		|	leaves the service
+	8	|		176338		|	enters the checkout queue
+	9	|		176338		|	starts checkout service
+	10	|		176643		|	finishes checkout & leaves
+Customer Group #1539:
+	0	|		165418		|	arrives to restaurant
+	3	|		165418		|	enters restaurant queue
+	4	|		165418		|	assigned to table
+	5	|		166418		|	waits for a waiter
+	6	|		166418		|	starts restaurant service
+	7	|		172936		|	leaves the service
+	8	|		172936		|	enters the checkout queue
+	9	|		172936		|	starts checkout service
+	10	|		172936		|	finishes checkout & leaves
+Customer Group #1540:
+	0	|		165949		|	arrives to restaurant
+	1	|		165949		|	enters buffet queue
+	2	|		170101		|	starts buffet service
+	7	|		176427		|	leaves the service
+	8	|		176427		|	enters the checkout queue
+	9	|		176643		|	starts checkout service
+	10	|		176685		|	finishes checkout & leaves
+Customer Group #1541:
+	0	|		166586		|	arrives to restaurant
+	3	|		166586		|	enters restaurant queue
+	4	|		166586		|	assigned to table
+	5	|		167586		|	waits for a waiter
+	6	|		168515		|	starts restaurant service
+	7	|		169597		|	leaves the service
+	8	|		169597		|	enters the checkout queue
+	9	|		169597		|	starts checkout service
+	10	|		169800		|	finishes checkout & leaves
+Customer Group #1542:
+	0	|		167114		|	arrives to restaurant
+	1	|		167114		|	enters buffet queue
+	2	|		170101		|	starts buffet service
+	7	|		176967		|	leaves the service
+	8	|		176967		|	enters the checkout queue
+	9	|		176967		|	starts checkout service
+	10	|		176972		|	finishes checkout & leaves
+Customer Group #1543:
+	0	|		167660		|	arrives to restaurant
+	3	|		167660		|	enters restaurant queue
+	4	|		167660		|	assigned to table
+	5	|		168660		|	waits for a waiter
+	6	|		168685		|	starts restaurant service
+	7	|		171034		|	leaves the service
+	8	|		171034		|	enters the checkout queue
+	9	|		171034		|	starts checkout service
+	10	|		171209		|	finishes checkout & leaves
+Customer Group #1544:
+	0	|		168207		|	arrives to restaurant
+	3	|		168207		|	enters restaurant queue
+	4	|		168515		|	assigned to table
+	5	|		169515		|	waits for a waiter
+	6	|		169597		|	starts restaurant service
+	7	|		170167		|	leaves the service
+	8	|		170167		|	enters the checkout queue
+	9	|		170493		|	starts checkout service
+	10	|		170673		|	finishes checkout & leaves
+Customer Group #1545:
+	0	|		168904		|	arrives to restaurant
+	3	|		168904		|	enters restaurant queue
+	4	|		168904		|	assigned to table
+	5	|		169904		|	waits for a waiter
+	6	|		170167		|	starts restaurant service
+	7	|		171764		|	leaves the service
+	8	|		171764		|	enters the checkout queue
+	9	|		171764		|	starts checkout service
+	10	|		171943		|	finishes checkout & leaves
+Customer Group #1546:
+	0	|		169535		|	arrives to restaurant
+	3	|		169535		|	enters restaurant queue
+	4	|		169535		|	assigned to table
+	5	|		170535		|	waits for a waiter
+	6	|		171034		|	starts restaurant service
+	7	|		173475		|	leaves the service
+	8	|		173475		|	enters the checkout queue
+	9	|		173475		|	starts checkout service
+	10	|		173598		|	finishes checkout & leaves
+Customer Group #1547:
+	0	|		170123		|	arrives to restaurant
+	3	|		170123		|	enters restaurant queue
+	4	|		170123		|	assigned to table
+	5	|		171123		|	waits for a waiter
+	6	|		171764		|	starts restaurant service
+	7	|		174397		|	leaves the service
+	8	|		174397		|	enters the checkout queue
+	9	|		174397		|	starts checkout service
+	10	|		174724		|	finishes checkout & leaves
+Customer Group #1548:
+	0	|		170657		|	arrives to restaurant
+	3	|		170657		|	enters restaurant queue
+	4	|		170657		|	assigned to table
+	5	|		171657		|	waits for a waiter
+	6	|		172936		|	starts restaurant service
+	7	|		184911		|	leaves the service
+	8	|		184911		|	enters the checkout queue
+	9	|		184911		|	starts checkout service
+	10	|		185280		|	finishes checkout & leaves
+Customer Group #1549:
+	0	|		171315		|	arrives to restaurant
+	1	|		171315		|	enters buffet queue
+	2	|		171315		|	starts buffet service
+	7	|		177254		|	leaves the service
+	8	|		177254		|	enters the checkout queue
+	9	|		177434		|	starts checkout service
+	10	|		178389		|	finishes checkout & leaves
+Customer Group #1550:
+	0	|		171971		|	arrives to restaurant
+	1	|		171971		|	enters buffet queue
+	2	|		171971		|	starts buffet service
+	7	|		177779		|	leaves the service
+	8	|		177779		|	enters the checkout queue
+	9	|		178389		|	starts checkout service
+	10	|		178503		|	finishes checkout & leaves
+Customer Group #1551:
+	0	|		172510		|	arrives to restaurant
+	3	|		172510		|	enters restaurant queue
+	4	|		172510		|	assigned to table
+	5	|		173510		|	waits for a waiter
+	6	|		173510		|	starts restaurant service
+	7	|		187885		|	leaves the service
+	8	|		187885		|	enters the checkout queue
+	9	|		188450		|	starts checkout service
+	10	|		188471		|	finishes checkout & leaves
+Customer Group #1552:
+	0	|		173062		|	arrives to restaurant
+	3	|		173062		|	enters restaurant queue
+	4	|		173475		|	assigned to table
+	5	|		174475		|	waits for a waiter
+	6	|		174475		|	starts restaurant service
+	7	|		179544		|	leaves the service
+	8	|		179544		|	enters the checkout queue
+	9	|		179544		|	starts checkout service
+	10	|		179583		|	finishes checkout & leaves
+Customer Group #1553:
+	0	|		173639		|	arrives to restaurant
+	1	|		173639		|	enters buffet queue
+	2	|		173639		|	starts buffet service
+	7	|		179158		|	leaves the service
+	8	|		179158		|	enters the checkout queue
+	9	|		179158		|	starts checkout service
+	10	|		179368		|	finishes checkout & leaves
+Customer Group #1554:
+	0	|		174198		|	arrives to restaurant
+	3	|		174198		|	enters restaurant queue
+	4	|		174198		|	assigned to table
+	5	|		175198		|	waits for a waiter
+	6	|		177081		|	starts restaurant service
+	7	|		189589		|	leaves the service
+	8	|		189589		|	enters the checkout queue
+	9	|		190013		|	starts checkout service
+	10	|		190394		|	finishes checkout & leaves
+Customer Group #1555:
+	0	|		174834		|	arrives to restaurant
+	3	|		174834		|	enters restaurant queue
+	4	|		174834		|	assigned to table
+	5	|		175834		|	waits for a waiter
+	6	|		179544		|	starts restaurant service
+	7	|		180076		|	leaves the service
+	8	|		180076		|	enters the checkout queue
+	9	|		180076		|	starts checkout service
+	10	|		180172		|	finishes checkout & leaves
+Customer Group #1556:
+	0	|		175480		|	arrives to restaurant
+	1	|		175480		|	enters buffet queue
+	2	|		175480		|	starts buffet service
+	7	|		181744		|	leaves the service
+	8	|		181744		|	enters the checkout queue
+	9	|		181744		|	starts checkout service
+	10	|		181878		|	finishes checkout & leaves
+Customer Group #1557:
+	0	|		176069		|	arrives to restaurant
+	3	|		176069		|	enters restaurant queue
+	4	|		176069		|	assigned to table
+	5	|		177069		|	waits for a waiter
+	6	|		180076		|	starts restaurant service
+	7	|		181618		|	leaves the service
+	8	|		181618		|	enters the checkout queue
+	9	|		181618		|	starts checkout service
+	10	|		181691		|	finishes checkout & leaves
+Customer Group #1558:
+	0	|		176629		|	arrives to restaurant
+	3	|		176629		|	enters restaurant queue
+	4	|		177069		|	assigned to table
+	5	|		178069		|	waits for a waiter
+	6	|		180840		|	starts restaurant service
+	7	|		184026		|	leaves the service
+	8	|		184026		|	enters the checkout queue
+	9	|		184026		|	starts checkout service
+	10	|		184099		|	finishes checkout & leaves
+Customer Group #1559:
+	0	|		177217		|	arrives to restaurant
+	1	|		177217		|	enters buffet queue
+	2	|		177217		|	starts buffet service
+	7	|		183501		|	leaves the service
+	8	|		183501		|	enters the checkout queue
+	9	|		183800		|	starts checkout service
+	10	|		183800		|	finishes checkout & leaves
+Customer Group #1560:
+	0	|		177810		|	arrives to restaurant
+	1	|		177810		|	enters buffet queue
+	2	|		177810		|	starts buffet service
+	7	|		183429		|	leaves the service
+	8	|		183429		|	enters the checkout queue
+	9	|		183429		|	starts checkout service
+	10	|		183800		|	finishes checkout & leaves
+Customer Group #1561:
+	0	|		178435		|	arrives to restaurant
+	3	|		178435		|	enters restaurant queue
+	4	|		178435		|	assigned to table
+	5	|		179435		|	waits for a waiter
+	6	|		181618		|	starts restaurant service
+	7	|		205876		|	leaves the service
+	8	|		205876		|	enters the checkout queue
+	9	|		208570		|	starts checkout service
+	10	|		208717		|	finishes checkout & leaves
+Customer Group #1562:
+	0	|		178963		|	arrives to restaurant
+	3	|		178963		|	enters restaurant queue
+	4	|		179435		|	assigned to table
+	5	|		180435		|	waits for a waiter
+	6	|		184026		|	starts restaurant service
+	7	|		194669		|	leaves the service
+	8	|		194669		|	enters the checkout queue
+	9	|		194669		|	starts checkout service
+	10	|		195507		|	finishes checkout & leaves
+Customer Group #1563:
+	0	|		179573		|	arrives to restaurant
+	1	|		179573		|	enters buffet queue
+	2	|		179573		|	starts buffet service
+	7	|		185678		|	leaves the service
+	8	|		185678		|	enters the checkout queue
+	9	|		185678		|	starts checkout service
+	10	|		185779		|	finishes checkout & leaves
+Customer Group #1564:
+	0	|		180226		|	arrives to restaurant
+	1	|		180226		|	enters buffet queue
+	2	|		180226		|	starts buffet service
+	7	|		186601		|	leaves the service
+	8	|		186601		|	enters the checkout queue
+	9	|		186601		|	starts checkout service
+	10	|		186921		|	finishes checkout & leaves
+Customer Group #1565:
+	0	|		180826		|	arrives to restaurant
+	1	|		180826		|	enters buffet queue
+	2	|		180826		|	starts buffet service
+	7	|		186666		|	leaves the service
+	8	|		186666		|	enters the checkout queue
+	9	|		186921		|	starts checkout service
+	10	|		188038		|	finishes checkout & leaves
+Customer Group #1566:
+	0	|		181452		|	arrives to restaurant
+	3	|		181452		|	enters restaurant queue
+	4	|		181452		|	assigned to table
+	5	|		182452		|	waits for a waiter
+	6	|		184911		|	starts restaurant service
+	7	|		186991		|	leaves the service
+	8	|		186991		|	enters the checkout queue
+	9	|		188038		|	starts checkout service
+	10	|		188198		|	finishes checkout & leaves
+Customer Group #1567:
+	0	|		182068		|	arrives to restaurant
+	3	|		182068		|	enters restaurant queue
+	4	|		188836		|	assigned to table
+	5	|		189836		|	waits for a waiter
+	6	|		189836		|	starts restaurant service
+	7	|		194166		|	leaves the service
+	8	|		194166		|	enters the checkout queue
+	9	|		194504		|	starts checkout service
+	10	|		194565		|	finishes checkout & leaves
+Customer Group #1568:
+	0	|		182692		|	arrives to restaurant
+	1	|		182692		|	enters buffet queue
+	2	|		182692		|	starts buffet service
+	7	|		189550		|	leaves the service
+	8	|		189550		|	enters the checkout queue
+	9	|		189763		|	starts checkout service
+	10	|		189963		|	finishes checkout & leaves
+Customer Group #1569:
+	0	|		183335		|	arrives to restaurant
+	3	|		183335		|	enters restaurant queue
+	4	|		183335		|	assigned to table
+	5	|		184335		|	waits for a waiter
+	6	|		185881		|	starts restaurant service
+	7	|		192414		|	leaves the service
+	8	|		192414		|	enters the checkout queue
+	9	|		192414		|	starts checkout service
+	10	|		192469		|	finishes checkout & leaves
+Customer Group #1570:
+	0	|		184017		|	arrives to restaurant
+	1	|		184017		|	enters buffet queue
+	2	|		184017		|	starts buffet service
+	7	|		189511		|	leaves the service
+	8	|		189511		|	enters the checkout queue
+	9	|		189511		|	starts checkout service
+	10	|		189763		|	finishes checkout & leaves
+Customer Group #1571:
+	0	|		184689		|	arrives to restaurant
+	1	|		184689		|	enters buffet queue
+	2	|		184689		|	starts buffet service
+	7	|		190316		|	leaves the service
+	8	|		190316		|	enters the checkout queue
+	9	|		190394		|	starts checkout service
+	10	|		191257		|	finishes checkout & leaves
+Customer Group #1572:
+	0	|		185264		|	arrives to restaurant
+	1	|		185264		|	enters buffet queue
+	2	|		185264		|	starts buffet service
+	7	|		191219		|	leaves the service
+	8	|		191219		|	enters the checkout queue
+	9	|		191257		|	starts checkout service
+	10	|		191597		|	finishes checkout & leaves
+Customer Group #1573:
+	0	|		185836		|	arrives to restaurant
+	3	|		185836		|	enters restaurant queue
+	4	|		185836		|	assigned to table
+	5	|		186836		|	waits for a waiter
+	6	|		186991		|	starts restaurant service
+	7	|		187853		|	leaves the service
+	8	|		187853		|	enters the checkout queue
+	9	|		188198		|	starts checkout service
+	10	|		188450		|	finishes checkout & leaves
+Customer Group #1574:
+	0	|		186533		|	arrives to restaurant
+	3	|		186533		|	enters restaurant queue
+	4	|		186836		|	assigned to table
+	5	|		187836		|	waits for a waiter
+	6	|		187853		|	starts restaurant service
+	7	|		189553		|	leaves the service
+	8	|		189553		|	enters the checkout queue
+	9	|		189963		|	starts checkout service
+	10	|		190013		|	finishes checkout & leaves
+Customer Group #1575:
+	0	|		187083		|	arrives to restaurant
+	3	|		187083		|	enters restaurant queue
+	4	|		187836		|	assigned to table
+	5	|		188836		|	waits for a waiter
+	6	|		188836		|	starts restaurant service
+	7	|		222627		|	leaves the service
+	8	|		222627		|	enters the checkout queue
+	9	|		223510		|	starts checkout service
+	10	|		223662		|	finishes checkout & leaves
+Customer Group #1576:
+	0	|		187664		|	arrives to restaurant
+	1	|		187664		|	enters buffet queue
+	2	|		187664		|	starts buffet service
+	7	|		193973		|	leaves the service
+	8	|		193973		|	enters the checkout queue
+	9	|		193973		|	starts checkout service
+	10	|		194504		|	finishes checkout & leaves
+Customer Group #1577:
+	0	|		188354		|	arrives to restaurant
+	3	|		188354		|	enters restaurant queue
+	4	|		189553		|	assigned to table
+	5	|		190553		|	waits for a waiter
+	6	|		190553		|	starts restaurant service
+	7	|		204718		|	leaves the service
+	8	|		204718		|	enters the checkout queue
+	9	|		204718		|	starts checkout service
+	10	|		206539		|	finishes checkout & leaves
+Customer Group #1578:
+	0	|		188968		|	arrives to restaurant
+	3	|		188968		|	enters restaurant queue
+	4	|		189589		|	assigned to table
+	5	|		190589		|	waits for a waiter
+	6	|		192414		|	starts restaurant service
+	7	|		198566		|	leaves the service
+	8	|		198566		|	enters the checkout queue
+	9	|		198566		|	starts checkout service
+	10	|		198723		|	finishes checkout & leaves
+Customer Group #1579:
+	0	|		189594		|	arrives to restaurant
+	1	|		189594		|	enters buffet queue
+	2	|		189594		|	starts buffet service
+	7	|		194826		|	leaves the service
+	8	|		194826		|	enters the checkout queue
+	9	|		195507		|	starts checkout service
+	10	|		195771		|	finishes checkout & leaves
+Customer Group #1580:
+	0	|		190208		|	arrives to restaurant
+	1	|		190208		|	enters buffet queue
+	2	|		190208		|	starts buffet service
+	7	|		196718		|	leaves the service
+	8	|		196718		|	enters the checkout queue
+	9	|		196718		|	starts checkout service
+	10	|		196884		|	finishes checkout & leaves
+Customer Group #1581:
+	0	|		190836		|	arrives to restaurant
+	3	|		190836		|	enters restaurant queue
+	4	|		190836		|	assigned to table
+	5	|		191836		|	waits for a waiter
+	6	|		194166		|	starts restaurant service
+	7	|		208872		|	leaves the service
+	8	|		208872		|	enters the checkout queue
+	9	|		211305		|	starts checkout service
+	10	|		211376		|	finishes checkout & leaves
+Customer Group #1582:
+	0	|		191472		|	arrives to restaurant
+	3	|		191472		|	enters restaurant queue
+	4	|		191836		|	assigned to table
+	5	|		192836		|	waits for a waiter
+	6	|		194669		|	starts restaurant service
+	7	|		201252		|	leaves the service
+	8	|		201252		|	enters the checkout queue
+	9	|		201252		|	starts checkout service
+	10	|		201287		|	finishes checkout & leaves
+Customer Group #1583:
+	0	|		192086		|	arrives to restaurant
+	1	|		192086		|	enters buffet queue
+	2	|		192086		|	starts buffet service
+	7	|		197450		|	leaves the service
+	8	|		197450		|	enters the checkout queue
+	9	|		197450		|	starts checkout service
+	10	|		197540		|	finishes checkout & leaves
+Customer Group #1584:
+	0	|		192759		|	arrives to restaurant
+	1	|		192759		|	enters buffet queue
+	2	|		192759		|	starts buffet service
+	7	|		198956		|	leaves the service
+	8	|		198956		|	enters the checkout queue
+	9	|		198956		|	starts checkout service
+	10	|		199757		|	finishes checkout & leaves
+Customer Group #1585:
+	0	|		193348		|	arrives to restaurant
+	3	|		193348		|	enters restaurant queue
+	4	|		193348		|	assigned to table
+	5	|		194348		|	waits for a waiter
+	6	|		198566		|	starts restaurant service
+	7	|		201885		|	leaves the service
+	8	|		201885		|	enters the checkout queue
+	9	|		201885		|	starts checkout service
+	10	|		202111		|	finishes checkout & leaves
+Customer Group #1586:
+	0	|		193742		|	arrives to restaurant
+	3	|		193742		|	enters restaurant queue
+	4	|		194348		|	assigned to table
+	5	|		195348		|	waits for a waiter
+	6	|		201252		|	starts restaurant service
+	7	|		204988		|	leaves the service
+	8	|		204988		|	enters the checkout queue
+	9	|		206946		|	starts checkout service
+	10	|		207099		|	finishes checkout & leaves
+Customer Group #1587:
+	0	|		194255		|	arrives to restaurant
+	3	|		194255		|	enters restaurant queue
+	4	|		194669		|	assigned to table
+	5	|		195669		|	waits for a waiter
+	6	|		201885		|	starts restaurant service
+	7	|		201989		|	leaves the service
+	8	|		201989		|	enters the checkout queue
+	9	|		202111		|	starts checkout service
+	10	|		202395		|	finishes checkout & leaves
+Customer Group #1588:
+	0	|		194840		|	arrives to restaurant
+	3	|		194840		|	enters restaurant queue
+	4	|		195348		|	assigned to table
+	5	|		196348		|	waits for a waiter
+	6	|		201989		|	starts restaurant service
+	7	|		204406		|	leaves the service
+	8	|		204406		|	enters the checkout queue
+	9	|		204406		|	starts checkout service
+	10	|		204617		|	finishes checkout & leaves
+Customer Group #1589:
+	0	|		195403		|	arrives to restaurant
+	3	|		195403		|	enters restaurant queue
+	4	|		195669		|	assigned to table
+	5	|		196669		|	waits for a waiter
+	6	|		204406		|	starts restaurant service
+	7	|		207790		|	leaves the service
+	8	|		207790		|	enters the checkout queue
+	9	|		208717		|	starts checkout service
+	10	|		210056		|	finishes checkout & leaves
+Customer Group #1590:
+	0	|		196066		|	arrives to restaurant
+	3	|		196066		|	enters restaurant queue
+	4	|		196348		|	assigned to table
+	5	|		197348		|	waits for a waiter
+	6	|		204718		|	starts restaurant service
+	7	|		204798		|	leaves the service
+	8	|		204798		|	enters the checkout queue
+	9	|		206539		|	starts checkout service
+	10	|		206946		|	finishes checkout & leaves
+Customer Group #1591:
+	0	|		196726		|	arrives to restaurant
+	3	|		196726		|	enters restaurant queue
+	4	|		196726		|	assigned to table
+	5	|		197726		|	waits for a waiter
+	6	|		204798		|	starts restaurant service
+	7	|		205781		|	leaves the service
+	8	|		205781		|	enters the checkout queue
+	9	|		208412		|	starts checkout service
+	10	|		208570		|	finishes checkout & leaves
+Customer Group #1592:
+	0	|		197292		|	arrives to restaurant
+	1	|		197292		|	enters buffet queue
+	2	|		197292		|	starts buffet service
+	7	|		203068		|	leaves the service
+	8	|		203068		|	enters the checkout queue
+	9	|		203068		|	starts checkout service
+	10	|		203507		|	finishes checkout & leaves
+Customer Group #1593:
+	0	|		197915		|	arrives to restaurant
+	1	|		197915		|	enters buffet queue
+	2	|		197915		|	starts buffet service
+	7	|		204052		|	leaves the service
+	8	|		204052		|	enters the checkout queue
+	9	|		204052		|	starts checkout service
+	10	|		204384		|	finishes checkout & leaves
+Customer Group #1594:
+	0	|		198482		|	arrives to restaurant
+	3	|		198482		|	enters restaurant queue
+	4	|		198482		|	assigned to table
+	5	|		199482		|	waits for a waiter
+	6	|		204988		|	starts restaurant service
+	7	|		205375		|	leaves the service
+	8	|		205375		|	enters the checkout queue
+	9	|		207764		|	starts checkout service
+	10	|		208412		|	finishes checkout & leaves
+Customer Group #1595:
+	0	|		199038		|	arrives to restaurant
+	3	|		199038		|	enters restaurant queue
+	4	|		199482		|	assigned to table
+	5	|		200482		|	waits for a waiter
+	6	|		205375		|	starts restaurant service
+	7	|		207996		|	leaves the service
+	8	|		207996		|	enters the checkout queue
+	9	|		210056		|	starts checkout service
+	10	|		210748		|	finishes checkout & leaves
+Customer Group #1596:
+	0	|		199511		|	arrives to restaurant
+	1	|		199511		|	enters buffet queue
+	2	|		199511		|	starts buffet service
+	7	|		205312		|	leaves the service
+	8	|		205312		|	enters the checkout queue
+	9	|		207099		|	starts checkout service
+	10	|		207764		|	finishes checkout & leaves
+Customer Group #1597:
+	0	|		200186		|	arrives to restaurant
+	3	|		200186		|	enters restaurant queue
+	4	|		200482		|	assigned to table
+	5	|		201482		|	waits for a waiter
+	6	|		205781		|	starts restaurant service
+	7	|		214163		|	leaves the service
+	8	|		214163		|	enters the checkout queue
+	9	|		214208		|	starts checkout service
+	10	|		214247		|	finishes checkout & leaves
+Customer Group #1598:
+	0	|		200732		|	arrives to restaurant
+	3	|		200732		|	enters restaurant queue
+	4	|		201482		|	assigned to table
+	5	|		202482		|	waits for a waiter
+	6	|		205876		|	starts restaurant service
+	7	|		208554		|	leaves the service
+	8	|		208554		|	enters the checkout queue
+	9	|		210748		|	starts checkout service
+	10	|		211195		|	finishes checkout & leaves
+Customer Group #1599:
+	0	|		201297		|	arrives to restaurant
+	3	|		201297		|	enters restaurant queue
+	4	|		201989		|	assigned to table
+	5	|		202989		|	waits for a waiter
+	6	|		207790		|	starts restaurant service
+	7	|		208860		|	leaves the service
+	8	|		208860		|	enters the checkout queue
+	9	|		211195		|	starts checkout service
+	10	|		211305		|	finishes checkout & leaves
+Customer Group #1600:
+	0	|		201962		|	arrives to restaurant
+	3	|		201962		|	enters restaurant queue
+	4	|		202482		|	assigned to table
+	5	|		203482		|	waits for a waiter
+	6	|		207996		|	starts restaurant service
+	7	|		213694		|	leaves the service
+	8	|		213694		|	enters the checkout queue
+	9	|		213694		|	starts checkout service
+	10	|		214153		|	finishes checkout & leaves
+Customer Group #1601:
+	0	|		202628		|	arrives to restaurant
+	3	|		202628		|	enters restaurant queue
+	4	|		204718		|	assigned to table
+	5	|		205718		|	waits for a waiter
+	6	|		208554		|	starts restaurant service
+	7	|		216151		|	leaves the service
+	8	|		216151		|	enters the checkout queue
+	9	|		216151		|	starts checkout service
+	10	|		216783		|	finishes checkout & leaves
+Customer Group #1602:
+	0	|		203160		|	arrives to restaurant
+	1	|		203160		|	enters buffet queue
+	2	|		203160		|	starts buffet service
+	7	|		209875		|	leaves the service
+	8	|		209875		|	enters the checkout queue
+	9	|		211376		|	starts checkout service
+	10	|		211752		|	finishes checkout & leaves
+Customer Group #1603:
+	0	|		203764		|	arrives to restaurant
+	3	|		203764		|	enters restaurant queue
+	4	|		204798		|	assigned to table
+	5	|		205798		|	waits for a waiter
+	6	|		208860		|	starts restaurant service
+	7	|		213287		|	leaves the service
+	8	|		213287		|	enters the checkout queue
+	9	|		213287		|	starts checkout service
+	10	|		213587		|	finishes checkout & leaves
+Customer Group #1604:
+	0	|		204361		|	arrives to restaurant
+	3	|		204361		|	enters restaurant queue
+	4	|		204988		|	assigned to table
+	5	|		205988		|	waits for a waiter
+	6	|		208872		|	starts restaurant service
+	7	|		215414		|	leaves the service
+	8	|		215414		|	enters the checkout queue
+	9	|		215414		|	starts checkout service
+	10	|		215522		|	finishes checkout & leaves
+Customer Group #1605:
+	0	|		205044		|	arrives to restaurant
+	3	|		205044		|	enters restaurant queue
+	4	|		205375		|	assigned to table
+	5	|		206375		|	waits for a waiter
+	6	|		213287		|	starts restaurant service
+	7	|		215669		|	leaves the service
+	8	|		215669		|	enters the checkout queue
+	9	|		215669		|	starts checkout service
+	10	|		215977		|	finishes checkout & leaves
+Customer Group #1606:
+	0	|		205718		|	arrives to restaurant
+	1	|		205718		|	enters buffet queue
+	2	|		205718		|	starts buffet service
+	7	|		212871		|	leaves the service
+	8	|		212871		|	enters the checkout queue
+	9	|		212871		|	starts checkout service
+	10	|		213052		|	finishes checkout & leaves
+Customer Group #1607:
+	0	|		206406		|	arrives to restaurant
+	3	|		206406		|	enters restaurant queue
+	4	|		206406		|	assigned to table
+	5	|		207406		|	waits for a waiter
+	6	|		213694		|	starts restaurant service
+	7	|		234210		|	leaves the service
+	8	|		234210		|	enters the checkout queue
+	9	|		234210		|	starts checkout service
+	10	|		234247		|	finishes checkout & leaves
+Customer Group #1608:
+	0	|		206963		|	arrives to restaurant
+	1	|		206963		|	enters buffet queue
+	2	|		206963		|	starts buffet service
+	7	|		212895		|	leaves the service
+	8	|		212895		|	enters the checkout queue
+	9	|		213052		|	starts checkout service
+	10	|		213181		|	finishes checkout & leaves
+Customer Group #1609:
+	0	|		207458		|	arrives to restaurant
+	3	|		207458		|	enters restaurant queue
+	4	|		207458		|	assigned to table
+	5	|		208458		|	waits for a waiter
+	6	|		214163		|	starts restaurant service
+	7	|		223785		|	leaves the service
+	8	|		223785		|	enters the checkout queue
+	9	|		224592		|	starts checkout service
+	10	|		224738		|	finishes checkout & leaves
+Customer Group #1610:
+	0	|		208085		|	arrives to restaurant
+	3	|		208085		|	enters restaurant queue
+	4	|		208458		|	assigned to table
+	5	|		209458		|	waits for a waiter
+	6	|		215414		|	starts restaurant service
+	7	|		216316		|	leaves the service
+	8	|		216316		|	enters the checkout queue
+	9	|		216783		|	starts checkout service
+	10	|		217123		|	finishes checkout & leaves
+Customer Group #1611:
+	0	|		208649		|	arrives to restaurant
+	1	|		208649		|	enters buffet queue
+	2	|		208649		|	starts buffet service
+	7	|		214135		|	leaves the service
+	8	|		214135		|	enters the checkout queue
+	9	|		214153		|	starts checkout service
+	10	|		214208		|	finishes checkout & leaves
+Customer Group #1612:
+	0	|		209175		|	arrives to restaurant
+	3	|		209175		|	enters restaurant queue
+	4	|		209458		|	assigned to table
+	5	|		210458		|	waits for a waiter
+	6	|		215669		|	starts restaurant service
+	7	|		231949		|	leaves the service
+	8	|		231949		|	enters the checkout queue
+	9	|		231949		|	starts checkout service
+	10	|		232025		|	finishes checkout & leaves
+Customer Group #1613:
+	0	|		209869		|	arrives to restaurant
+	3	|		209869		|	enters restaurant queue
+	4	|		210458		|	assigned to table
+	5	|		211458		|	waits for a waiter
+	6	|		216151		|	starts restaurant service
+	7	|		217269		|	leaves the service
+	8	|		217269		|	enters the checkout queue
+	9	|		217269		|	starts checkout service
+	10	|		217391		|	finishes checkout & leaves
+Customer Group #1614:
+	0	|		210507		|	arrives to restaurant
+	3	|		210507		|	enters restaurant queue
+	4	|		211458		|	assigned to table
+	5	|		212458		|	waits for a waiter
+	6	|		216316		|	starts restaurant service
+	7	|		218422		|	leaves the service
+	8	|		218422		|	enters the checkout queue
+	9	|		218972		|	starts checkout service
+	10	|		219166		|	finishes checkout & leaves
+Customer Group #1615:
+	0	|		211077		|	arrives to restaurant
+	1	|		211077		|	enters buffet queue
+	2	|		211077		|	starts buffet service
+	7	|		217644		|	leaves the service
+	8	|		217644		|	enters the checkout queue
+	9	|		217644		|	starts checkout service
+	10	|		218972		|	finishes checkout & leaves
+Customer Group #1616:
+	0	|		211719		|	arrives to restaurant
+	3	|		211719		|	enters restaurant queue
+	4	|		216151		|	assigned to table
+	5	|		217151		|	waits for a waiter
+	6	|		221270		|	starts restaurant service
+	7	|		223296		|	leaves the service
+	8	|		223296		|	enters the checkout queue
+	9	|		224085		|	starts checkout service
+	10	|		224183		|	finishes checkout & leaves
+Customer Group #1617:
+	0	|		212290		|	arrives to restaurant
+	3	|		212290		|	enters restaurant queue
+	4	|		212458		|	assigned to table
+	5	|		213458		|	waits for a waiter
+	6	|		217269		|	starts restaurant service
+	7	|		217294		|	leaves the service
+	8	|		217294		|	enters the checkout queue
+	9	|		217391		|	starts checkout service
+	10	|		217448		|	finishes checkout & leaves
+Customer Group #1618:
+	0	|		212868		|	arrives to restaurant
+	3	|		212868		|	enters restaurant queue
+	4	|		218699		|	assigned to table
+	5	|		219699		|	waits for a waiter
+	6	|		223296		|	starts restaurant service
+	7	|		235118		|	leaves the service
+	8	|		235118		|	enters the checkout queue
+	9	|		235123		|	starts checkout service
+	10	|		235124		|	finishes checkout & leaves
+Customer Group #1619:
+	0	|		213369		|	arrives to restaurant
+	3	|		213369		|	enters restaurant queue
+	4	|		213458		|	assigned to table
+	5	|		214458		|	waits for a waiter
+	6	|		217294		|	starts restaurant service
+	7	|		221246		|	leaves the service
+	8	|		221246		|	enters the checkout queue
+	9	|		221246		|	starts checkout service
+	10	|		221922		|	finishes checkout & leaves
+Customer Group #1620:
+	0	|		213979		|	arrives to restaurant
+	1	|		213979		|	enters buffet queue
+	2	|		213979		|	starts buffet service
+	7	|		220309		|	leaves the service
+	8	|		220309		|	enters the checkout queue
+	9	|		220309		|	starts checkout service
+	10	|		220361		|	finishes checkout & leaves
+Customer Group #1621:
+	0	|		214585		|	arrives to restaurant
+	3	|		214585		|	enters restaurant queue
+	4	|		214585		|	assigned to table
+	5	|		215585		|	waits for a waiter
+	6	|		218422		|	starts restaurant service
+	7	|		221270		|	leaves the service
+	8	|		221270		|	enters the checkout queue
+	9	|		221922		|	starts checkout service
+	10	|		222023		|	finishes checkout & leaves
+Customer Group #1622:
+	0	|		215292		|	arrives to restaurant
+	3	|		215292		|	enters restaurant queue
+	4	|		215414		|	assigned to table
+	5	|		216414		|	waits for a waiter
+	6	|		221246		|	starts restaurant service
+	7	|		222327		|	leaves the service
+	8	|		222327		|	enters the checkout queue
+	9	|		222862		|	starts checkout service
+	10	|		223510		|	finishes checkout & leaves
+Customer Group #1623:
+	0	|		215878		|	arrives to restaurant
+	1	|		215878		|	enters buffet queue
+	2	|		215878		|	starts buffet service
+	7	|		222169		|	leaves the service
+	8	|		222169		|	enters the checkout queue
+	9	|		222169		|	starts checkout service
+	10	|		222862		|	finishes checkout & leaves
+Customer Group #1624:
+	0	|		216508		|	arrives to restaurant
+	1	|		216508		|	enters buffet queue
+	2	|		216508		|	starts buffet service
+	7	|		222839		|	leaves the service
+	8	|		222839		|	enters the checkout queue
+	9	|		223662		|	starts checkout service
+	10	|		224085		|	finishes checkout & leaves
+Customer Group #1625:
+	0	|		217098		|	arrives to restaurant
+	1	|		217098		|	enters buffet queue
+	2	|		217098		|	starts buffet service
+	7	|		223382		|	leaves the service
+	8	|		223382		|	enters the checkout queue
+	9	|		224183		|	starts checkout service
+	10	|		224592		|	finishes checkout & leaves
+Customer Group #1626:
+	0	|		217699		|	arrives to restaurant
+	3	|		217699		|	enters restaurant queue
+	4	|		217699		|	assigned to table
+	5	|		218699		|	waits for a waiter
+	6	|		222327		|	starts restaurant service
+	7	|		225883		|	leaves the service
+	8	|		225883		|	enters the checkout queue
+	9	|		225939		|	starts checkout service
+	10	|		225951		|	finishes checkout & leaves
+Customer Group #1627:
+	0	|		218304		|	arrives to restaurant
+	3	|		218304		|	enters restaurant queue
+	4	|		218422		|	assigned to table
+	5	|		219422		|	waits for a waiter
+	6	|		222627		|	starts restaurant service
+	7	|		225328		|	leaves the service
+	8	|		225328		|	enters the checkout queue
+	9	|		225498		|	starts checkout service
+	10	|		225580		|	finishes checkout & leaves
+Customer Group #1628:
+	0	|		218798		|	arrives to restaurant
+	1	|		218798		|	enters buffet queue
+	2	|		218798		|	starts buffet service
+	7	|		225393		|	leaves the service
+	8	|		225393		|	enters the checkout queue
+	9	|		225580		|	starts checkout service
+	10	|		225939		|	finishes checkout & leaves
+Customer Group #1629:
+	0	|		219401		|	arrives to restaurant
+	1	|		219401		|	enters buffet queue
+	2	|		219401		|	starts buffet service
+	7	|		225317		|	leaves the service
+	8	|		225317		|	enters the checkout queue
+	9	|		225317		|	starts checkout service
+	10	|		225498		|	finishes checkout & leaves
+Customer Group #1630:
+	0	|		220020		|	arrives to restaurant
+	1	|		220020		|	enters buffet queue
+	2	|		220020		|	starts buffet service
+	7	|		226741		|	leaves the service
+	8	|		226741		|	enters the checkout queue
+	9	|		226741		|	starts checkout service
+	10	|		226772		|	finishes checkout & leaves
+Customer Group #1631:
+	0	|		220643		|	arrives to restaurant
+	3	|		220643		|	enters restaurant queue
+	4	|		220643		|	assigned to table
+	5	|		221643		|	waits for a waiter
+	6	|		223785		|	starts restaurant service
+	7	|		229413		|	leaves the service
+	8	|		229413		|	enters the checkout queue
+	9	|		229413		|	starts checkout service
+	10	|		229740		|	finishes checkout & leaves
+Customer Group #1632:
+	0	|		221257		|	arrives to restaurant
+	1	|		221257		|	enters buffet queue
+	2	|		221257		|	starts buffet service
+	7	|		226860		|	leaves the service
+	8	|		226860		|	enters the checkout queue
+	9	|		226860		|	starts checkout service
+	10	|		226991		|	finishes checkout & leaves
+Customer Group #1633:
+	0	|		221987		|	arrives to restaurant
+	1	|		221987		|	enters buffet queue
+	2	|		226741		|	starts buffet service
+	7	|		232284		|	leaves the service
+	8	|		232284		|	enters the checkout queue
+	9	|		232284		|	starts checkout service
+	10	|		232551		|	finishes checkout & leaves
+Customer Group #1634:
+	0	|		222586		|	arrives to restaurant
+	3	|		222586		|	enters restaurant queue
+	4	|		222586		|	assigned to table
+	5	|		223586		|	waits for a waiter
+	6	|		225328		|	starts restaurant service
+	7	|		229881		|	leaves the service
+	8	|		229881		|	enters the checkout queue
+	9	|		230317		|	starts checkout service
+	10	|		230319		|	finishes checkout & leaves
+Customer Group #1635:
+	0	|		223177		|	arrives to restaurant
+	3	|		223177		|	enters restaurant queue
+	4	|		223586		|	assigned to table
+	5	|		224586		|	waits for a waiter
+	6	|		225883		|	starts restaurant service
+	7	|		229483		|	leaves the service
+	8	|		229483		|	enters the checkout queue
+	9	|		229740		|	starts checkout service
+	10	|		230317		|	finishes checkout & leaves
+Customer Group #1636:
+	0	|		223775		|	arrives to restaurant
+	1	|		223775		|	enters buffet queue
+	2	|		226741		|	starts buffet service
+	7	|		232579		|	leaves the service
+	8	|		232579		|	enters the checkout queue
+	9	|		232579		|	starts checkout service
+	10	|		232611		|	finishes checkout & leaves
+Customer Group #1637:
+	0	|		224347		|	arrives to restaurant
+	3	|		224347		|	enters restaurant queue
+	4	|		224586		|	assigned to table
+	5	|		225586		|	waits for a waiter
+	6	|		229413		|	starts restaurant service
+	7	|		236204		|	leaves the service
+	8	|		236204		|	enters the checkout queue
+	9	|		236381		|	starts checkout service
+	10	|		236465		|	finishes checkout & leaves
+Customer Group #1638:
+	0	|		225010		|	arrives to restaurant
+	1	|		225010		|	enters buffet queue
+	2	|		226741		|	starts buffet service
+	7	|		233211		|	leaves the service
+	8	|		233211		|	enters the checkout queue
+	9	|		233476		|	starts checkout service
+	10	|		233601		|	finishes checkout & leaves
+Customer Group #1639:
+	0	|		225658		|	arrives to restaurant
+	1	|		225658		|	enters buffet queue
+	2	|		226741		|	starts buffet service
+	7	|		232697		|	leaves the service
+	8	|		232697		|	enters the checkout queue
+	9	|		232697		|	starts checkout service
+	10	|		232710		|	finishes checkout & leaves
+Customer Group #1640:
+	0	|		226245		|	arrives to restaurant
+	1	|		226245		|	enters buffet queue
+	2	|		226741		|	starts buffet service
+	7	|		233213		|	leaves the service
+	8	|		233213		|	enters the checkout queue
+	9	|		233601		|	starts checkout service
+	10	|		233635		|	finishes checkout & leaves
+Customer Group #1641:
+	0	|		226856		|	arrives to restaurant
+	1	|		226856		|	enters buffet queue
+	2	|		233211		|	starts buffet service
+	7	|		239663		|	leaves the service
+	8	|		239663		|	enters the checkout queue
+	9	|		239741		|	starts checkout service
+	10	|		239877		|	finishes checkout & leaves
+Customer Group #1642:
+	0	|		227479		|	arrives to restaurant
+	1	|		227479		|	enters buffet queue
+	2	|		233211		|	starts buffet service
+	7	|		239631		|	leaves the service
+	8	|		239631		|	enters the checkout queue
+	9	|		239682		|	starts checkout service
+	10	|		239741		|	finishes checkout & leaves
+Customer Group #1643:
+	0	|		228078		|	arrives to restaurant
+	3	|		228078		|	enters restaurant queue
+	4	|		229704		|	assigned to table
+	5	|		230704		|	waits for a waiter
+	6	|		231949		|	starts restaurant service
+	7	|		235513		|	leaves the service
+	8	|		235513		|	enters the checkout queue
+	9	|		235513		|	starts checkout service
+	10	|		236381		|	finishes checkout & leaves
+Customer Group #1644:
+	0	|		228704		|	arrives to restaurant
+	3	|		228704		|	enters restaurant queue
+	4	|		228704		|	assigned to table
+	5	|		229704		|	waits for a waiter
+	6	|		229704		|	starts restaurant service
+	7	|		232839		|	leaves the service
+	8	|		232839		|	enters the checkout queue
+	9	|		232839		|	starts checkout service
+	10	|		233476		|	finishes checkout & leaves
+Customer Group #1645:
+	0	|		229334		|	arrives to restaurant
+	3	|		229334		|	enters restaurant queue
+	4	|		229413		|	assigned to table
+	5	|		230413		|	waits for a waiter
+	6	|		230413		|	starts restaurant service
+	7	|		234254		|	leaves the service
+	8	|		234254		|	enters the checkout queue
+	9	|		234254		|	starts checkout service
+	10	|		234689		|	finishes checkout & leaves
+Customer Group #1646:
+	0	|		229936		|	arrives to restaurant
+	3	|		229936		|	enters restaurant queue
+	4	|		230413		|	assigned to table
+	5	|		231413		|	waits for a waiter
+	6	|		232839		|	starts restaurant service
+	7	|		236910		|	leaves the service
+	8	|		236910		|	enters the checkout queue
+	9	|		236910		|	starts checkout service
+	10	|		237215		|	finishes checkout & leaves
+Customer Group #1647:
+	0	|		230513		|	arrives to restaurant
+	1	|		230513		|	enters buffet queue
+	2	|		233211		|	starts buffet service
+	7	|		239567		|	leaves the service
+	8	|		239567		|	enters the checkout queue
+	9	|		239622		|	starts checkout service
+	10	|		239682		|	finishes checkout & leaves
+Customer Group #1648:
+	0	|		231151		|	arrives to restaurant
+	3	|		231151		|	enters restaurant queue
+	4	|		231151		|	assigned to table
+	5	|		232151		|	waits for a waiter
+	6	|		234210		|	starts restaurant service
+	7	|		234652		|	leaves the service
+	8	|		234652		|	enters the checkout queue
+	9	|		234801		|	starts checkout service
+	10	|		234806		|	finishes checkout & leaves
+Customer Group #1649:
+	0	|		231746		|	arrives to restaurant
+	3	|		231746		|	enters restaurant queue
+	4	|		231746		|	assigned to table
+	5	|		232746		|	waits for a waiter
+	6	|		234254		|	starts restaurant service
+	7	|		234470		|	leaves the service
+	8	|		234470		|	enters the checkout queue
+	9	|		234689		|	starts checkout service
+	10	|		234801		|	finishes checkout & leaves
+Customer Group #1650:
+	0	|		232358		|	arrives to restaurant
+	3	|		232358		|	enters restaurant queue
+	4	|		232358		|	assigned to table
+	5	|		233358		|	waits for a waiter
+	6	|		234470		|	starts restaurant service
+	7	|		234818		|	leaves the service
+	8	|		234818		|	enters the checkout queue
+	9	|		234818		|	starts checkout service
+	10	|		235123		|	finishes checkout & leaves
+Customer Group #1651:
+	0	|		232997		|	arrives to restaurant
+	1	|		232997		|	enters buffet queue
+	2	|		233211		|	starts buffet service
+	7	|		239233		|	leaves the service
+	8	|		239233		|	enters the checkout queue
+	9	|		239233		|	starts checkout service
+	10	|		239622		|	finishes checkout & leaves
+Customer Group #1652:
+	0	|		233586		|	arrives to restaurant
+	3	|		233586		|	enters restaurant queue
+	4	|		233586		|	assigned to table
+	5	|		234586		|	waits for a waiter
+	6	|		234652		|	starts restaurant service
+	7	|		245823		|	leaves the service
+	8	|		245823		|	enters the checkout queue
+	9	|		245823		|	starts checkout service
+	10	|		245872		|	finishes checkout & leaves
+Customer Group #1653:
+	0	|		234206		|	arrives to restaurant
+	1	|		234206		|	enters buffet queue
+	2	|		234206		|	starts buffet service
+	7	|		240563		|	leaves the service
+	8	|		240563		|	enters the checkout queue
+	9	|		240865		|	starts checkout service
+	10	|		241168		|	finishes checkout & leaves
+Customer Group #1654:
+	0	|		234823		|	arrives to restaurant
+	3	|		234823		|	enters restaurant queue
+	4	|		234823		|	assigned to table
+	5	|		235823		|	waits for a waiter
+	6	|		235823		|	starts restaurant service
+	7	|		238710		|	leaves the service
+	8	|		238710		|	enters the checkout queue
+	9	|		238710		|	starts checkout service
+	10	|		238724		|	finishes checkout & leaves
+Customer Group #1655:
+	0	|		235424		|	arrives to restaurant
+	1	|		235424		|	enters buffet queue
+	2	|		235424		|	starts buffet service
+	7	|		241714		|	leaves the service
+	8	|		241714		|	enters the checkout queue
+	9	|		241714		|	starts checkout service
+	10	|		241752		|	finishes checkout & leaves
+Customer Group #1656:
+	0	|		236120		|	arrives to restaurant
+	3	|		236120		|	enters restaurant queue
+	4	|		236120		|	assigned to table
+	5	|		237120		|	waits for a waiter
+	6	|		237120		|	starts restaurant service
+	7	|		237376		|	leaves the service
+	8	|		237376		|	enters the checkout queue
+	9	|		237376		|	starts checkout service
+	10	|		237391		|	finishes checkout & leaves
+Customer Group #1657:
+	0	|		236607		|	arrives to restaurant
+	3	|		236607		|	enters restaurant queue
+	4	|		236910		|	assigned to table
+	5	|		237910		|	waits for a waiter
+	6	|		237910		|	starts restaurant service
+	7	|		241108		|	leaves the service
+	8	|		241108		|	enters the checkout queue
+	9	|		241168		|	starts checkout service
+	10	|		241178		|	finishes checkout & leaves
+Customer Group #1658:
+	0	|		237281		|	arrives to restaurant
+	3	|		237281		|	enters restaurant queue
+	4	|		237281		|	assigned to table
+	5	|		238281		|	waits for a waiter
+	6	|		238281		|	starts restaurant service
+	7	|		240497		|	leaves the service
+	8	|		240497		|	enters the checkout queue
+	9	|		240497		|	starts checkout service
+	10	|		240865		|	finishes checkout & leaves
+Customer Group #1659:
+	0	|		237831		|	arrives to restaurant
+	3	|		237831		|	enters restaurant queue
+	4	|		237910		|	assigned to table
+	5	|		238910		|	waits for a waiter
+	6	|		238910		|	starts restaurant service
+	7	|		246882		|	leaves the service
+	8	|		246882		|	enters the checkout queue
+	9	|		247353		|	starts checkout service
+	10	|		247453		|	finishes checkout & leaves
+Customer Group #1660:
+	0	|		238375		|	arrives to restaurant
+	3	|		238375		|	enters restaurant queue
+	4	|		238375		|	assigned to table
+	5	|		239375		|	waits for a waiter
+	6	|		239375		|	starts restaurant service
+	7	|		242987		|	leaves the service
+	8	|		242987		|	enters the checkout queue
+	9	|		242987		|	starts checkout service
+	10	|		243084		|	finishes checkout & leaves
+Customer Group #1661:
+	0	|		239004		|	arrives to restaurant
+	1	|		239004		|	enters buffet queue
+	2	|		239004		|	starts buffet service
+	7	|		245032		|	leaves the service
+	8	|		245032		|	enters the checkout queue
+	9	|		245032		|	starts checkout service
+	10	|		245586		|	finishes checkout & leaves
+Customer Group #1662:
+	0	|		239730		|	arrives to restaurant
+	3	|		239730		|	enters restaurant queue
+	4	|		239730		|	assigned to table
+	5	|		240730		|	waits for a waiter
+	6	|		240730		|	starts restaurant service
+	7	|		243775		|	leaves the service
+	8	|		243775		|	enters the checkout queue
+	9	|		243775		|	starts checkout service
+	10	|		243860		|	finishes checkout & leaves
+Customer Group #1663:
+	0	|		240205		|	arrives to restaurant
+	3	|		240205		|	enters restaurant queue
+	4	|		240497		|	assigned to table
+	5	|		241497		|	waits for a waiter
+	6	|		241497		|	starts restaurant service
+	7	|		245556		|	leaves the service
+	8	|		245556		|	enters the checkout queue
+	9	|		245586		|	starts checkout service
+	10	|		245791		|	finishes checkout & leaves
+Customer Group #1664:
+	0	|		240804		|	arrives to restaurant
+	3	|		240804		|	enters restaurant queue
+	4	|		240804		|	assigned to table
+	5	|		241804		|	waits for a waiter
+	6	|		241804		|	starts restaurant service
+	7	|		242198		|	leaves the service
+	8	|		242198		|	enters the checkout queue
+	9	|		242198		|	starts checkout service
+	10	|		242219		|	finishes checkout & leaves
+Customer Group #1665:
+	0	|		241535		|	arrives to restaurant
+	3	|		241535		|	enters restaurant queue
+	4	|		241535		|	assigned to table
+	5	|		242535		|	waits for a waiter
+	6	|		242535		|	starts restaurant service
+	7	|		257317		|	leaves the service
+	8	|		257317		|	enters the checkout queue
+	9	|		257317		|	starts checkout service
+	10	|		257456		|	finishes checkout & leaves
+Customer Group #1666:
+	0	|		242163		|	arrives to restaurant
+	3	|		242163		|	enters restaurant queue
+	4	|		242163		|	assigned to table
+	5	|		243163		|	waits for a waiter
+	6	|		243163		|	starts restaurant service
+	7	|		246842		|	leaves the service
+	8	|		246842		|	enters the checkout queue
+	9	|		246842		|	starts checkout service
+	10	|		247353		|	finishes checkout & leaves
+Customer Group #1667:
+	0	|		242786		|	arrives to restaurant
+	3	|		242786		|	enters restaurant queue
+	4	|		242786		|	assigned to table
+	5	|		243786		|	waits for a waiter
+	6	|		243786		|	starts restaurant service
+	7	|		250462		|	leaves the service
+	8	|		250462		|	enters the checkout queue
+	9	|		250842		|	starts checkout service
+	10	|		250900		|	finishes checkout & leaves
+Customer Group #1668:
+	0	|		243391		|	arrives to restaurant
+	3	|		243391		|	enters restaurant queue
+	4	|		243391		|	assigned to table
+	5	|		244391		|	waits for a waiter
+	6	|		245556		|	starts restaurant service
+	7	|		246125		|	leaves the service
+	8	|		246125		|	enters the checkout queue
+	9	|		246125		|	starts checkout service
+	10	|		246330		|	finishes checkout & leaves
+Customer Group #1669:
+	0	|		243984		|	arrives to restaurant
+	1	|		243984		|	enters buffet queue
+	2	|		243984		|	starts buffet service
+	7	|		250013		|	leaves the service
+	8	|		250013		|	enters the checkout queue
+	9	|		250188		|	starts checkout service
+	10	|		250380		|	finishes checkout & leaves
+Customer Group #1670:
+	0	|		244583		|	arrives to restaurant
+	3	|		244583		|	enters restaurant queue
+	4	|		244583		|	assigned to table
+	5	|		245583		|	waits for a waiter
+	6	|		245823		|	starts restaurant service
+	7	|		247719		|	leaves the service
+	8	|		247719		|	enters the checkout queue
+	9	|		247719		|	starts checkout service
+	10	|		247783		|	finishes checkout & leaves
+Customer Group #1671:
+	0	|		245240		|	arrives to restaurant
+	1	|		245240		|	enters buffet queue
+	2	|		245240		|	starts buffet service
+	7	|		251635		|	leaves the service
+	8	|		251635		|	enters the checkout queue
+	9	|		251635		|	starts checkout service
+	10	|		252102		|	finishes checkout & leaves
+Customer Group #1672:
+	0	|		245907		|	arrives to restaurant
+	3	|		245907		|	enters restaurant queue
+	4	|		245907		|	assigned to table
+	5	|		246907		|	waits for a waiter
+	6	|		246907		|	starts restaurant service
+	7	|		250148		|	leaves the service
+	8	|		250148		|	enters the checkout queue
+	9	|		250380		|	starts checkout service
+	10	|		250842		|	finishes checkout & leaves
+Customer Group #1673:
+	0	|		246490		|	arrives to restaurant
+	1	|		246490		|	enters buffet queue
+	2	|		246490		|	starts buffet service
+	7	|		253195		|	leaves the service
+	8	|		253195		|	enters the checkout queue
+	9	|		253261		|	starts checkout service
+	10	|		253793		|	finishes checkout & leaves
+Customer Group #1674:
+	0	|		247090		|	arrives to restaurant
+	3	|		247090		|	enters restaurant queue
+	4	|		247090		|	assigned to table
+	5	|		248090		|	waits for a waiter
+	6	|		248090		|	starts restaurant service
+	7	|		249428		|	leaves the service
+	8	|		249428		|	enters the checkout queue
+	9	|		249428		|	starts checkout service
+	10	|		250188		|	finishes checkout & leaves
+Customer Group #1675:
+	0	|		247711		|	arrives to restaurant
+	1	|		247711		|	enters buffet queue
+	2	|		247711		|	starts buffet service
+	7	|		253193		|	leaves the service
+	8	|		253193		|	enters the checkout queue
+	9	|		253193		|	starts checkout service
+	10	|		253261		|	finishes checkout & leaves
+Customer Group #1676:
+	0	|		248324		|	arrives to restaurant
+	1	|		248324		|	enters buffet queue
+	2	|		248324		|	starts buffet service
+	7	|		253898		|	leaves the service
+	8	|		253898		|	enters the checkout queue
+	9	|		253898		|	starts checkout service
+	10	|		254086		|	finishes checkout & leaves
+Customer Group #1677:
+	0	|		248929		|	arrives to restaurant
+	1	|		248929		|	enters buffet queue
+Customer Group #1678:
+	0	|		249504		|	arrives to restaurant
+	3	|		249504		|	enters restaurant queue
+	4	|		249504		|	assigned to table
+	5	|		250504		|	waits for a waiter
+	6	|		250504		|	starts restaurant service
+	7	|		254492		|	leaves the service
+	8	|		254492		|	enters the checkout queue
+	9	|		254492		|	starts checkout service
+	10	|		254878		|	finishes checkout & leaves
+Customer Group #1679:
+	0	|		250066		|	arrives to restaurant
+	1	|		250066		|	enters buffet queue
+Customer Group #1680:
+	0	|		250623		|	arrives to restaurant
+	3	|		250623		|	enters restaurant queue
+	4	|		250623		|	assigned to table
+	5	|		251623		|	waits for a waiter
+	6	|		251623		|	starts restaurant service
+	7	|		275150		|	leaves the service
+	8	|		275150		|	enters the checkout queue
+	9	|		275150		|	starts checkout service
+	10	|		275230		|	finishes checkout & leaves
+Customer Group #1681:
+	0	|		251271		|	arrives to restaurant
+	3	|		251271		|	enters restaurant queue
+	4	|		251623		|	assigned to table
+	5	|		252623		|	waits for a waiter
+	6	|		252623		|	starts restaurant service
+	7	|		262432		|	leaves the service
+	8	|		262432		|	enters the checkout queue
+	9	|		262432		|	starts checkout service
+	10	|		263130		|	finishes checkout & leaves
+Customer Group #1682:
+	0	|		251907		|	arrives to restaurant
+	3	|		251907		|	enters restaurant queue
+	4	|		252623		|	assigned to table
+	5	|		253623		|	waits for a waiter
+	6	|		253623		|	starts restaurant service
+	7	|		267890		|	leaves the service
+	8	|		267890		|	enters the checkout queue
+	9	|		267890		|	starts checkout service
+	10	|		268570		|	finishes checkout & leaves
+Customer Group #1683:
+	0	|		252505		|	arrives to restaurant
+	1	|		252505		|	enters buffet queue
+Customer Group #1684:
+	0	|		253104		|	arrives to restaurant
+	3	|		253104		|	enters restaurant queue
+	4	|		253623		|	assigned to table
+	5	|		254623		|	waits for a waiter
+	6	|		254623		|	starts restaurant service
+	7	|		256407		|	leaves the service
+	8	|		256407		|	enters the checkout queue
+	9	|		256407		|	starts checkout service
+	10	|		256501		|	finishes checkout & leaves
+Customer Group #1685:
+	0	|		253778		|	arrives to restaurant
+	3	|		253778		|	enters restaurant queue
+	4	|		254492		|	assigned to table
+	5	|		255492		|	waits for a waiter
+	6	|		255492		|	starts restaurant service
+	7	|		265045		|	leaves the service
+	8	|		265045		|	enters the checkout queue
+	9	|		265045		|	starts checkout service
+	10	|		265680		|	finishes checkout & leaves
+Customer Group #1686:
+	0	|		254325		|	arrives to restaurant
+	1	|		254325		|	enters buffet queue
+Customer Group #1687:
+	0	|		254896		|	arrives to restaurant
+	3	|		254896		|	enters restaurant queue
+	4	|		254896		|	assigned to table
+	5	|		255896		|	waits for a waiter
+	6	|		256407		|	starts restaurant service
+	7	|		257723		|	leaves the service
+	8	|		257723		|	enters the checkout queue
+	9	|		257723		|	starts checkout service
+	10	|		258023		|	finishes checkout & leaves
+Customer Group #1688:
+	0	|		255402		|	arrives to restaurant
+	1	|		255402		|	enters buffet queue
+Customer Group #1689:
+	0	|		255962		|	arrives to restaurant
+	1	|		255962		|	enters buffet queue
+Customer Group #1690:
+	0	|		256528		|	arrives to restaurant
+	3	|		256528		|	enters restaurant queue
+	4	|		256528		|	assigned to table
+	5	|		257528		|	waits for a waiter
+	6	|		257528		|	starts restaurant service
+	7	|		262624		|	leaves the service
+	8	|		262624		|	enters the checkout queue
+	9	|		263130		|	starts checkout service
+	10	|		263165		|	finishes checkout & leaves
+Customer Group #1691:
+	0	|		257102		|	arrives to restaurant
+	3	|		257102		|	enters restaurant queue
+	4	|		257317		|	assigned to table
+	5	|		258317		|	waits for a waiter
+	6	|		258317		|	starts restaurant service
+	7	|		265321		|	leaves the service
+	8	|		265321		|	enters the checkout queue
+	9	|		265680		|	starts checkout service
+	10	|		265836		|	finishes checkout & leaves
+Customer Group #1692:
+	0	|		257665		|	arrives to restaurant
+	1	|		257665		|	enters buffet queue
+Customer Group #1693:
+	0	|		258283		|	arrives to restaurant
+	3	|		258283		|	enters restaurant queue
+	4	|		258283		|	assigned to table
+	5	|		259283		|	waits for a waiter
+	6	|		262432		|	starts restaurant service
+	7	|		271762		|	leaves the service
+	8	|		271762		|	enters the checkout queue
+	9	|		271762		|	starts checkout service
+	10	|		272101		|	finishes checkout & leaves
+Customer Group #1694:
+	0	|		258960		|	arrives to restaurant
+	1	|		258960		|	enters buffet queue
+Customer Group #1695:
+	0	|		259516		|	arrives to restaurant
+	3	|		259516		|	enters restaurant queue
+	4	|		259516		|	assigned to table
+	5	|		260516		|	waits for a waiter
+	6	|		262624		|	starts restaurant service
+	7	|		268757		|	leaves the service
+	8	|		268757		|	enters the checkout queue
+	9	|		268757		|	starts checkout service
+	10	|		269469		|	finishes checkout & leaves
+Customer Group #1696:
+	0	|		260073		|	arrives to restaurant
+	3	|		260073		|	enters restaurant queue
+	4	|		260516		|	assigned to table
+	5	|		261516		|	waits for a waiter
+	6	|		265045		|	starts restaurant service
+	7	|		270138		|	leaves the service
+	8	|		270138		|	enters the checkout queue
+	9	|		270138		|	starts checkout service
+	10	|		270956		|	finishes checkout & leaves
+Customer Group #1697:
+	0	|		260709		|	arrives to restaurant
+	1	|		260709		|	enters buffet queue
+Customer Group #1698:
+	0	|		261152		|	arrives to restaurant
+	3	|		261152		|	enters restaurant queue
+	4	|		261516		|	assigned to table
+	5	|		262516		|	waits for a waiter
+	6	|		265321		|	starts restaurant service
+	7	|		265919		|	leaves the service
+	8	|		265919		|	enters the checkout queue
+	9	|		265919		|	starts checkout service
+	10	|		266072		|	finishes checkout & leaves
+Customer Group #1699:
+	0	|		261726		|	arrives to restaurant
+	3	|		261726		|	enters restaurant queue
+	4	|		262432		|	assigned to table
+	5	|		263432		|	waits for a waiter
+	6	|		265919		|	starts restaurant service
+	7	|		269147		|	leaves the service
+	8	|		269147		|	enters the checkout queue
+	9	|		269469		|	starts checkout service
+	10	|		269579		|	finishes checkout & leaves
+Customer Group #1700:
+	0	|		262401		|	arrives to restaurant
+	1	|		262401		|	enters buffet queue
+Customer Group #1701:
+	0	|		263001		|	arrives to restaurant
+	3	|		263001		|	enters restaurant queue
+	4	|		263001		|	assigned to table
+	5	|		264001		|	waits for a waiter
+	6	|		267890		|	starts restaurant service
+	7	|		279198		|	leaves the service
+	8	|		279198		|	enters the checkout queue
+	9	|		279306		|	starts checkout service
+	10	|		279546		|	finishes checkout & leaves
+Customer Group #1702:
+	0	|		263588		|	arrives to restaurant
+	3	|		263588		|	enters restaurant queue
+	4	|		263588		|	assigned to table
+	5	|		264588		|	waits for a waiter
+	6	|		268757		|	starts restaurant service
+	7	|		270858		|	leaves the service
+	8	|		270858		|	enters the checkout queue
+	9	|		270956		|	starts checkout service
+	10	|		270967		|	finishes checkout & leaves
+Customer Group #1703:
+	0	|		264196		|	arrives to restaurant
+	3	|		264196		|	enters restaurant queue
+	4	|		264196		|	assigned to table
+	5	|		265196		|	waits for a waiter
+	6	|		269147		|	starts restaurant service
+	7	|		283730		|	leaves the service
+	8	|		283730		|	enters the checkout queue
+	9	|		284152		|	starts checkout service
+	10	|		284291		|	finishes checkout & leaves
+Customer Group #1704:
+	0	|		264822		|	arrives to restaurant
+	3	|		264822		|	enters restaurant queue
+	4	|		264822		|	assigned to table
+	5	|		265822		|	waits for a waiter
+	6	|		270138		|	starts restaurant service
+	7	|		273792		|	leaves the service
+	8	|		273792		|	enters the checkout queue
+	9	|		273792		|	starts checkout service
+	10	|		274064		|	finishes checkout & leaves
+Customer Group #1705:
+	0	|		265481		|	arrives to restaurant
+	1	|		265481		|	enters buffet queue
+Customer Group #1706:
+	0	|		266151		|	arrives to restaurant
+	3	|		266151		|	enters restaurant queue
+	4	|		266151		|	assigned to table
+	5	|		267151		|	waits for a waiter
+	6	|		270858		|	starts restaurant service
+	7	|		279167		|	leaves the service
+	8	|		279167		|	enters the checkout queue
+	9	|		279167		|	starts checkout service
+	10	|		279306		|	finishes checkout & leaves
+Customer Group #1707:
+	0	|		266700		|	arrives to restaurant
+	1	|		266700		|	enters buffet queue
+Customer Group #1708:
+	0	|		267317		|	arrives to restaurant
+	1	|		267317		|	enters buffet queue
+Customer Group #1709:
+	0	|		267898		|	arrives to restaurant
+	1	|		267898		|	enters buffet queue
+Customer Group #1710:
+	0	|		268514		|	arrives to restaurant
+	3	|		268514		|	enters restaurant queue
+	4	|		268514		|	assigned to table
+	5	|		269514		|	waits for a waiter
+	6	|		271762		|	starts restaurant service
+	7	|		283374		|	leaves the service
+	8	|		283374		|	enters the checkout queue
+	9	|		283374		|	starts checkout service
+	10	|		284152		|	finishes checkout & leaves
+Customer Group #1711:
+	0	|		269204		|	arrives to restaurant
+	3	|		269204		|	enters restaurant queue
+	4	|		269514		|	assigned to table
+	5	|		270514		|	waits for a waiter
+	6	|		273792		|	starts restaurant service
+Customer Group #1712:
+	0	|		269895		|	arrives to restaurant
+	1	|		269895		|	enters buffet queue
+Customer Group #1713:
+	0	|		270502		|	arrives to restaurant
+	1	|		270502		|	enters buffet queue
+Customer Group #1714:
+	0	|		271099		|	arrives to restaurant
+	3	|		271099		|	enters restaurant queue
+	4	|		271099		|	assigned to table
+	5	|		272099		|	waits for a waiter
+	6	|		275150		|	starts restaurant service
+	7	|		282804		|	leaves the service
+	8	|		282804		|	enters the checkout queue
+	9	|		282804		|	starts checkout service
+	10	|		283042		|	finishes checkout & leaves
+Customer Group #1715:
+	0	|		271723		|	arrives to restaurant
+	1	|		271723		|	enters buffet queue
+Customer Group #1716:
+	0	|		272355		|	arrives to restaurant
+	3	|		272355		|	enters restaurant queue
+	4	|		272355		|	assigned to table
+	5	|		273355		|	waits for a waiter
+	6	|		279167		|	starts restaurant service
+Customer Group #1717:
+	0	|		273039		|	arrives to restaurant
+	1	|		273039		|	enters buffet queue
+Customer Group #1718:
+	0	|		273710		|	arrives to restaurant
+	3	|		273710		|	enters restaurant queue
+	4	|		273710		|	assigned to table
+	5	|		274710		|	waits for a waiter
+	6	|		279198		|	starts restaurant service
+Customer Group #1719:
+	0	|		274290		|	arrives to restaurant
+	1	|		274290		|	enters buffet queue
+Customer Group #1720:
+	0	|		274876		|	arrives to restaurant
+	1	|		274876		|	enters buffet queue
+Customer Group #1721:
+	0	|		275416		|	arrives to restaurant
+	3	|		275416		|	enters restaurant queue
+	4	|		275416		|	assigned to table
+	5	|		276416		|	waits for a waiter
+	6	|		282804		|	starts restaurant service
+Customer Group #1722:
+	0	|		276038		|	arrives to restaurant
+	1	|		276038		|	enters buffet queue
+Customer Group #1723:
+	0	|		276618		|	arrives to restaurant
+	1	|		276618		|	enters buffet queue
+Customer Group #1724:
+	0	|		277258		|	arrives to restaurant
+	3	|		277258		|	enters restaurant queue
+	4	|		277258		|	assigned to table
+	5	|		278258		|	waits for a waiter
+	6	|		283374		|	starts restaurant service
+Customer Group #1725:
+	0	|		277913		|	arrives to restaurant
+	3	|		277913		|	enters restaurant queue
+	4	|		278258		|	assigned to table
+	5	|		279258		|	waits for a waiter
+	6	|		283730		|	starts restaurant service
+	7	|		284110		|	leaves the service
+	8	|		284110		|	enters the checkout queue
+	9	|		284291		|	starts checkout service
+	10	|		284338		|	finishes checkout & leaves
+Customer Group #1726:
+	0	|		278559		|	arrives to restaurant
+	3	|		278559		|	enters restaurant queue
+	4	|		279167		|	assigned to table
+	5	|		280167		|	waits for a waiter
+	6	|		284110		|	starts restaurant service
+	7	|		285449		|	leaves the service
+	8	|		285449		|	enters the checkout queue
+	9	|		285449		|	starts checkout service
+	10	|		285454		|	finishes checkout & leaves
+Customer Group #1727:
+	0	|		279251		|	arrives to restaurant
+	1	|		279251		|	enters buffet queue
+Customer Group #1728:
+	0	|		279842		|	arrives to restaurant
+	3	|		279842		|	enters restaurant queue
+	4	|		283374		|	assigned to table
+	5	|		284374		|	waits for a waiter
+	6	|		286781		|	starts restaurant service
+	7	|		287612		|	leaves the service
+	8	|		287612		|	enters the checkout queue
+	9	|		287612		|	starts checkout service
+	10	|		287900		|	finishes checkout & leaves
+Customer Group #1729:
+	0	|		280485		|	arrives to restaurant
+	3	|		280485		|	enters restaurant queue
+	4	|		280485		|	assigned to table
+	5	|		281485		|	waits for a waiter
+	6	|		285449		|	starts restaurant service
+	7	|		286364		|	leaves the service
+	8	|		286364		|	enters the checkout queue
+	9	|		286364		|	starts checkout service
+	10	|		286445		|	finishes checkout & leaves
+Customer Group #1730:
+	0	|		281126		|	arrives to restaurant
+	3	|		281126		|	enters restaurant queue
+	4	|		281485		|	assigned to table
+	5	|		282485		|	waits for a waiter
+	6	|		286364		|	starts restaurant service
+	7	|		286781		|	leaves the service
+	8	|		286781		|	enters the checkout queue
+	9	|		286781		|	starts checkout service
+	10	|		287129		|	finishes checkout & leaves
+Customer Group #1731:
+	0	|		281705		|	arrives to restaurant
+	1	|		281705		|	enters buffet queue
+Customer Group #1732:
+	0	|		282365		|	arrives to restaurant
+	1	|		282365		|	enters buffet queue
+Customer Group #1733:
+	0	|		282975		|	arrives to restaurant
+	1	|		282975		|	enters buffet queue
+Customer Group #1734:
+	0	|		283691		|	arrives to restaurant
+	1	|		283691		|	enters buffet queue
+Customer Group #1735:
+	0	|		284284		|	arrives to restaurant
+	1	|		284284		|	enters buffet queue
+Customer Group #1736:
+	0	|		284893		|	arrives to restaurant
+	3	|		284893		|	enters restaurant queue
+	4	|		284893		|	assigned to table
+	5	|		285893		|	waits for a waiter
+	6	|		287612		|	starts restaurant service
+Customer Group #1737:
+	0	|		285541		|	arrives to restaurant
+	3	|		285541		|	enters restaurant queue
+	4	|		285893		|	assigned to table
+	5	|		286893		|	waits for a waiter
+Customer Group #1738:
+	0	|		286239		|	arrives to restaurant
+	3	|		286239		|	enters restaurant queue
+	4	|		286364		|	assigned to table
+	5	|		287364		|	waits for a waiter
+Customer Group #1739:
+	0	|		286758		|	arrives to restaurant
+	3	|		286758		|	enters restaurant queue
+	4	|		286781		|	assigned to table
+	5	|		287781		|	waits for a waiter
+Customer Group #1740:
+	0	|		287386		|	arrives to restaurant
+	1	|		287386		|	enters buffet queue
